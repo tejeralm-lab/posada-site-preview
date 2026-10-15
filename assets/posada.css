@@ -477,7 +477,9 @@ html,body{overflow-x:hidden}
 .c1 .hero.film .hero-media{height:300px}
 .c1 .pillar h3,.c1 .step h3{min-height:0}
 .c1 .work-grid img{height:auto;aspect-ratio:4/5}
-.c1 .trust.three{grid-template-columns:1fr 1fr}
+.c1 .trust.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c1 .trust.three .cell{padding:24px 6px}
+.c1 .trust.three .cell:nth-child(n+3){border-top:0}
 .c1 .yt .dur,.c1 .yt.person .play{left:auto;right:18px;bottom:18px}
 .c1 .yt .dur{left:18px;right:auto}
 }
