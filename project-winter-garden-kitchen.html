@@ -95,17 +95,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" imagesrcset="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=6">
+<link rel="stylesheet" href="assets/posada.css?v=7">
 <style>
+.c1 p,.c1 li,.c1 blockquote,.c1 figcaption{text-wrap:pretty}
+.c1 h2,.c1 h3{text-wrap:balance}
+.c1 .nb{white-space:nowrap}
 .c1 .glance{margin-top:22px}
 .c1 .film-quote{margin:0 0 20px;font-family:var(--serif);font-size:24px;font-style:italic;line-height:1.4;color:var(--navy);border-left:1px solid var(--brass);padding-left:22px}
 .c1 .film-quote cite{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze2)}
 .c1 .steps.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.c1 .steps.three .step{display:flex;flex-direction:column}
-.c1 .steps.three .textlink{align-self:flex-start;margin-top:auto;padding-top:22px}
+.c1 #similar .sec-head h2{max-width:600px}
+.c1 .steps.three .step h3{min-height:0}
+.c1 .steps.three .step p a{color:var(--bronze);border-bottom:1px solid var(--brass);padding-bottom:1px;white-space:nowrap;transition:color .2s}
+.c1 .steps.three .step p a:hover{color:var(--navy)}
 .c1 .pillars{margin-top:64px}
 @media (max-width:1100px){.c1 .steps.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:880px){.c1 .steps.three{grid-template-columns:1fr}.c1 .film-quote{font-size:21px}}
+@media (min-width:881px) and (max-width:1100px){.c1 #stills .gal{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:880px){
+.c1 .steps.three{grid-template-columns:1fr}
+.c1 .film-quote{font-size:21px}
+.c1 .trust.three .n{font-size:30px}
+.c1 .trust.three .l{letter-spacing:.14em}
+.c1 .trust-line{line-height:1.9}
+}
 </style>
 </head>
 <body>
@@ -162,8 +174,8 @@
 <a class="textlink" href="#film">Watch the film</a>
 </div>
 <div class="proof">
-<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · 60+ five-star reviews</span>
-<span>Designed, built and finished by our own team</span>
+<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · <span class="nb">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span>
+<span>Veteran-owned · Family-operated · Fully insured</span>
 </div>
 </div>
 </div>
@@ -173,11 +185,11 @@
 <div class="wrap">
 <div class="center"><span class="eyebrow">At a Glance</span></div>
 <div class="trust glance three">
-<div class="cell"><div class="n">Winter Garden</div><div class="l">Orange County, Florida</div></div>
-<div class="cell"><div class="n">Kitchen</div><div class="l">With a coffee bar</div></div>
-<div class="cell"><div class="n">8 min</div><div class="l">Project film with Mike</div></div>
+<div class="cell"><div class="n">8:07</div><div class="l">Film tour<br>with Mike</div></div>
+<div class="cell"><div class="n">36 in</div><div class="l">Workstation<br>farm sink</div></div>
+<div class="cell"><div class="n">3</div><div class="l">Seats at<br>the island</div></div>
 </div>
-<p class="trust-line">Quartz counters &amp; island · Brick herringbone backsplash · Soft-close drawers &amp; Blum Aventos lift-up doors</p>
+<p class="trust-line"><span class="nb">Kitchen remodel</span> · <span class="nb">Coffee bar on brick herringbone</span> · <span class="nb">Quartz counters &amp; island</span> · <span class="nb">Blum Aventos lift-up doors</span> · <span class="nb">Winter Garden, Orange County</span></p>
 </div>
 </section>
 
@@ -185,15 +197,16 @@
 <div class="wrap">
 <div class="sec-head">
 <div>
-<span class="eyebrow">Project Film</span>
+<span class="eyebrow">Project Film · 8:07</span>
 <h2>Walk through it <em>with Mike.</em></h2>
 </div>
 <p>Eight minutes in the finished kitchen, explained by the owner: the coffee bar, the lift-up doors, the pot filler, the touchless hood, the workstation sink and the island. Tap to play.</p>
 </div>
 <div class="video on-navy">
 <a class="vid-media yt" href="https://www.youtube.com/watch?v=fxRc-cF9Q_E" data-yt="fxRc-cF9Q_E" data-title="Kitchen Remodel Tour: Coffee Bar, Pot Filler &amp; Smart Storage | Winter Garden FL" aria-label="Play the video: Kitchen Remodel Tour: Coffee Bar, Pot Filler and Smart Storage, Winter Garden FL">
-<img src="images/video-kitchen-remodel-tour-winter-garden-fl.webp" srcset="images/video-kitchen-remodel-tour-winter-garden-fl-800.webp 800w, images/video-kitchen-remodel-tour-winter-garden-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 58vw" width="1280" height="720" alt="Video: kitchen remodel tour in Winter Garden, FL with coffee bar, pot filler and smart storage" loading="lazy" decoding="async">
+<img src="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp" srcset="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants-800.webp 800w, images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp 2000w" sizes="(max-width: 1100px) 100vw, 58vw" width="2000" height="1092" alt="Remodeled kitchen in Winter Garden, FL with a quartz island, leather counter stools, wood cabinetry and lantern pendants" loading="lazy" decoding="async">
 <span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span>
+<span class="dur">Play · 8:07</span>
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Kitchen Remodel Tour</span>
@@ -208,7 +221,7 @@
 <section class="sec sand on-sand" id="what-we-did">
 <div class="wrap">
 <div class="split">
-<div class="media"><div class="frame"><img src="images/winter-garden-kitchen-remodel-coffee-bar-brick-herringbone-backsplash-fl.webp" srcset="images/winter-garden-kitchen-remodel-coffee-bar-brick-herringbone-backsplash-fl-800.webp 480w, images/winter-garden-kitchen-remodel-coffee-bar-brick-herringbone-backsplash-fl.webp 608w" sizes="(max-width: 1100px) 100vw, 50vw" width="608" height="760" alt="Coffee bar in a Winter Garden, FL kitchen remodel with a brick herringbone backsplash, floating wood shelves, sconces and glass-front cabinets" loading="lazy" decoding="async"></div></div>
+<div class="media"><div class="frame"><img src="images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp" srcset="images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl-800.webp 480w, images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp 608w" sizes="(max-width: 1100px) 100vw, 50vw" width="608" height="760" alt="Apron-front workstation farm sink with a sliding cutting board and matte black faucet in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"></div></div>
 <div>
 <span class="eyebrow">What We Did</span>
 <h2>Every piece earns <em>its place.</em></h2>
@@ -233,17 +246,15 @@
 <div class="wrap">
 <div class="sec-head">
 <div>
-<span class="eyebrow">Stills &amp; Photos</span>
+<span class="eyebrow">Stills From the Film</span>
 <h2>The details, <em>up close.</em></h2>
 </div>
-<p>Frames from the tour and photographs of the finished kitchen. Tap any photo to enlarge it.</p>
+<p>Frames from Mike's walkthrough of the finished kitchen, not a staged photo shoot. Tap any still to enlarge it.</p>
 </div>
 <div class="gal">
-<figure><img src="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp" srcset="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants-800.webp 800w, images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp 2000w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="2000" height="1092" alt="Remodeled kitchen in Winter Garden, FL with a quartz island, leather counter stools, wood cabinetry and lantern pendants" loading="lazy" decoding="async"><figcaption><span>Quartz island &amp; leather stools</span><span>Winter&nbsp;Garden</span></figcaption></figure>
-<figure><img src="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp" srcset="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl-800.webp 480w, images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp 608w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="608" height="760" alt="Custom wood range hood and wall-mounted pot filler above the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pot filler over the range</span><span>Winter&nbsp;Garden</span></figcaption></figure>
-<figure><img src="images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp" srcset="images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl-800.webp 480w, images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp 608w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="608" height="760" alt="Winter Garden, FL kitchen remodel with lantern pendants over the quartz island, white and wood cabinetry and a custom wood range hood" loading="lazy" decoding="async"><figcaption><span>Lantern pendants &amp; wood hood</span><span>Winter&nbsp;Garden</span></figcaption></figure>
-<figure><img src="images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp" srcset="images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl-800.webp 480w, images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp 608w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="608" height="760" alt="Apron-front workstation farm sink with a sliding cutting board and matte black faucet in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Workstation farm sink</span><span>Winter&nbsp;Garden</span></figcaption></figure>
-<figure><img src="images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl.webp" srcset="images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl-800.webp 600w, images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl.webp 1350w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="1350" height="1800" alt="Kitchen island with seating for three and wood-look tile flooring in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Island seating, wood-look tile</span><span>Winter&nbsp;Garden</span></figcaption></figure>
+<figure><img src="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp" srcset="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl-800.webp 480w, images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Custom wood range hood and wall-mounted pot filler above the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pot filler &amp; wood hood</span><span>Range wall</span></figcaption></figure>
+<figure><img src="images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl.webp" srcset="images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl-800.webp 480w, images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Deep soft-close drawer for pots and pans beside the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pots &amp; pans drawer</span><span>Beside the range</span></figcaption></figure>
+<figure><img src="images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp" srcset="images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl-800.webp 480w, images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Winter Garden, FL kitchen remodel with lantern pendants over the quartz island, white and wood cabinetry and a custom wood range hood" loading="lazy" decoding="async"><figcaption><span>Lantern pendants</span><span>Over the island</span></figcaption></figure>
 </div>
 <div class="rev-links">
 <a class="textlink" href="our-work.html">See more of our work</a>
@@ -277,7 +288,7 @@
 <div class="pillar">
 <div class="rn">04</div>
 <h3>Doors that lift, drawers that glide</h3>
-<p>At the coffee bar the solid doors sit on the counter, so nothing is wasted behind a backsplash, and they lift on Blum Aventos hardware and close softly. Pots live in a deep double-drawer base beside the range, spices in a pull-out, sheets and trays in shallow drawers. All of it is soft-close, because a school morning should not sound like slamming doors.</p>
+<p>At the coffee bar the solid doors sit on the counter, so nothing is wasted behind a backsplash, and they lift on Blum Aventos hardware and close softly. Pots live in a deep <span class="nb">double-drawer</span> base beside the range, spices in a pull-out, sheets and trays in shallow drawers. All of it is soft-close, because a school morning should not sound like slamming doors.</p>
 </div>
 </div>
 </div>
@@ -296,20 +307,17 @@
 <div class="step">
 <div class="rn">01</div>
 <h3>Kitchen remodeling</h3>
-<p>Cabinetry, quartz, islands, custom wood hoods and layout changes, designed, priced and built by one team. Typical 2026 ranges for Central Florida kitchens are published on the page, so you can plan with real numbers.</p>
-<a class="textlink" href="kitchen-remodeling.html#cost">Kitchens &amp; what they cost</a>
+<p>Cabinetry, quartz, islands, custom wood hoods and layout changes, designed, priced and built by one team. Typical 2026 ranges for Central Florida kitchens are published on our <a href="kitchen-remodeling.html#cost">kitchen remodeling page</a>, so you can plan with real numbers.</p>
 </div>
 <div class="step">
 <div class="rn">02</div>
 <h3>How a project runs</h3>
-<p>Seven steps from the first visit to the final walkthrough, with one point of contact and a clean site at the end of every day. The $500 kitchen design retainer is credited to your project once the agreement is signed.</p>
-<a class="textlink" href="our-process.html">See our process</a>
+<p>Our <a href="our-process.html">seven-step process</a> runs from the first visit to the final walkthrough, with one point of contact and a clean site at the end of every day. The $500 kitchen design retainer is credited to your project once the agreement is signed.</p>
 </div>
 <div class="step">
 <div class="rn">03</div>
 <h3>Financing</h3>
-<p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Posada is not a lender; rates and terms are set by the lending partner.</p>
-<a class="textlink" href="financing.html">Financing options</a>
+<p><a href="financing.html">Financing is available</a> through Hearth (NMLS <span class="nb">ID 1628533)</span>, which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Posada is not a lender; rates and terms are set by the lending partner.</p>
 </div>
 </div>
 </div>
@@ -397,6 +405,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=6" defer></script>
+<script src="assets/posada.js?v=7" defer></script>
 </body>
 </html>

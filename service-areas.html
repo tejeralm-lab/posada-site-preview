@@ -15,7 +15,7 @@
 <meta property="og:title" content="Service Areas | Posada Remodeling &amp; Design, Casselberry FL">
 <meta property="og:description" content="Kitchen, bath and flooring remodeling in Orlando and across Orange, Seminole, Osceola and Lake counties. 5.0 on Google. Book a complimentary consultation.">
 <meta property="og:url" content="https://posadaremodeling.com/service-areas/">
-<meta property="og:image" content="https://posadaremodeling.com/images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp">
+<meta property="og:image" content="https://posadaremodeling.com/images/bonus-room-remodel-central-florida.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -83,21 +83,44 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp" imagesrcset="images/stone-fireplace-feature-wall-living-room-remodel-central-florida-800.webp 600w, images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp 1350w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=6">
+<link rel="preload" as="image" href="images/bonus-room-remodel-central-florida.webp" imagesrcset="images/bonus-room-remodel-central-florida-800.webp 600w, images/bonus-room-remodel-central-florida.webp 1350w" imagesizes="100vw">
+<link rel="stylesheet" href="assets/posada.css?v=7">
 <style>
-/* service-areas: county rows (county name + two linked city lists) */
-.c1 .county{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:64px;padding:52px 0;border-top:1px solid rgba(111,88,31,.3)}
-.c1 .county h3{font-size:36px;margin:0 0 12px}
-.c1 .county .county-head p{font-size:15.5px;color:var(--body);margin:0;max-width:340px}
-.c1 .county .city-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.c1 .county .city-grid h4{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze2);font-family:var(--sans);font-weight:500;margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid rgba(111,88,31,.3)}
-.c1 .also{padding-top:52px;border-top:1px solid rgba(111,88,31,.3)}
+/* service-areas page styles */
+/* .split.rev shares its class name with the review card; keep the split flat on ivory (same fix as the kitchen page) */
+.c1 .split.rev{background:transparent;border-top:0;padding:0}
+/* city guides: a quiet index, one column per county, one row per page */
+.c1 .city-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 96px}
+.c1 .city-index h3{font-size:36px;margin:0 0 10px}
+.c1 .city-index .county > p{font-size:15.5px;color:var(--body);margin:0 0 26px;max-width:520px}
+.c1 .city-index ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.c1 .city-index li a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--navy)}
+.c1 .city-index li a > span{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--bronze2)}
+.c1 .city-index li a:hover{color:var(--bronze)}
+.c1 .city-index li a:hover > span{color:var(--navy)}
+.c1 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.c1 .also{margin-top:88px}
 .c1 .also p{font-size:16.5px;color:var(--body);margin:14px 0 0;line-height:1.8;max-width:860px}
 .c1 .also .notice{margin-top:22px}
-.c1 .more-links{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;margin-top:44px}
-@media (max-width:1100px){.c1 .county{grid-template-columns:1fr;gap:28px}}
-@media (max-width:880px){.c1 .county .city-grid{grid-template-columns:1fr;gap:28px}.c1 .county{padding:40px 0}.c1 .also{padding-top:40px}.c1 .more-links{gap:24px}}
+/* film captions link to the project stories */
+.c1 .yt-card .cap h3 a{border-bottom:1px solid transparent}
+.c1 .yt-card .cap h3 a:hover{color:var(--bronze);border-bottom-color:var(--brass)}
+.c1 #standard .one-link{margin-top:44px}
+/* where we work: landscape photo sits at the top of the column with a caption */
+.c1 #counties .split{align-items:start}
+.c1 #counties .frame{margin-top:6px}
+.c1 #counties .split p.ph-cap{margin:16px 0 0;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze2)}
+.c1 #counties .media .notice{margin-top:28px}
+.c1 .ph-cap .nb{white-space:nowrap}
+/* vertical film: the whole 4:5 still sits in the 16:9 tile over a blurred, toned copy of itself */
+.c1 .yt.portrait img.bg{position:absolute;inset:-8%;width:116%;height:116%;max-width:none;object-fit:cover;filter:blur(26px) saturate(.75);opacity:.5}
+.c1 .yt.portrait img.still{position:absolute;top:0;bottom:0;left:0;right:0;margin:0 auto;width:auto;height:100%;max-width:none;object-fit:contain;box-shadow:0 24px 60px -24px rgba(0,0,0,.55)}
+@media (max-width:1100px){.c1 #counties .media{max-width:640px}}
+@media (max-width:880px){
+.c1 .city-index{grid-template-columns:1fr;gap:56px}
+.c1 .city-index h3{font-size:32px}
+.c1 .also{margin-top:64px}
+}
 </style>
 </head>
 <body>
@@ -142,7 +165,7 @@
 <main id="main">
 <section class="hero compact" id="top">
 <div class="hero-media">
-<img src="images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp" srcset="images/stone-fireplace-feature-wall-living-room-remodel-central-florida-800.webp 600w, images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp 1350w" sizes="100vw" width="1350" height="1800" alt="Living room remodel with a floor-to-ceiling stone fireplace feature wall in Central Florida" style="object-position:center 74%" fetchpriority="high" decoding="async">
+<img src="images/bonus-room-remodel-central-florida.webp" srcset="images/bonus-room-remodel-central-florida-800.webp 600w, images/bonus-room-remodel-central-florida.webp 1350w" sizes="100vw" width="1350" height="1800" alt="Bonus room remodel with new flooring and finishes in Central Florida" style="object-position:center 30%" fetchpriority="high" decoding="async">
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
@@ -153,6 +176,10 @@
 <a class="btn" href="contact.html">Book a Complimentary Consultation</a>
 <a class="textlink" href="#cities">Find your city</a>
 </div>
+<div class="proof">
+<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · <span style="white-space:nowrap">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span>
+<span>Veteran-owned · Family-operated · Fully insured</span>
+</div>
 </div>
 </div>
 </section>
@@ -160,19 +187,20 @@
 <section class="sec" id="counties">
 <div class="wrap">
 <div class="split rev">
-<div class="media"><div class="frame"><img src="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" srcset="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w" sizes="(max-width: 1100px) 100vw, 50vw" width="1228" height="1800" alt="Kitchen remodel in Winter Garden, FL with a custom wood range hood, white shaker cabinets, coffee bar and lantern pendants" loading="lazy" decoding="async"></div></div>
+<div class="media"><div class="frame wide"><img src="images/mike-posada-bathroom-walkthrough-dr-phillips-orlando-fl.webp" srcset="images/mike-posada-bathroom-walkthrough-dr-phillips-orlando-fl-800.webp 800w, images/mike-posada-bathroom-walkthrough-dr-phillips-orlando-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 50vw" width="1280" height="720" alt="Mike Posada walking through a finished two-bathroom remodel in Dr. Phillips, Orlando" style="object-position:45% center" loading="lazy" decoding="async"></div><p class="ph-cap"><span class="nb">Mike Posada</span> · <span class="nb">On site in Dr.&nbsp;Phillips, Orlando</span></p>
+<div class="notice">West Orlando homeowners: design consultations in Winter&nbsp;Garden, by appointment. Visits to our Casselberry studio are also by appointment.</div>
+</div>
 <div>
 <span class="eyebrow">Where We Work</span>
 <h2>Four counties, <em>one team.</em></h2>
-<p>Posada is a family-operated kitchen and bath design and remodeling studio in Casselberry, Florida. From there we design and build across greater Orlando: Orange and Seminole counties first, with Osceola and Lake counties beyond them.</p>
+<p>Posada is a family-operated kitchen and bath design and remodeling studio in Casselberry, Florida. From there we design and build across greater Orlando: Orange and Seminole counties first, with Osceola and Lake counties beyond&nbsp;them.</p>
 <p>Wherever your home is, the project is handled the same way: a complimentary in-home consultation, an itemized written proposal, and our own team on site with Mike overseeing the work.</p>
 <ul class="checks">
-<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Orange County:</strong> Orlando, Winter Park, Winter Garden, Windermere, Dr. Phillips, Lake Nona, Ocoee, Apopka and Maitland</span></li>
-<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Seminole County:</strong> Casselberry, Altamonte Springs, Longwood, Lake Mary, Heathrow, Sanford, Oviedo and Winter Springs</span></li>
-<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Lake County:</strong> Clermont, Minneola, Sorrento, Mount Dora and Eustis</span></li>
-<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Osceola County:</strong> the communities just south of Orlando</span></li>
+<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Orange County:</strong> Orlando, Winter&nbsp;Park, Winter&nbsp;Garden, Windermere, Dr.&nbsp;Phillips, Lake&nbsp;Nona, Ocoee, Apopka and Maitland</span></li>
+<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Seminole County:</strong> Casselberry, Altamonte&nbsp;Springs, Longwood, Lake&nbsp;Mary, Heathrow, Sanford, Oviedo and Winter&nbsp;Springs</span></li>
+<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Lake County:</strong> Clermont, Minneola, Sorrento, Mount&nbsp;Dora and Eustis</span></li>
+<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><strong>Osceola County:</strong> the communities just south of&nbsp;Orlando</span></li>
 </ul>
-<div class="notice">West Orlando homeowners: design consultations in Winter Garden, by appointment. Visits to our Casselberry studio are also by appointment.</div>
 </div>
 </div>
 </div>
@@ -185,75 +213,53 @@
 <span class="eyebrow">City Guides</span>
 <h2>Kitchen and bath, <em>by city.</em></h2>
 </div>
-<p>Choose your city for the kitchen or bathroom page written for that area. Orlando itself is covered on our main kitchen and bathroom pages.</p>
+<p>Choose your city for the kitchen or bathroom page written for that area. Orlando itself is covered on our main kitchen and bathroom&nbsp;pages.</p>
 </div>
+<div class="city-index">
 <div class="county">
-<div class="county-head">
 <h3>Orange County</h3>
-<p>Orlando and the communities around it, from Winter Park to Winter Garden.</p>
-</div>
-<div class="city-grid">
-<div>
-<h4>Kitchens</h4>
+<p>Orlando and the communities around it, from Winter&nbsp;Park to Winter&nbsp;Garden.</p>
 <ul>
-<li><a href="kitchen-remodeling.html">Kitchen remodeling in Orlando</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Kitchen remodeling in Winter Park</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Kitchen remodeling in Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Kitchen remodeling in Windermere</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-dr-phillips-fl/">Kitchen remodeling in Dr. Phillips</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-nona-fl/">Kitchen remodeling in Lake Nona</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-ocoee-fl/">Kitchen remodeling in Ocoee</a></li>
+<li><a href="kitchen-remodeling.html">Orlando <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="bathroom-remodeling.html">Orlando <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-dr-phillips-fl/">Dr. Phillips <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-dr-phillips-fl/">Dr. Phillips <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-nona-fl/">Lake Nona <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-lake-nona-fl/">Lake Nona <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-ocoee-fl/">Ocoee <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-ocoee-fl/">Ocoee <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-windermere-fl/">Windermere <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-garden-fl/">Winter Garden <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-park/">Winter Park <span>Bath<span class="sr">room remodeling</span></span></a></li>
 </ul>
-</div>
-<div>
-<h4>Bathrooms</h4>
-<ul>
-<li><a href="bathroom-remodeling.html">Bathroom remodeling in Orlando</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-park/">Bathroom remodeling in Winter Park</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-garden-fl/">Bathroom remodeling in Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-windermere-fl/">Bathroom remodeling in Windermere</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-dr-phillips-fl/">Bathroom remodeling in Dr. Phillips</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-lake-nona-fl/">Bathroom remodeling in Lake Nona</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-ocoee-fl/">Bathroom remodeling in Ocoee</a></li>
-</ul>
-</div>
-</div>
 </div>
 <div class="county">
-<div class="county-head">
 <h3>Seminole County</h3>
 <p>Our home county, north of Orlando, with the design studio in Casselberry.</p>
-</div>
-<div class="city-grid">
-<div>
-<h4>Kitchens</h4>
 <ul>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-casselberry-fl/">Kitchen remodeling in Casselberry</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-altamonte-springs-fl/">Kitchen remodeling in Altamonte Springs</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Kitchen remodeling in Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Kitchen remodeling in Lake Mary</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-heathrow-fl/">Kitchen remodeling in Heathrow</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-sanford-fl/">Kitchen remodeling in Sanford</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Kitchen remodeling in Oviedo</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-casselberry-fl/">Casselberry <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-casselberry-fl/">Casselberry <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-altamonte-springs-fl/">Altamonte Springs <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-altamonte-springs-fl/">Altamonte Springs <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-heathrow-fl/">Heathrow <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-heathrow-fl/">Heathrow <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-lake-mary-fl/">Lake Mary <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-longwood-fl/">Longwood <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-oviedo-fl/">Oviedo <span>Bath<span class="sr">room remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-sanford-fl/">Sanford <span>Kitchen<span class="sr"> remodeling</span></span></a></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-sanford-fl/">Sanford <span>Bath<span class="sr">room remodeling</span></span></a></li>
 </ul>
-</div>
-<div>
-<h4>Bathrooms</h4>
-<ul>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-casselberry-fl/">Bathroom remodeling in Casselberry</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-altamonte-springs-fl/">Bathroom remodeling in Altamonte Springs</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-longwood-fl/">Bathroom remodeling in Longwood</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-lake-mary-fl/">Bathroom remodeling in Lake Mary</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-heathrow-fl/">Bathroom remodeling in Heathrow</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-sanford-fl/">Bathroom remodeling in Sanford</a></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-oviedo-fl/">Bathroom remodeling in Oviedo</a></li>
-</ul>
-</div>
 </div>
 </div>
 <div class="also">
 <span class="eyebrow">Also Serving</span>
-<p>Heathrow, Sanford, Altamonte Springs, Apopka, Maitland, Winter Springs, Ocoee, Dr. Phillips, Lake Nona, Clermont, Sorrento, Mount Dora, Eustis, DeLand, DeBary, Deltona, Geneva, Horizon West, Gotha, Oakland and Minneola.</p>
+<p>Apopka, Maitland, Winter&nbsp;Springs, Clermont, Sorrento, Mount&nbsp;Dora, Eustis, DeLand, DeBary, Deltona, Geneva, Horizon&nbsp;West, Gotha, Oakland and Minneola.</p>
 <div class="notice">If your community is not listed, call or text <a href="tel:+14073193503">(407) 319-3503</a>. We reply within 24 hours.</div>
 </div>
 </div>
@@ -266,16 +272,16 @@
 <span class="eyebrow">Project Films</span>
 <h2>Two counties, <em>two rooms.</em></h2>
 </div>
-<p>Short walkthroughs of real Posada projects, explained by Mike. A kitchen in Orange County, a bathroom in Lake County, the same standard of finish.</p>
+<p>Short walkthroughs of real Posada projects, explained by Mike. A kitchen in Orange County, a bathroom in Lake County, the same standard of&nbsp;finish.</p>
 </div>
 <div class="video-grid">
 <div class="yt-card">
 <a class="yt" data-yt="fxRc-cF9Q_E" data-title="Kitchen Remodel Tour: Coffee Bar, Pot Filler &amp; Smart Storage | Winter Garden FL" href="https://www.youtube.com/watch?v=fxRc-cF9Q_E" aria-label="Play the video: Kitchen remodel tour in Winter Garden, FL"><img src="images/video-kitchen-remodel-tour-winter-garden-fl.webp" srcset="images/video-kitchen-remodel-tour-winter-garden-fl-800.webp 800w, images/video-kitchen-remodel-tour-winter-garden-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 50vw" width="1280" height="720" alt="Video: kitchen remodel tour in Winter Garden, FL with coffee bar, pot filler and smart storage" loading="lazy" decoding="async"><span class="dur">Play · 8 min</span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></a>
-<div class="cap"><h3>Kitchen remodel tour, Winter Garden</h3><p>Orange County · Coffee bar, pot filler and smart storage</p></div>
+<div class="cap"><h3><a href="project-winter-garden-kitchen.html">Kitchen remodel tour, Winter Garden</a></h3><p>Orange County · Coffee bar, pot filler and smart storage</p></div>
 </div>
 <div class="yt-card">
-<a class="yt person" data-yt="F4Zs3s4YfMk" data-ratio="9/16" data-title="Master Bathroom Remodel in Sorrento FL | Full Walkthrough" href="https://www.youtube.com/watch?v=F4Zs3s4YfMk" aria-label="Play the video: Master bathroom remodel in Sorrento, FL, full walkthrough"><img src="images/video-master-bathroom-remodel-sorrento-fl.webp" srcset="images/video-master-bathroom-remodel-sorrento-fl-800.webp 800w, images/video-master-bathroom-remodel-sorrento-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 50vw" width="1280" height="720" alt="Video: master bathroom remodel walkthrough in Sorrento, FL" loading="lazy" decoding="async"><span class="dur">Play · 3:38</span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></a>
-<div class="cap"><h3>Master bathroom remodel, Sorrento</h3><p>Lake County · Full walkthrough</p></div>
+<a class="yt portrait" data-yt="F4Zs3s4YfMk" data-ratio="9/16" data-title="Master Bathroom Remodel in Sorrento FL | Full Walkthrough" href="https://www.youtube.com/watch?v=F4Zs3s4YfMk" aria-label="Play the video: Master bathroom remodel in Sorrento, FL, full walkthrough"><img class="bg" src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp" alt="" aria-hidden="true" width="640" height="800" loading="lazy" decoding="async"><img class="still" src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" srcset="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp 720w" sizes="(max-width: 1100px) 45vw, 260px" width="720" height="900" alt="Curbless walk-in shower with large-format gloss tile, a mitered infinity niche and a handheld shower in Sorrento, FL" loading="lazy" decoding="async"><span class="dur">Play · 3:38</span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></a>
+<div class="cap"><h3><a href="project-sorrento-master-bathroom.html">Master bathroom remodel, Sorrento</a></h3><p>Lake County · Full walkthrough</p></div>
 </div>
 </div>
 <div style="margin-top:40px"><a class="textlink" href="our-work.html">See all our work</a></div>
@@ -287,17 +293,15 @@
 <span class="dia" aria-hidden="true"></span>
 <h2>The same standard in <em>every city.</em></h2>
 <p>The address changes; the way we work does not. One team designs, prices and builds your remodel, and every project carries a three-year labor and installation warranty with complete written terms before you sign.</p>
-<div class="stat-row">
+<div class="trust-block">
+<div class="trust three">
 <a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
 <div class="cell"><div class="n">14+</div><div class="l">Years of remodeling<br>experience</div></div>
 <div class="cell"><div class="n">3 yrs</div><div class="l">Labor &amp; installation<br>warranty</div></div>
-<a class="cell" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><div class="n">BBB</div><div class="l">Accredited business<br>A rating</div></a>
 </div>
-<div class="more-links">
-<a class="textlink" href="our-process.html">How our process works</a>
-<a class="textlink" href="financing.html">Financing options</a>
-<a class="textlink" href="faqs.html">Read the FAQs</a>
+<p class="trust-line"><span class="nb">Veteran-owned</span> · <span class="nb">Family-operated</span> · <span class="nb">Fully insured, certificate on request</span> · <a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
 </div>
+<div class="one-link"><a class="textlink" href="our-process.html">How our process works</a></div>
 </div>
 </section>
 
@@ -380,6 +384,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=6" defer></script>
+<script src="assets/posada.js?v=7" defer></script>
 </body>
 </html>

@@ -42,13 +42,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp" imagesrcset="images/mike-posada-owner-posada-remodeling-design-casselberry-fl-800.webp 800w, images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp 1400w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=6">
+<link rel="stylesheet" href="assets/posada.css?v=7">
 <style>
 .c1 .next p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .next p a:hover{color:var(--bronze2)}
 .c1 .hero .panel h1 em{white-space:nowrap}
 .c1 .hero.compact{padding-bottom:72px}
 @media (max-width:880px){.c1 .hero.compact{padding-bottom:48px}}
+.c1 .owner-cue .micro{display:block;margin-top:2px}
+.c1 .hero .proof .nb{white-space:nowrap}
+.c1 p,.c1 .owner-cue>span{text-wrap:pretty}
+.c1 #end .dia{display:block;margin:0 auto 26px}
+.c1 #end .closing-line{line-height:1.4;text-wrap:balance}
+@media (max-width:880px){
+.c1 p.trust-line .sep{display:block;height:0;overflow:hidden}
+.c1 #end .closing-line{font-size:24px}
+}
+@media (max-width:560px){.c1 .hero .proof .sep{display:block;height:0;overflow:hidden}}
+/* hero crop by width: Mike's head stays clear of the top edge, and the van lettering sits either fully above or fully behind the panel */
+@media (min-width:641px) and (max-width:1159px){.c1 #top .hero-media img{object-position:center 21%!important}}
+@media (min-width:1160px) and (max-width:1249px){.c1 #top .hero-media img{object-position:center 2%!important}}
+@media (min-width:1250px) and (max-width:1339px){.c1 #top .hero-media img{object-position:center 7%!important}}
 </style>
 </head>
 <body>
@@ -94,7 +108,7 @@
 <!-- PAGE CONTENT STARTS -->
 <section class="hero compact" id="top">
 <div class="hero-media">
-<img src="images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp" srcset="images/mike-posada-owner-posada-remodeling-design-casselberry-fl-800.webp 800w, images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp 1400w" sizes="100vw" width="1400" height="934" alt="Mike Posada, owner and founder of Posada Remodeling and Design, beside the company van in Casselberry, FL" style="object-position:70% 30%" fetchpriority="high" decoding="async">
+<img src="images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp" srcset="images/mike-posada-owner-posada-remodeling-design-casselberry-fl-800.webp 800w, images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp 1400w" sizes="100vw" width="1400" height="934" alt="Mike Posada, owner and founder of Posada Remodeling and Design, beside the company van in Casselberry, FL" style="object-position:center 12%" fetchpriority="high" decoding="async">
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
@@ -104,6 +118,10 @@
 <div class="ctas">
 <a class="btn" href="#contact">Book a Complimentary Consultation</a>
 <a class="textlink" href="tel:+14073193503">Or call (407) 319-3503</a>
+</div>
+<div class="proof">
+<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong><span class="sep"> · </span><span class="nb">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span>
+<span><span class="nb">Veteran-owned</span> · <span class="nb">Family-operated</span><span class="sep"> · </span><span class="nb">Fully insured</span></span>
 </div>
 </div>
 </div>
@@ -135,7 +153,7 @@
 <div class="field full consent"><input type="checkbox" id="f-sms" name="sms_consent" value="yes"><label for="f-sms"><strong>Yes, text me about my project.</strong><small>By checking this box I agree to receive text messages from Posada Remodeling &amp; Design at the number provided, including automated messages. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out or HELP for help. See our Privacy Policy.</small></label></div>
 <div class="submit-row">
 <button class="btn" type="submit">Book My Complimentary Consultation</button>
-<div class="owner-cue"><img src="images/mike-posada-owner-founder-headshot.webp" srcset="images/mike-posada-owner-founder-headshot.webp 427w" sizes="56px" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"><span>Your request is in Mike's hands. We reply within 24 hours.</span></div>
+<div class="owner-cue"><img src="images/mike-posada-owner-founder-headshot.webp" srcset="images/mike-posada-owner-founder-headshot.webp 427w" sizes="56px" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"><span>Your request is in Mike's hands. We reply within 24&nbsp;hours.<span class="micro">Evening and weekend consultations available.</span></span></div>
 </div>
 </form>
 </div>
@@ -163,7 +181,7 @@
 </div>
 </section>
 
-<section class="sec" id="next">
+<section class="sec" id="next" style="padding-bottom:48px">
 <div class="wrap">
 <div class="areas next">
 <div>
@@ -184,7 +202,7 @@
 <li>
 <div class="rn">02</div>
 <div>
-<h3>A complimentary in-home consultation</h3>
+<h3>A complimentary <span class="nb" style="white-space:nowrap">in-home</span> consultation</h3>
 <p>We meet at your home, listen to your ideas, look at the space and tell you honestly which budget range your project falls into.</p>
 </div>
 </li>
@@ -199,14 +217,21 @@
 <p class="notice" style="margin-top:28px">Evening and weekend consultations are available. Tell us in the form what works for your family and we will plan the visit around it.</p>
 </div>
 </div>
-<div class="trust">
+</div>
+<div class="wrap" style="margin-top:72px;margin-bottom:8px">
+<div class="trust three" style="margin-top:0">
 <a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
 <div class="cell"><div class="n">14+</div><div class="l">Years of remodeling<br>experience</div></div>
-<div class="cell"><div class="n">Veteran</div><div class="l">Owned &amp;<br>family-operated</div></div>
-<div class="cell"><div class="n">Insured</div><div class="l">Fully insured,<br>certificate on request</div></div>
 <div class="cell"><div class="n">3 yrs</div><div class="l">Labor &amp; installation<br>warranty</div></div>
-<a class="cell" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><div class="n">BBB</div><div class="l">Accredited business<br>A rating</div></a>
 </div>
+<p class="trust-line"><span class="nb">Veteran-owned</span> · <span class="nb">Family-operated</span><span class="sep"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
+</div>
+</section>
+
+<section class="sec" id="end" style="padding-top:40px;padding-bottom:110px">
+<div class="wrap">
+<span class="dia" aria-hidden="true"></span>
+<p class="closing-line">Every project begins with a&nbsp;conversation at your kitchen table.</p>
 </div>
 </section>
 
@@ -277,6 +302,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=6" defer></script>
+<script src="assets/posada.js?v=7" defer></script>
 </body>
 </html>

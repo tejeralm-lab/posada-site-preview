@@ -15,7 +15,7 @@
 <meta property="og:title" content="Sorrento Master Bathroom Remodel: Curbless Shower, Longer Vanity &amp; a Wider Toilet Room | Posada Remodeling &amp; Design">
 <meta property="og:description" content="A Sorrento, FL master bathroom remodel by Posada: curbless shower, mitered infinity niche, a longer vanity and a toilet room that closes. Watch the film.">
 <meta property="og:url" content="https://posadaremodeling.com/projects/sorrento-master-bathroom/">
-<meta property="og:image" content="https://posadaremodeling.com/images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp">
+<meta property="og:image" content="https://posadaremodeling.com/images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -93,20 +93,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp" imagesrcset="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp 656w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=6">
+<link rel="preload" as="image" href="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" imagesrcset="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp 720w" imagesizes="(max-width: 880px) 100vw, 60vw">
+<link rel="stylesheet" href="assets/posada.css?v=7">
 <style>
-/* Project page: the hero is one graded still from the walkthrough film (shared .hero.film rules in posada.css). */
-.c1 .hero.film .panel .eyebrow{display:block;margin:0 0 16px;line-height:1.7}
-.c1 .glance{margin-top:0}
-.c1 .glance .n{font-size:38px}
+/* Project page: film-frame hero (shared .hero.film rules in posada.css): the sharp still sits right, over a blurred copy of itself. */
+/* the sharp still is z-index:1 in posada.css; keep the panel above it where they overlap on phones */
+.c1 .hero.film .hero-panel{z-index:2}
+/* desktop: the still aligns with the right edge of the content grid instead of the window edge */
+@media (min-width:881px){.c1 .hero.film .hero-media img.still{margin-right:max(48px,calc(50vw - 592px))}}
+.c1 .hero.film .panel .eyebrow{display:block;margin:0 0 16px;line-height:1.7;text-wrap:balance}
+.c1 p,.c1 li,.c1 figcaption{text-wrap:pretty}
+.c1 .on-navy h3 em{color:var(--brassl)}
+.c1 .glance{margin-top:22px}
+.c1 .trust-line{line-height:1.9}
+.c1 .gal figcaption > span + span{white-space:nowrap;flex:none}
 .c1 .video .vid-copy .ctas{gap:28px}
+/* the long "what we did" column scrolls past a photo that stays in view below the 132px sticky header (only on screens tall enough to show the whole frame) */
+.c1 #what-we-did .split{align-items:start}
+.c1 #what-we-did .media{margin-top:40px}
+@media (min-width:881px) and (min-height:860px){.c1 #what-we-did .media{position:sticky;top:164px}}
 .c1 .next .svc .num{margin-top:0}
+.c1 .next .svc .textlink{align-self:flex-start}
+.c1 .next .svc h3{min-height:0}
 .c1 .next .svc p a,.c1 .split p a,.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 @media (max-width:1100px){.c1 .video .vid-media:not(.playing){aspect-ratio:16/9;min-height:0}}
-@media (max-width:880px){.c1 .glance .n{font-size:32px}}
-/* stacked film tile on phones: a 4:5 crop anchored left so Mike stays in frame instead of a headless torso (!important beats the desktop object-position set inline on the poster) */
-@media (max-width:600px){.c1 .video .vid-media:not(.playing){aspect-ratio:4/5}.c1 .video .vid-media:not(.playing) img{object-position:left center !important}}
+@media (max-width:880px){
+.c1 #what-we-did .media{margin-top:0}
+.c1 .trust.three .cell{padding:24px 6px}
+.c1 .trust.three .n{font-size:30px}
+.c1 .trust.three .l{letter-spacing:.14em}
+}
+/* stacked film tile on phones: a 4:5 crop; the poster's inline object-position (0% 15%) keeps Mike's whole face in frame, since the source frame already has him at its left edge */
+@media (max-width:600px){.c1 .video .vid-media:not(.playing){aspect-ratio:4/5}}
 </style>
 </head>
 <body>
@@ -151,7 +169,8 @@
 <main id="main">
 <section class="hero compact film" id="top">
 <div class="hero-media">
-<img src="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp" srcset="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp 656w" sizes="100vw" width="656" height="820" alt="Hexagon mosaic shower floor with a tile-in square drain in a Sorrento, FL curbless shower" style="object-position:center 70%" fetchpriority="high" decoding="async">
+<img class="bg" src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" alt="" aria-hidden="true" width="720" height="900" fetchpriority="high" decoding="async">
+<img class="still" src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" srcset="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp 720w" sizes="(max-width: 880px) 100vw, 60vw" width="720" height="900" alt="Curbless walk-in shower with large-format gloss tile, a mitered infinity niche and a handheld shower in Sorrento, FL" fetchpriority="high" decoding="async">
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
@@ -164,21 +183,22 @@
 <a class="textlink" href="#film">Watch the film</a>
 </div>
 <div class="proof">
-<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · 60+ five-star reviews</span>
+<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · 60+&nbsp;<span class="nb" style="white-space:nowrap">five-star</span> reviews</span>
 <span>Veteran-owned · Family-operated · Fully insured</span>
 </div>
 </div>
 </div>
 </section>
 
-<section class="sec" id="glance" style="padding-bottom:0">
+<section class="sec" id="glance" style="padding-top:64px;padding-bottom:0">
 <div class="wrap">
-<div class="stat-row glance">
-<div class="cell"><div class="n">Sorrento</div><div class="l">Lake County, Florida</div></div>
-<div class="cell"><div class="n">3 zones</div><div class="l">Shower, vanity &amp; toilet room</div></div>
-<div class="cell"><div class="n">2 × 4 ft</div><div class="l">Large-format tile</div></div>
-<div class="cell"><div class="n">3:38</div><div class="l">Film with Mike &amp; Cameron</div></div>
+<div class="center"><span class="eyebrow">At a Glance</span></div>
+<div class="trust glance three">
+<div class="cell"><div class="n">3:38</div><div class="l">Film with Mike<br>&amp; Cameron</div></div>
+<div class="cell"><div class="n">2 × 4 ft</div><div class="l">Large-format<br>tile</div></div>
+<div class="cell"><div class="n">48 in</div><div class="l">Toilet room,<br>up from 30 in</div></div>
 </div>
+<p class="trust-line"><span class="nb">Shower, vanity &amp; toilet room</span> · <span class="nb">Curbless shower</span> · <span class="nb">Mitered infinity niche</span> · <span class="nb">Sorrento, Lake County</span></p>
 </div>
 </section>
 
@@ -186,17 +206,16 @@
 <div class="wrap">
 <div class="video on-navy">
 <a class="vid-media yt person" href="https://www.youtube.com/watch?v=F4Zs3s4YfMk" data-yt="F4Zs3s4YfMk" data-ratio="9/16" data-title="Master Bathroom Remodel in Sorrento FL | Full Walkthrough" aria-label="Play the video: Master Bathroom Remodel in Sorrento FL, Full Walkthrough">
-<img src="images/video-master-bathroom-remodel-sorrento-fl.webp" srcset="images/video-master-bathroom-remodel-sorrento-fl-800.webp 800w, images/video-master-bathroom-remodel-sorrento-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 58vw" width="1280" height="720" alt="Video: master bathroom remodel walkthrough in Sorrento, FL" style="object-position:22% center" loading="lazy" decoding="async">
+<img src="images/video-master-bathroom-remodel-sorrento-fl.webp" srcset="images/video-master-bathroom-remodel-sorrento-fl-800.webp 800w, images/video-master-bathroom-remodel-sorrento-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 58vw" width="1280" height="720" alt="Video: master bathroom remodel walkthrough in Sorrento, FL" style="object-position:0% 15%" loading="lazy" decoding="async">
 <span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span>
 <span class="dur">Play · 3:38</span>
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Project Film · 3:38</span>
-<h3>Walk the finished bathroom with Mike and Cameron.</h3>
+<h3>Walk the finished bathroom with <em>Mike and Cameron.</em></h3>
 <p>Mike starts at the vanity wall where the tub used to be and the toilet room he pushed out to 48 inches, then hands over to Cameron, our tile installer, inside the curbless shower: the 2 by 4 foot tile, the mitered infinity niche, the leveling clips and the lift-out drain. Three minutes and thirty-eight seconds with the people who built it. Tap to play.</p>
 <div class="ctas">
-<a class="textlink" href="our-work.html#films">All project films</a>
-<a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign">Posada on YouTube</a>
+<a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign" rel="noopener">More films on YouTube</a>
 </div>
 </div>
 </div>
@@ -206,7 +225,7 @@
 <section class="sec" id="what-we-did" style="padding-top:0">
 <div class="wrap">
 <div class="split">
-<div class="media"><div class="frame"><img src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" srcset="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp 720w" sizes="(max-width: 1100px) 100vw, 50vw" width="720" height="900" alt="Curbless walk-in shower with large-format gloss tile, a mitered infinity niche and a handheld shower in Sorrento, FL" loading="lazy" decoding="async"></div></div>
+<div class="media"><div class="frame"><img src="images/sorrento-master-bathroom-remodel-walk-in-shower-vanity-fl.webp" srcset="images/sorrento-master-bathroom-remodel-walk-in-shower-vanity-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-walk-in-shower-vanity-fl.webp 656w" sizes="(max-width: 880px) 100vw, 50vw" width="656" height="820" alt="Master bathroom remodel in Sorrento, FL: glass walk-in shower behind a half wall, white vanity cabinetry and marble-look tile floor" loading="lazy" decoding="async"></div></div>
 <div>
 <span class="eyebrow">What We Did</span>
 <h2>Three problems, <em>solved.</em></h2>
@@ -238,13 +257,12 @@
 <p>Frames lifted straight from the walkthrough, not a photo shoot. Tap any still to enlarge it.</p>
 </div>
 <div class="gal">
-<figure><img src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" srcset="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp 720w" sizes="(max-width: 880px) 100vw, 33vw" width="720" height="900" alt="Curbless walk-in shower with large-format gloss tile, a mitered infinity niche and a handheld shower in Sorrento, FL" loading="lazy" decoding="async"><figcaption><span>Curbless shower &amp; infinity niche</span><span>Shower</span></figcaption></figure>
-<figure><img src="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp" srcset="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp 656w" sizes="(max-width: 880px) 100vw, 33vw" width="656" height="820" alt="Hexagon mosaic shower floor with a tile-in square drain in a Sorrento, FL curbless shower" loading="lazy" decoding="async"><figcaption><span>Hex mosaic floor, lift-out drain</span><span>Shower floor</span></figcaption></figure>
+<figure><img src="images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl.webp" srcset="images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl.webp 660w" sizes="(max-width: 880px) 100vw, 33vw" width="660" height="825" alt="White vanity with drawer bases, satin-finish pulls and a marble-look countertop in a Sorrento, FL master bathroom remodel" loading="lazy" decoding="async"><figcaption><span>Drawer bases &amp; a longer top</span><span>Vanity</span></figcaption></figure>
+<figure><img src="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp" srcset="images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-hex-tile-shower-floor-drain-fl.webp 656w" sizes="(max-width: 880px) 100vw, 33vw" width="656" height="820" alt="Hexagon mosaic shower floor with a tile-in square drain in a Sorrento, FL curbless shower" loading="lazy" decoding="async"><figcaption><span>Hex mosaic floor, <span class="nb" style="white-space:nowrap">lift-out</span> drain</span><span>Shower floor</span></figcaption></figure>
 <figure><img src="images/sorrento-master-bathroom-remodel-rain-shower-head-fl.webp" srcset="images/sorrento-master-bathroom-remodel-rain-shower-head-fl-800.webp 600w, images/sorrento-master-bathroom-remodel-rain-shower-head-fl.webp 720w" sizes="(max-width: 880px) 100vw, 33vw" width="720" height="785" alt="Ceiling-mounted rain shower head and recessed lighting in a Sorrento, FL master bathroom remodel" loading="lazy" decoding="async"><figcaption><span>Rain head &amp; recessed lighting</span><span>Shower ceiling</span></figcaption></figure>
 </div>
 <div class="rev-links">
 <a class="textlink" href="our-work.html">See all our work</a>
-<a class="textlink" href="bathroom-remodeling.html#films">More bathroom films</a>
 </div>
 </div>
 </section>
@@ -306,7 +324,7 @@
 <figure class="svc">
 <div class="num">03</div>
 <h3>Financing</h3>
-<p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Posada is not a lender; rates and terms are set by the lending partner.</p>
+<p>Financing is available through Hearth (NMLS ID&nbsp;1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Posada is not a lender; rates and terms are set by the lending partner.</p>
 <a class="textlink" href="financing.html">See financing options</a>
 </figure>
 </div>
@@ -395,6 +413,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=6" defer></script>
+<script src="assets/posada.js?v=7" defer></script>
 </body>
 </html>
