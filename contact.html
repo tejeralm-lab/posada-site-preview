@@ -41,34 +41,44 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp" imagesrcset="images/mike-posada-owner-posada-remodeling-design-casselberry-fl-800.webp 800w, images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp 1400w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=7">
+<link rel="stylesheet" href="assets/posada.css?v=1792129946">
 <style>
 .c1 .next p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .next p a:hover{color:var(--bronze2)}
-.c1 .hero .panel h1 em{white-space:nowrap}
-.c1 .hero.compact{padding-bottom:72px}
-@media (max-width:880px){.c1 .hero.compact{padding-bottom:48px}}
-.c1 .owner-cue .micro{display:block;margin-top:2px}
-.c1 .hero .proof .nb{white-space:nowrap}
+.c1 #contact{padding-top:56px}
+.c1 #contact h1{font-size:clamp(38px,4.2vw,56px);margin:0 0 18px;color:var(--ivory)}
+.c1 #contact h1 em{color:var(--brassl);white-space:nowrap}
+.c1 #contact .crumb{margin:0 0 18px}
+.c1 #contact .proof{margin:0 0 44px}
+@media (max-width:880px){.c1 #contact{padding-top:36px}}
+@media (max-width:560px){
+.c1 #contact .crumb{margin-bottom:14px}
+.c1 #contact h1{margin-bottom:14px}
+.c1 #contact .lead{font-size:16px;line-height:1.65;margin-bottom:24px}
+.c1 #contact .proof{padding-top:20px;margin-bottom:32px;gap:8px 20px;line-height:1.55}
+}
 .c1 p,.c1 .owner-cue>span{text-wrap:pretty}
 .c1 #end .dia{display:block;margin:0 auto 26px}
 .c1 #end .closing-line{line-height:1.4;text-wrap:balance}
-@media (max-width:880px){
-.c1 p.trust-line .sep{display:block;height:0;overflow:hidden}
-.c1 #end .closing-line{font-size:24px}
-}
-@media (max-width:560px){.c1 .hero .proof .sep{display:block;height:0;overflow:hidden}}
-/* hero crop by width: Mike's head stays clear of the top edge, and the van lettering sits either fully above or fully behind the panel */
-@media (min-width:641px) and (max-width:1159px){.c1 #top .hero-media img{object-position:center 21%!important}}
-@media (min-width:1160px) and (max-width:1249px){.c1 #top .hero-media img{object-position:center 2%!important}}
-@media (min-width:1250px) and (max-width:1339px){.c1 #top .hero-media img{object-position:center 7%!important}}
+@media (max-width:880px){.c1 #end .closing-line{font-size:24px}}
+/* a client's voice beside the form (round 4, fix 8) */
+.c1 .side .side-q{margin:0 0 14px;font-family:var(--serif);font-size:21px;line-height:1.45;font-style:italic;color:var(--ivory);text-wrap:pretty}
+.c1 .side .side-by{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brassl);line-height:1.8}
+.c1 .side .side-by a{border-bottom:1px solid var(--brass);padding-bottom:2px;white-space:nowrap}
+/* on phones (and where the two-column side is narrowest) the review link takes its own line, so no line ends with a dot */
+@media (max-width:480px),(min-width:1101px) and (max-width:1120px){.c1 .side .side-by .sep{display:block;height:0;overflow:hidden}}
+/* round 5: the optional "Best time to reach you" select reads like the text fields beside it: no native box or indent, the same underline height, and a thin brass chevron */
+.c1 #contact select{-webkit-appearance:none;appearance:none;height:45px;line-height:24px;padding:10px 30px 10px 0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23D9C58A' stroke-width='1.3'/%3E%3C/svg%3E") no-repeat right 4px center/12px 8px}
+/* round 5: below 600px the top bar wraps, so the rating takes its own line (sized to its text, so the tap area is only the link) and the separator dot is dropped, so no line ends or starts with a dot; same rule for every page */
+@media (max-width:599px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block;width:fit-content;margin:0 auto}}
+/* round 5: the footer gets an edge after the quiet closing line */
+.c1 .foot{border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline">Complimentary in-home design consultations across Central Florida<span class="hide-m"> &nbsp;·&nbsp; Evenings &amp; weekends available &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep"> &nbsp;·&nbsp; </span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -80,7 +90,7 @@
 <a class="lnk" href="our-work.html">Our Work</a>
 <a class="lnk" href="about.html">Meet Mike</a>
 </nav>
-<a class="logo" href="#top" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo" href="index.html" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <div class="nav-r">
 <a class="tel" href="tel:+14073193503">(407) 319-3503</a>
 <a class="btn" href="#contact">Book a Consultation</a>
@@ -106,43 +116,27 @@
 
 <main id="main">
 <!-- PAGE CONTENT STARTS -->
-<section class="hero compact" id="top">
-<div class="hero-media">
-<img src="images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp" srcset="images/mike-posada-owner-posada-remodeling-design-casselberry-fl-800.webp 800w, images/mike-posada-owner-posada-remodeling-design-casselberry-fl.webp 1400w" sizes="100vw" width="1400" height="934" alt="Mike Posada, owner and founder of Posada Remodeling and Design, beside the company van in Casselberry, FL" style="object-position:center 12%" fetchpriority="high" decoding="async">
-</div>
-<div class="hero-panel">
-<div class="panel on-navy">
-<div class="crumb"><a href="index.html">Home</a><span>›</span><span>Contact</span></div>
-<h1>Tell us about <em>your project.</em></h1>
-<p>One conversation at your home, an honest budget range at the consultation, and an itemized proposal before anything is decided.</p>
-<div class="ctas">
-<a class="btn" href="#contact">Book a Complimentary Consultation</a>
-<a class="textlink" href="tel:+14073193503">Or call (407) 319-3503</a>
-</div>
-<div class="proof">
-<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong><span class="sep"> · </span><span class="nb">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span>
-<span><span class="nb">Veteran-owned</span> · <span class="nb">Family-operated</span><span class="sep"> · </span><span class="nb">Fully insured</span></span>
-</div>
-</div>
-</div>
-</section>
-
 <section class="sec navy on-navy" id="contact">
 <div class="wrap">
 <div class="contact">
 <div>
-<span class="eyebrow">Request a Consultation</span>
-<h2>Start with a <em>conversation.</em></h2>
+<div class="crumb" id="top"><a href="index.html">Home</a><span>›</span><span>Contact</span></div>
+<h1>Tell us about <em>your project.</em></h1>
 <p class="lead">A complimentary consultation at your home. We listen first, then put real numbers on it. No obligation, and we never share your information.</p>
+<div class="proof">
+<span class="pl"><span class="pl-in"><span class="pl-it"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong></span> <span class="pl-it">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span></span>
+<span class="pl"><span class="pl-in"><span class="pl-it">Veteran-owned</span> <span class="pl-it">Family-operated</span> <span class="pl-it">Fully insured</span></span></span>
+</div>
 <form action="thank-you.html" method="get">
-<div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
+<div class="field full"><label for="f-name">Name</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
 <div class="field"><label for="f-phone">Mobile</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" required></div>
-<div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" autocomplete="email"></div>
-<div class="field"><label for="f-city">City or ZIP</label><input id="f-city" type="text" name="city" autocomplete="postal-code"></div>
+<div class="field"><label for="f-time">Best time to reach you <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><select id="f-time" name="best_time"><option value="">Any time works</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select></div>
+<div class="field"><label for="f-email">Email <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-email" type="email" name="email" autocomplete="email"></div>
+<div class="field"><label for="f-city">City or ZIP <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-city" type="text" name="city" autocomplete="postal-code"></div>
 <div class="field full">
 <label>Project type</label>
 <div class="chips">
-<span class="chip"><input type="radio" id="p-k" name="project" value="Kitchen" checked><label for="p-k">Kitchen</label></span>
+<span class="chip"><input type="radio" id="p-k" name="project" value="Kitchen"><label for="p-k">Kitchen</label></span>
 <span class="chip"><input type="radio" id="p-b" name="project" value="Bathroom"><label for="p-b">Bathroom</label></span>
 <span class="chip"><input type="radio" id="p-f" name="project" value="Flooring"><label for="p-f">Flooring</label></span>
 <span class="chip"><input type="radio" id="p-w" name="project" value="Whole home"><label for="p-w">Whole home</label></span>
@@ -150,10 +144,10 @@
 </div>
 <div class="field full"><label for="f-msg">Tell us a little about it <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
 <div class="field full file"><label for="f-photos">Photos of the space <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-photos" type="file" name="photos" accept="image/*" multiple></div>
-<div class="field full consent"><input type="checkbox" id="f-sms" name="sms_consent" value="yes"><label for="f-sms"><strong>Yes, text me about my project.</strong><small>By checking this box I agree to receive text messages from Posada Remodeling &amp; Design at the number provided, including automated messages. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out or HELP for help. See our Privacy Policy.</small></label></div>
+<div class="field full consent"><input type="checkbox" id="f-sms" name="sms_consent" value="yes"><label for="f-sms"><strong>Yes, text me about my project.</strong><small>By checking this box I agree to receive text messages from Posada Remodeling &amp; Design at the number provided, including automated messages. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="https://posadaremodeling.com/privacy-policy/" style="text-decoration:underline">Privacy Policy</a>.</small></label></div>
 <div class="submit-row">
 <button class="btn" type="submit">Book My Complimentary Consultation</button>
-<div class="owner-cue"><img src="images/mike-posada-owner-founder-headshot.webp" srcset="images/mike-posada-owner-founder-headshot.webp 427w" sizes="56px" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"><span>Your request is in Mike's hands. We reply within 24&nbsp;hours.<span class="micro">Evening and weekend consultations available.</span></span></div>
+<div class="owner-cue"><img src="images/mike-posada-owner-founder-headshot.webp" srcset="images/mike-posada-owner-founder-headshot.webp 427w" sizes="56px" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"><span>Our team reads every request, and Mike personally oversees&nbsp;every&nbsp;project. We reply within 24&nbsp;hours.<span class="micro">Evening and weekend consultations available.</span></span></div>
 </div>
 </form>
 </div>
@@ -176,6 +170,7 @@
 <h4>West Orlando</h4>
 <p>Design consultations in Winter Garden, by appointment</p>
 </div>
+<div class="blk"><h4>In a Client&rsquo;s Words</h4><blockquote class="side-q">&ldquo;They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was excellent.&rdquo;</blockquote><p class="side-by">Norman M. · Remodel<span class="sep" aria-hidden="true"> · </span><a href="https://maps.google.com/maps?cid=3116045480222163497">Read all reviews on Google</a></p></div>
 </div>
 </div>
 </div>
@@ -214,21 +209,13 @@
 </div>
 </li>
 </ol>
-<p class="notice" style="margin-top:28px">Evening and weekend consultations are available. Tell us in the form what works for your family and we will plan the visit around it.</p>
+<p class="notice" style="margin-top:28px">Evening and weekend consultations are available. Choose the best time to reach you in the form, and we will plan the visit around your family.</p>
 </div>
 </div>
-</div>
-<div class="wrap" style="margin-top:72px;margin-bottom:8px">
-<div class="trust three" style="margin-top:0">
-<a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
-<div class="cell"><div class="n">14+</div><div class="l">Years of remodeling<br>experience</div></div>
-<div class="cell"><div class="n">3 yrs</div><div class="l">Labor &amp; installation<br>warranty</div></div>
-</div>
-<p class="trust-line"><span class="nb">Veteran-owned</span> · <span class="nb">Family-operated</span><span class="sep"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
 </div>
 </section>
 
-<section class="sec" id="end" style="padding-top:40px;padding-bottom:110px">
+<section class="sec" id="end" style="padding-top:40px;padding-bottom:72px">
 <div class="wrap">
 <span class="dia" aria-hidden="true"></span>
 <p class="closing-line">Every project begins with a&nbsp;conversation at your kitchen table.</p>
@@ -242,15 +229,15 @@
 <div class="wrap">
 <div class="foot-grid">
 <div>
-<a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo foot-logo" href="index.html" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida. Veteran-owned · Family-operated · Fully insured.</p>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br>Veteran-owned&nbsp;· Family-operated&nbsp;· Fully insured.</p>
 <div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a> · <a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
 <a href="https://www.youtube.com/@PosadaRemodelingDesign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg>YouTube</a>
 <a href="https://www.facebook.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"></path></svg>Facebook</a>
-<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5" stroke-linecap="round"></path></svg>Google Reviews</a>
+<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3.5l2.55 5.2 5.7.83-4.13 4.02.98 5.68L12 16.55l-5.1 2.68.98-5.68-4.13-4.02 5.7-.83z" stroke-linejoin="round"></path></svg>Google Reviews</a>
 <a href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M7 9h10M7 12h10M7 15h6" stroke-linecap="round"></path></svg>BBB Accredited</a>
 </div>
 </div>
@@ -282,8 +269,8 @@
 <li><a href="kitchen-remodeling.html">Orlando</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary &amp; Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo &amp; Windermere</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere</a></li>
 <li><a href="service-areas.html">All service areas</a></li>
 </ul>
 </div>
@@ -302,6 +289,8 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=7" defer></script>
+<script src="assets/posada.js?v=1792129946" defer></script>
+<script>document.querySelectorAll('form[action="thank-you.html"]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();location.href='thank-you.html';});});</script>
+<script>(function(){var m={kitchen:'p-k',bathroom:'p-b',flooring:'p-f','whole-home':'p-w'},k=new URLSearchParams(location.search).get('project');if(!m[k]&&document.referrer){try{var r=new URL(document.referrer);if(r.host===location.host){var pa=r.pathname.toLowerCase();k=/kitchen/.test(pa)?'kitchen':/bath/.test(pa)?'bathroom':/floor/.test(pa)?'flooring':null;}}catch(e){}}var el=document.getElementById(m[k]);if(el&&!document.querySelector('input[name="project"]:checked'))el.checked=true;})();</script>
 </body>
 </html>

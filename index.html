@@ -39,21 +39,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp" imagesrcset="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants-800.webp 800w, images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp 2000w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=7">
+<link rel="stylesheet" href="assets/posada.css?v=1792129946">
 <style>
 .c1 p,.c1 li,.c1 blockquote,.c1 figcaption,.c1 summary,.c1 .owner-cue span,.c1 .micro{text-wrap:pretty}
 .c1 .on-navy h3 em{color:var(--brassl)}
-.c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:20px}
-.c1 .fin .guide p{max-width:400px}
+.c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:16px}
+.c1 .fin .guide p{max-width:none}
+.c1 #investment .fin ul{margin-bottom:24px}
+.c1 #investment .fin .ctas{row-gap:18px}
 .c1 .rev-links .quiet{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
 .c1 .rev-links .quiet a{color:var(--bronze2);border-bottom:1px solid var(--line);padding-bottom:3px;margin-left:6px}
 .c1 .rev-links .quiet a:hover{color:var(--navy);border-color:var(--brass)}
 .c1 .promise-foot .nb,.c1 .owner-cue .nb{white-space:nowrap}
+/* phones: the insurance pair stacks instead of ending its first line on a hanging dot (same pattern as p.trust-line) */
+@media (max-width:600px){.c1 .promise-foot .pf-ins .sep{display:none}.c1 .promise-foot .pf-ins .nb{display:block}}
 .c1 #investment .sec-head h2{max-width:640px}
+/* round 6: the combined-project link under the price table stays on one line (at 1101px it split as 'How a / combined project works') */
+.c1 #investment p.fine a{white-space:nowrap}
 .c1 #areas .areas{gap:72px}
-.c1 #areas .area-list{column-gap:32px}
-.c1 #areas .area-list li{gap:12px}
-.c1 #areas .area-list a{text-wrap:balance}
+.c1 #areas .area-list{grid-template-columns:1fr}
+.c1 #areas .area-list li{align-items:center;gap:16px;padding:0}
+.c1 #areas .area-list li .city{padding:12px 0;font-size:15.5px;letter-spacing:0;text-transform:none;color:var(--navy)}
+.c1 #areas .area-list li .go{display:flex;gap:6px;flex-shrink:0}
+.c1 #areas .area-list li .go a{display:inline-flex;align-items:center;min-height:44px;padding-left:14px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--bronze2);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:6px}
+.c1 #areas .area-list li .go a:hover,.c1 #areas .area-list li .go a:focus-visible{color:var(--navy);text-decoration-color:var(--brass)}
+.c1 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+/* round 5: "What Happens Next" fills the navy column beside the form (wording from contact.html's three steps). The heading block spans both columns, so from 1101px the side starts level with the Name field and ends level with the submit button instead of leaving empty navy beside it. Step 01 reads "We call or text to set a time that suits you" (contact.html step 1) rather than the round-5 text "We reply within 24 hours, by call or text": this same column already says "We reply within 24 hours" under the phone number, and the owner-cue says it again beside the submit button, so a third copy would repeat it verbatim within one band (on phones, within about one screen) */
+.c1 #contact .contact{row-gap:0}.c1 #contact .c-head{grid-column:1 / -1}
+@media (max-width:1100px){.c1 #contact .side{margin-top:56px}}
+/* the optional "Best time to reach you" select reads like the text fields beside it: no native box or indent, the same underline height, and a thin brass chevron (same rule as contact.html) */
+.c1 #contact select{-webkit-appearance:none;appearance:none;height:45px;line-height:24px;padding:10px 30px 10px 0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23D9C58A' stroke-width='1.3'/%3E%3C/svg%3E") no-repeat right 4px center/12px 8px}
+/* hero crop: the img's inline object-position is center 4%, not the round-5 text's 8%. Measured under the new band: at 1920x970 (photo 1920x692), 8% lets the top ~10px of the outlet on the island's end panel into the bottom of the photo and cuts the cap off the front lantern; 4% keeps the lantern cap and chain ring and keeps the outlet out at 1920x970, 1440x790 and 1280x640 (only a pixel or two to spare at 1920x970, so do not raise it) */
+/* topline on phones: the short line and the rating each take a line, and the separator between them is dropped, so no dot hangs at a line end (it wrapped at 550px and below; 601-880 keeps one line with the dot) */
+@media (max-width:600px){.c1 .topline .show-m{display:block}.c1 .topline .tl-sep{display:none}}
+/* round 6: the kicker names Winter Park; on phones it tightens to .14em at 10px so it holds 3 lines (4 without this) and sits quieter under the headline */
+@media (max-width:600px){.c1 .panel .kicker{letter-spacing:.14em;font-size:10px}}
+/* footer about line: the trust phrases need about 296px on one line. At 881-1000px the first footer column is 268-314px, and they wrapped onto a hanging dot plus "Fully insured." alone (881-953px); phones narrower than 360px do the same. In those bands each phrase takes its own line; everywhere else it stays one line. The phone and email line under the address hung its dot in the same bands (881-955px, under 340px), so it stacks there too */
+.c1 .foot .about .nb{white-space:nowrap}
+@media (min-width:881px) and (max-width:1000px),(max-width:359px){.c1 .foot .about .sep,.c1 .foot .nap .sep{display:none}.c1 .foot .about .nb,.c1 .foot .nap a{display:block}}
+.c1 .side .next-steps{list-style:none;margin:6px 0 0;padding:0}.c1 .side .next-steps li{display:flex;gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid var(--lined);font-size:15px;line-height:1.6;color:rgba(246,242,236,.86)}.c1 .side .next-steps li:first-child{border-top:0;padding-top:0}.c1 .side .next-steps span{font-family:var(--serif);font-size:22px;color:var(--brassl);min-width:28px}
 @media (max-width:880px){
 .c1 .trust.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .c1 .trust.three .cell{padding:24px 6px}
@@ -61,13 +85,16 @@
 .c1 .trust.three .n{font-size:30px}
 .c1 .trust.three .l{letter-spacing:.14em}
 .c1 .trust-line{line-height:1.9}
+/* tablets too (601-880): the long home trust line wrapped onto a hanging dot at 601-800, so it stacks as it does on phones */
+.c1 p.trust-line .sep{display:none}
+.c1 p.trust-line .nb{display:block}
 }
 </style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline">Complimentary in-home design consultations across Central Florida<span class="hide-m"> &nbsp;·&nbsp; Evenings &amp; weekends available &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep"> &nbsp;·&nbsp; </span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -106,29 +133,28 @@
 <main id="main">
 <section class="hero" id="top">
 <div class="hero-media">
-<img src="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp" srcset="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants-800.webp 800w, images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp 2000w" sizes="100vw" width="2000" height="1092" alt="Remodeled kitchen in Winter Garden, FL with a quartz island, leather counter stools, wood cabinetry and lantern pendants" fetchpriority="high" decoding="async">
+<img src="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp" srcset="images/kitchen-remodel-winter-garden-fl-island-lantern-pendants-800.webp 800w, images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp 2000w" sizes="100vw" width="2000" height="1092" alt="Remodeled kitchen in Winter Garden, FL with a quartz island, leather counter stools, wood cabinetry and lantern pendants" fetchpriority="high" decoding="async" style="object-position:center 4%">
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
-<h1><span class="kicker">Luxury kitchen, bathroom &amp; flooring remodeling in Orlando &amp; Central Florida</span>The kitchen you've been <em>picturing</em>, finished to the last detail.</h1>
+<h1><span class="kicker">Luxury kitchen, bathroom&nbsp;&amp; flooring remodeling in Orlando, Winter&nbsp;Park&nbsp;&amp; Central Florida</span>The kitchen you&rsquo;ve been <em>picturing</em>, finished to the last detail.</h1>
 <p>One team designs, prices and builds your remodel, from the first sketch to the final walkthrough.</p>
 <div class="ctas">
 <a class="btn" href="#contact">Book a Complimentary Consultation</a>
 <a class="textlink" href="#work">See our work</a>
 </div>
-<div class="proof">
-<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · 60+&nbsp;<span class="nb" style="white-space:nowrap">five-star</span>&nbsp;reviews</span>
-<span>Veteran-owned · Family-operated · Fully insured</span>
 </div>
 </div>
-</div>
+</section>
+
+<section class="trust-band">
 <div class="wrap">
 <div class="trust three">
 <a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
 <div class="cell"><div class="n">14+</div><div class="l">Years of remodeling<br>experience</div></div>
 <div class="cell"><div class="n">3 yrs</div><div class="l">Labor &amp; installation<br>warranty</div></div>
 </div>
-<p class="trust-line"><span class="nb">Veteran-owned</span> · <span class="nb">Family-operated</span> · <span class="nb">Fully insured, certificate on request</span> · <a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
+<p class="trust-line"><span class="nb">Veteran-owned</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Family-operated</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep" aria-hidden="true"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
 </div>
 </section>
 
@@ -187,13 +213,13 @@
 <figcaption>
 <div class="num">02</div>
 <h3>Bathrooms &amp; Walk-In Showers</h3>
-<p>Walk-in showers, tub-to-shower conversions with frameless glass, custom vanities, designer tile and spa-style primary suites.</p>
+<p>Walk-in showers, tub-to-shower conversions with frameless glass, custom vanities, designer tile and <span style="white-space:nowrap">spa-style</span> primary suites.</p>
 <p class="range">Typical investment $8,000 to $40,000+</p>
 <a class="textlink" href="bathroom-remodeling.html">Explore bathrooms</a>
 </figcaption>
 </figure>
 <figure class="svc" id="flooring">
-<div class="ph"><img src="images/wide-plank-flooring-installation-living-room-central-florida.webp" srcset="images/wide-plank-flooring-installation-living-room-central-florida-800.webp 800w, images/wide-plank-flooring-installation-living-room-central-florida.webp 900w" sizes="(max-width: 880px) 100vw, 33vw" width="900" height="504" alt="Wide plank flooring installation in a Central Florida living room" loading="lazy" decoding="async"></div>
+<div class="ph"><img src="images/wide-plank-flooring-installation-living-room-central-florida.webp" srcset="images/wide-plank-flooring-installation-living-room-central-florida-800.webp 800w, images/wide-plank-flooring-installation-living-room-central-florida.webp 900w" sizes="(max-width: 880px) 100vw, 60vw" width="900" height="504" alt="Wide plank flooring installation in a Central Florida living room" loading="lazy" decoding="async"></div>
 <figcaption>
 <div class="num">03</div>
 <h3>Flooring for Florida Homes</h3>
@@ -216,12 +242,12 @@
 <a class="btn-line" href="our-work.html">View All Projects</a>
 </div>
 <div class="work-grid">
-<figure class="w1"><img src="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" srcset="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w" sizes="(max-width: 880px) 100vw, 40vw" width="1228" height="1800" alt="Kitchen remodel in Winter Garden, FL with a custom wood range hood, white shaker cabinets, coffee bar and lantern pendants" loading="lazy" decoding="async"><figcaption><span>Custom kitchen</span><span>Winter Garden</span></figcaption></figure>
-<figure class="w2"><img src="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp" srcset="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl-800.webp 480w, images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Custom wood range hood and wall-mounted pot filler above the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async" style="object-position:center 30%"><figcaption><span>Wood hood &amp; pot filler</span><span>Kitchen</span></figcaption></figure>
-<figure class="w3"><img src="images/marble-walk-in-shower-remodel-central-florida.webp" srcset="images/marble-walk-in-shower-remodel-central-florida-800.webp 600w, images/marble-walk-in-shower-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 25vw" width="1350" height="1800" alt="Marble-look walk-in shower remodel with a glass enclosure in Central Florida" loading="lazy" decoding="async"><figcaption><span>Marble-look walk-in shower</span><span>Bath</span></figcaption></figure>
-<figure class="w4"><img src="images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp" srcset="images/stone-fireplace-feature-wall-living-room-remodel-central-florida-800.webp 600w, images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 25vw" width="1350" height="1800" alt="Living room remodel with a floor-to-ceiling stone fireplace feature wall in Central Florida" loading="lazy" decoding="async" style="object-position:center 45%"><figcaption><span>Stone fireplace wall</span><span>Living room</span></figcaption></figure>
-<figure class="w5"><img src="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" srcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Primary bathroom remodel with a soaking tub and a textured leaf accent wall in Central Florida" loading="lazy" decoding="async"><figcaption><span>Soaking tub &amp; textured wall</span><span>Primary bath</span></figcaption></figure>
-<figure class="w6"><img src="images/bathroom-vanity-led-mirror-oak-central-florida.webp" srcset="images/bathroom-vanity-led-mirror-oak-central-florida-800.webp 599w, images/bathroom-vanity-led-mirror-oak-central-florida.webp 1199w" sizes="(max-width: 880px) 100vw, 40vw" width="1199" height="1600" alt="Bathroom remodel with an oak vanity, quartz top and LED mirror in Central Florida" loading="lazy" decoding="async"><figcaption><span>Vanity with lit mirror</span><span>Bath</span></figcaption></figure>
+<figure class="w1"><img src="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" srcset="images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w" sizes="(max-width: 880px) 100vw, 40vw" width="1228" height="1800" alt="Coffee bar in a Winter Garden, FL kitchen remodel with a brick herringbone backsplash, floating wood shelves, glass-front white cabinets and a wine fridge" loading="lazy" decoding="async"><figcaption><span>Custom kitchen</span><span>Winter&nbsp;Garden</span></figcaption></figure>
+<figure class="w2"><img src="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp" srcset="images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl-800.webp 480w, images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Custom wood range hood and wall-mounted pot filler above the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async" style="object-position:center 30%"><figcaption><span>Wood hood &amp; pot filler</span><span>Winter&nbsp;Garden</span></figcaption></figure>
+<figure class="w3"><img src="images/marble-walk-in-shower-remodel-central-florida.webp" srcset="images/marble-walk-in-shower-remodel-central-florida-800.webp 600w, images/marble-walk-in-shower-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 25vw" width="1350" height="1800" alt="Marble-look walk-in shower remodel with a glass enclosure in Central Florida" loading="lazy" decoding="async"><figcaption><span>Walk-in shower</span><span>Central&nbsp;Florida</span></figcaption></figure>
+<figure class="w4"><img src="images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp" srcset="images/stone-fireplace-feature-wall-living-room-remodel-central-florida-800.webp 600w, images/stone-fireplace-feature-wall-living-room-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 25vw" width="1350" height="1800" alt="Living room remodel with a floor-to-ceiling stone fireplace feature wall in Central Florida" loading="lazy" decoding="async" style="object-position:center 45%"><figcaption><span>Stone fireplace</span><span>Central&nbsp;Florida</span></figcaption></figure>
+<figure class="w5"><img src="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" srcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Primary bathroom remodel with a soaking tub and a textured leaf accent wall in Central Florida" loading="lazy" decoding="async"><figcaption><span>Soaking tub, primary bath</span><span>Central&nbsp;Florida</span></figcaption></figure>
+<figure class="w6"><img src="images/bathroom-vanity-led-mirror-oak-central-florida.webp" srcset="images/bathroom-vanity-led-mirror-oak-central-florida-800.webp 599w, images/bathroom-vanity-led-mirror-oak-central-florida.webp 1199w" sizes="(max-width: 880px) 100vw, 40vw" width="1199" height="1600" alt="Bathroom remodel with an oak vanity, quartz top and LED mirror in Central Florida" loading="lazy" decoding="async"><figcaption><span>Floating vanity</span><span>Central&nbsp;Florida</span></figcaption></figure>
 </div>
 <div class="video on-navy">
 <a class="vid-media yt person" id="vid" href="https://www.youtube.com/watch?v=7jUmuJo31jc" data-yt="7jUmuJo31jc" data-title="Two Bathroom Remodel in Dr. Phillips, Orlando FL | Full Walkthrough" aria-label="Play the video: Two Bathroom Remodel in Dr. Phillips, full walkthrough with Mike">
@@ -236,14 +262,7 @@
 <div class="rev-links" style="margin-top:0"><a class="textlink" href="project-dr-phillips-two-bathrooms.html">Read the project story</a><a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign">More films on YouTube</a></div>
 </div>
 </div>
-<div class="gal-cap" style="margin-top:40px"><span>More every week</span><a href="https://www.instagram.com/posadaremodelingdesign/">Follow along @posadaremodelingdesign</a></div>
-<div class="insta" style="margin-top:18px">
-<a href="https://www.instagram.com/posadaremodelingdesign/" aria-label="Posada on Instagram"><img src="images/floral-tile-shower-niche-dr-phillips-orlando-fl-800.webp" srcset="images/floral-tile-shower-niche-dr-phillips-orlando-fl-800.webp 640w, images/floral-tile-shower-niche-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 33vw, 20vw" width="640" height="800" alt="Shower niche with floral accent tile and a brass soap dispenser in a Dr. Phillips, Orlando bathroom remodel" loading="lazy" decoding="async"></a>
-<a href="https://www.instagram.com/posadaremodelingdesign/" aria-label="Posada on Instagram"><img src="images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl-800.webp" srcset="images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl-800.webp 480w, images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp 608w" sizes="(max-width: 880px) 33vw, 20vw" width="480" height="600" alt="Winter Garden, FL kitchen remodel with lantern pendants over the quartz island, white and wood cabinetry and a custom wood range hood" loading="lazy" decoding="async"></a>
-<a href="https://www.instagram.com/posadaremodelingdesign/" aria-label="Posada on Instagram"><img src="images/bonus-room-remodel-central-florida-800.webp" srcset="images/bonus-room-remodel-central-florida-800.webp 600w, images/bonus-room-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 33vw, 20vw" width="600" height="800" alt="Bonus room remodel with new flooring and finishes in Central Florida" loading="lazy" decoding="async"></a>
-<a href="https://www.instagram.com/posadaremodelingdesign/" aria-label="Posada on Instagram"><img src="images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl-800.webp" srcset="images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl-800.webp 480w, images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp 608w" sizes="(max-width: 880px) 33vw, 20vw" width="480" height="600" alt="Apron-front workstation farm sink with a sliding cutting board and matte black faucet in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async" style="object-position:center 15%"></a>
-<a href="https://www.instagram.com/posadaremodelingdesign/" aria-label="Posada on Instagram"><img src="images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl-800.webp" srcset="images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl-800.webp 640w, images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 33vw, 20vw" width="640" height="800" alt="Hexagon tile shower floor with a square brass drain in a Dr. Phillips, Orlando bathroom remodel" loading="lazy" decoding="async" style="object-position:center 0%"></a>
-</div>
+<div class="gal-cap" style="margin-top:32px"><span>New work every week</span><a href="https://www.instagram.com/posadaremodelingdesign/">Follow along on Instagram</a></div>
 </div>
 </section>
 
@@ -256,7 +275,7 @@
 <div>
 <span class="eyebrow">Meet the Owner</span>
 <h2>Mike Posada, <em>owner &amp; founder.</em></h2>
-<blockquote>"Choosing a remodeler is a decision about trust. You are welcoming a team into the heart of your home, and that is something we never take lightly."</blockquote>
+<blockquote>&ldquo;Choosing a remodeler is a decision about trust. You are welcoming a team into the heart of your home, and that is something we never take lightly.&rdquo;</blockquote>
 <p>Mike learned the craft working alongside his father, where quality was never optional. After military service and a career in law enforcement, he built Posada on the same discipline: honest numbers, clear communication, and craftsmanship the family is proud to sign its name to.</p>
 <p>With more than fourteen years of remodeling experience, Mike personally oversees every kitchen, bathroom and flooring project the studio takes on.</p>
 <div class="sig">— Mike</div>
@@ -266,7 +285,7 @@
 <div class="team">
 <div class="member"><img src="images/mike-posada-owner-founder-headshot.webp" srcset="images/mike-posada-owner-founder-headshot-800.webp 427w, images/mike-posada-owner-founder-headshot.webp 427w" sizes="(max-width: 880px) 50vw, 25vw" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"><div class="who">Mike Posada</div><div class="role">Owner &amp; Founder</div></div>
 <div class="member"><img src="images/josh-castillo-project-manager-posada-remodeling.webp" srcset="images/josh-castillo-project-manager-posada-remodeling-800.webp 400w, images/josh-castillo-project-manager-posada-remodeling.webp 400w" sizes="(max-width: 880px) 50vw, 25vw" width="400" height="599" alt="Josh Castillo, project manager at Posada Remodeling and Design" loading="lazy" decoding="async" style="object-position:38% 0%;transform:scale(1.2);transform-origin:50% 35%;clip-path:inset(5.834% 8.334% 10.834% 8.334%);filter:saturate(.82) brightness(.96)"><div class="who">Josh Castillo</div><div class="role">Project Manager</div></div>
-<div class="member"><img src="images/yani-tejera-interior-design-advisor-posada-remodeling.webp" srcset="images/yani-tejera-interior-design-advisor-posada-remodeling-800.webp 400w, images/yani-tejera-interior-design-advisor-posada-remodeling.webp 400w" sizes="(max-width: 880px) 50vw, 25vw" width="400" height="558" alt="Yani Tejera, interior design advisor at Posada Remodeling and Design" loading="lazy" decoding="async"><div class="who">Yani Tejera</div><div class="role">Interior Design Advisor</div></div>
+<div class="member"><img src="images/yani-tejera-interior-design-advisor-posada-remodeling.webp" srcset="images/yani-tejera-interior-design-advisor-posada-remodeling-800.webp 400w, images/yani-tejera-interior-design-advisor-posada-remodeling.webp 400w" sizes="(max-width: 880px) 50vw, 25vw" width="400" height="558" alt="Yani Tejera, interior design advisor at Posada Remodeling and Design" loading="lazy" decoding="async"><div class="who">Yani Tejera</div><div class="role">Interior <span style="white-space:nowrap">Design Advisor</span></div></div>
 <div class="member"><img src="images/manny-tejera-vice-president-posada-remodeling.webp" srcset="images/manny-tejera-vice-president-posada-remodeling-800.webp 400w, images/manny-tejera-vice-president-posada-remodeling.webp 400w" sizes="(max-width: 880px) 50vw, 25vw" width="400" height="558" alt="Manny Tejera, vice president at Posada Remodeling and Design" loading="lazy" decoding="async"><div class="who">Manny Tejera</div><div class="role">Vice President</div></div>
 </div>
 <div style="margin-top:36px"><a class="textlink" href="about.html">Meet the whole team</a></div>
@@ -296,7 +315,7 @@
 <div class="step">
 <div class="rn">03</div>
 <h3>Itemized proposal</h3>
-<p>Line by line: labor, materials and timeline. Pick the upgrades you want and leave out anything you don't.</p>
+<p>Line by line: labor, materials and timeline. Pick the upgrades you want and leave out anything you don&rsquo;t.</p>
 </div>
 <div class="step">
 <div class="rn">04</div>
@@ -327,7 +346,7 @@
 <p>A three-year labor and installation warranty on every project we do.</p>
 </div>
 <div class="tile">
-<div class="big">Lifetime</div>
+<div class="big">Up to lifetime</div>
 <div class="k">Shower waterproofing</div>
 <p>Three-year, ten-year and lifetime warranties on our shower waterproofing systems, where included.</p>
 </div>
@@ -338,7 +357,7 @@
 </div>
 </div>
 <div class="promise-foot">
-<span><span class="nb">Fully insured</span> · <span class="nb">Certificate of insurance on request</span></span>
+<span class="pf-ins"><span class="nb">Fully insured</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Certificate of insurance on request</span></span>
 <span>Complete written warranty terms <span class="nb">before you sign</span></span>
 </div>
 </div>
@@ -359,25 +378,25 @@
 <div class="rev-grid">
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>"We chose Posada for our new floors and full kitchen remodel and we couldn't be happier. Mike and his team are professional, hard workers, and very detail oriented. They were respectful to our home and went above and beyond to satisfy our vision."</blockquote>
+<blockquote>&ldquo;We chose Posada for our new floors and full kitchen remodel and we couldn&rsquo;t be happier. Mike and his team are professional, hard workers, and very detail oriented. They were respectful to our home and went above and beyond to satisfy our vision.&rdquo;</blockquote>
 <div class="who">Christina A.</div>
 <div class="src">Full kitchen remodel &amp; new floors · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>"They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was excellent."</blockquote>
+<blockquote>&ldquo;They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was excellent.&rdquo;</blockquote>
 <div class="who">Norman M.</div>
 <div class="src">Remodel · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>"Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and ideas."</blockquote>
+<blockquote>&ldquo;Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and ideas.&rdquo;</blockquote>
 <div class="who">Jamie H.</div>
 <div class="src">Three bathrooms &amp; kitchen floors · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>"Mike and his team did an excellent job remodeling our kitchen. His attention to detail and willingness to satisfy us were top notch. We felt heard when we made suggestions. We would hire him and his team again in an instant."</blockquote>
+<blockquote>&ldquo;Mike and his team did an excellent job remodeling our kitchen. His attention to detail and willingness to satisfy us were top notch. We felt heard when we made suggestions. We would hire him and his team again in an instant.&rdquo;</blockquote>
 <div class="who">Michel B.</div>
 <div class="src">Kitchen remodel · Google review</div>
 </div>
@@ -414,6 +433,7 @@
 </tbody>
 </table>
 <p class="fine">Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact, and we confirm your range at the consultation.</p>
+<p class="fine">Planning several rooms at once? One team designs and builds kitchens, bathrooms and floors together, with every room itemized in your written proposal. <a href="faqs.html#both" style="border-bottom:1px solid #C4A24E">How a combined project works</a>.</p>
 </div>
 <div class="fin">
 <span class="eyebrow">Financing</span>
@@ -424,8 +444,8 @@
 <li><span class="dia" aria-hidden="true"></span><span>Soft credit check that does not affect your score</span></li>
 <li><span class="dia" aria-hidden="true"></span><span>Posada is not a lender; rates and terms are set by the lending partner</span></li>
 </ul>
-<a class="btn-navy" href="financing.html">See Financing Options</a>
-<div class="guide" style="margin-top:36px;padding-top:28px;border-top:1px solid var(--line)"><div><div class="k">The 2026 Kitchen &amp; Bath Guide</div><p>Our printed guide: real project photos, what remodels cost in Central Florida, our seven-step process and every warranty, in one PDF.</p></div><a class="btn-line" href="Posada-2026-Kitchen-Bath-Guide.pdf">Download the Guide</a></div>
+<div class="ctas"><a class="btn" href="#contact">Book a Complimentary Consultation</a><a class="textlink" href="financing.html">See financing options</a></div>
+<div class="guide" style="margin-top:28px;padding-top:24px;border-top:1px solid var(--line)"><div><div class="k">The 2026 Kitchen &amp; Bath Guide</div><p>Our printed guide: real project photos, what remodels cost in Central Florida, our seven-step process and every warranty, in one PDF.</p></div><a class="btn-line" href="Posada-2026-Kitchen-Bath-Guide.pdf">Download the Guide</a></div>
 </div>
 </div>
 </div>
@@ -441,14 +461,14 @@
 <a class="textlink" href="service-areas.html">All service areas</a>
 </div>
 <ul class="area-list">
-<li><a href="kitchen-remodeling.html">Kitchen remodeling in Orlando</a><span>Orange</span></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Kitchen remodeling in Winter Park</a><span>Orange</span></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-lake-mary-fl/">Bathroom remodeling in Lake Mary</a><span>Seminole</span></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Remodeling in Winter Garden</a><span>Orange</span></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Remodeling in Windermere</a><span>Orange</span></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Remodeling in Longwood</a><span>Seminole</span></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Remodeling in Oviedo</a><span>Seminole</span></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-casselberry-fl/">Remodeling in Casselberry</a><span>Seminole</span></li>
+<li><span class="city">Casselberry</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-casselberry-fl/">Kitchen<span class="sr"> remodeling in Casselberry</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-casselberry-fl/">Bath<span class="sr">room remodeling in Casselberry</span></a></span></li>
+<li><span class="city">Lake Mary</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Kitchen<span class="sr"> remodeling in Lake Mary</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-lake-mary-fl/">Bath<span class="sr">room remodeling in Lake Mary</span></a></span></li>
+<li><span class="city">Longwood</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Kitchen<span class="sr"> remodeling in Longwood</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-longwood-fl/">Bath<span class="sr">room remodeling in Longwood</span></a></span></li>
+<li><span class="city">Orlando</span><span class="go"><a href="kitchen-remodeling.html">Kitchen<span class="sr"> remodeling in Orlando</span></a><a href="bathroom-remodeling.html">Bath<span class="sr">room remodeling in Orlando</span></a></span></li>
+<li><span class="city">Oviedo</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Kitchen<span class="sr"> remodeling in Oviedo</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-oviedo-fl/">Bath<span class="sr">room remodeling in Oviedo</span></a></span></li>
+<li><span class="city">Windermere</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Kitchen<span class="sr"> remodeling in Windermere</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-windermere-fl/">Bath<span class="sr">room remodeling in Windermere</span></a></span></li>
+<li><span class="city">Winter Garden</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Kitchen<span class="sr"> remodeling in Winter Garden</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-winter-garden-fl/">Bath<span class="sr">room remodeling in Winter Garden</span></a></span></li>
+<li><span class="city">Winter Park</span><span class="go"><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Kitchen<span class="sr"> remodeling in Winter Park</span></a><a href="https://posadaremodeling.com/bathroom-remodeling-winter-park/">Bath<span class="sr">room remodeling in Winter Park</span></a></span></li>
 </ul>
 </div>
 </div>
@@ -490,19 +510,22 @@
 <section class="sec navy on-navy" id="contact">
 <div class="wrap">
 <div class="contact">
-<div>
+<div class="c-head">
 <span class="eyebrow">Begin Here</span>
 <h2>Tell us about <em>your project.</em></h2>
 <p class="lead">A complimentary consultation at your home. We listen first, then put real numbers on it. No obligation, and we never share your information.</p>
+</div>
+<div>
 <form action="thank-you.html" method="get">
-<div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
+<div class="field full"><label for="f-name">Name</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
 <div class="field"><label for="f-phone">Mobile</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" required></div>
-<div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" autocomplete="email"></div>
-<div class="field"><label for="f-city">City or ZIP</label><input id="f-city" type="text" name="city" autocomplete="postal-code"></div>
+<div class="field"><label for="f-time">Best time to reach you <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><select id="f-time" name="best_time"><option value="">Any time works</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select></div>
+<div class="field"><label for="f-email">Email <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-email" type="email" name="email" autocomplete="email"></div>
+<div class="field"><label for="f-city">City or ZIP <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-city" type="text" name="city" autocomplete="postal-code"></div>
 <div class="field full">
 <label>Project type</label>
 <div class="chips">
-<span class="chip"><input type="radio" id="p-k" name="project" value="Kitchen" checked><label for="p-k">Kitchen</label></span>
+<span class="chip"><input type="radio" id="p-k" name="project" value="Kitchen"><label for="p-k">Kitchen</label></span>
 <span class="chip"><input type="radio" id="p-b" name="project" value="Bathroom"><label for="p-b">Bathroom</label></span>
 <span class="chip"><input type="radio" id="p-f" name="project" value="Flooring"><label for="p-f">Flooring</label></span>
 <span class="chip"><input type="radio" id="p-w" name="project" value="Whole home"><label for="p-w">Whole home</label></span>
@@ -510,11 +533,10 @@
 </div>
 <div class="field full"><label for="f-msg">Tell us a little about it <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
 <div class="field full file"><label for="f-photos">Photos of the space <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-photos" type="file" name="photos" accept="image/*" multiple></div>
-<div class="field full consent"><input type="checkbox" id="f-sms" name="sms_consent" value="yes"><label for="f-sms"><strong>Yes, text me about my project.</strong><small>By checking this box I agree to receive text messages from Posada Remodeling &amp; Design at the number provided, including automated messages. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out or HELP for help. See our Privacy Policy.</small></label></div>
+<div class="field full consent"><input type="checkbox" id="f-sms" name="sms_consent" value="yes"><label for="f-sms"><strong>Yes, text me about my project.</strong><small>By checking this box I agree to receive text messages from Posada Remodeling &amp; Design at the number provided, including automated messages. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="https://posadaremodeling.com/privacy-policy/" style="text-decoration:underline">Privacy Policy</a>.</small></label></div>
 <div class="submit-row">
 <button class="btn" type="submit">Book My Complimentary Consultation</button>
-<div class="owner-cue"><img src="images/mike-posada-owner-founder-headshot-800.webp" width="427" height="640" alt="Mike Posada" loading="lazy" decoding="async"><span>Your request is in Mike's hands. We reply <span class="nb">within 24 hours.</span></span></div>
-<span class="micro">Evening and weekend consultations available.</span>
+<div class="owner-cue"><img src="images/mike-posada-owner-founder-headshot-800.webp" width="427" height="640" alt="Mike Posada" loading="lazy" decoding="async"><span>Our team reads every request, and Mike personally oversees <span class="nb">every project.</span> <span class="nb">We reply within 24 hours.</span><span class="micro">Evening and weekend consultations available.</span></span></div>
 </div>
 </form>
 </div>
@@ -536,6 +558,10 @@
 <h4>West Orlando</h4>
 <p>Design consultations in Winter Garden, by appointment</p>
 </div>
+<div class="blk">
+<h4>What Happens Next</h4>
+<ol class="next-steps"><li><span>01</span>We call or text to set a time that suits you.</li><li><span>02</span>A complimentary in-home design consultation.</li><li><span>03</span>An itemized written proposal, line by line.</li></ol>
+</div>
 </div>
 </div>
 </div>
@@ -549,13 +575,13 @@
 <div>
 <a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida. Veteran-owned · Family-operated · Fully insured.</p>
-<div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a> · <a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br><span class="nb">Veteran-owned</span><span class="sep">&nbsp;· </span><span class="nb">Family-operated</span><span class="sep">&nbsp;· </span><span class="nb">Fully insured.</span></p>
+<div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a><span class="sep"> · </span><a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
 <a href="https://www.youtube.com/@PosadaRemodelingDesign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg>YouTube</a>
 <a href="https://www.facebook.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"></path></svg>Facebook</a>
-<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5" stroke-linecap="round"></path></svg>Google Reviews</a>
+<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3.5l2.55 5.2 5.7.83-4.13 4.02.98 5.68L12 16.55l-5.1 2.68.98-5.68-4.13-4.02 5.7-.83z" stroke-linejoin="round"></path></svg>Google Reviews</a>
 <a href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M7 9h10M7 12h10M7 15h6" stroke-linecap="round"></path></svg>BBB Accredited</a>
 </div>
 </div>
@@ -587,8 +613,8 @@
 <li><a href="kitchen-remodeling.html">Orlando</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary &amp; Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo &amp; Windermere</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere</a></li>
 <li><a href="service-areas.html">All service areas</a></li>
 </ul>
 </div>
@@ -607,6 +633,8 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=7" defer></script>
+<script src="assets/posada.js?v=1792129946" defer></script>
+<script>document.querySelectorAll('form[action="thank-you.html"]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();location.href='thank-you.html';});});</script>
+<script>(function(){var m={kitchen:'p-k',bathroom:'p-b',flooring:'p-f','whole-home':'p-w'},k=new URLSearchParams(location.search).get('project');if(!m[k]&&document.referrer){try{var r=new URL(document.referrer);if(r.host===location.host){var pa=r.pathname.toLowerCase();k=/kitchen/.test(pa)?'kitchen':/bath/.test(pa)?'bathroom':/floor/.test(pa)?'flooring':null;}}catch(e){}}var el=document.getElementById(m[k]);if(el&&!document.querySelector('input[name="project"]:checked'))el.checked=true;})();</script>
 </body>
 </html>

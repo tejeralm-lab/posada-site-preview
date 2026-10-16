@@ -15,7 +15,7 @@
 <meta property="og:title" content="Orlando Full Bathroom Remodel: Shower, Floor &amp; Vanity | Posada Remodeling &amp; Design">
 <meta property="og:description" content="A full bathroom remodel in Orlando, FL: barn-door glass shower, pitched hex floor, wood-plank porcelain tile and a linen-closet vanity. Watch the film.">
 <meta property="og:url" content="https://posadaremodeling.com/projects/orlando-full-bathroom/">
-<meta property="og:image" content="https://posadaremodeling.com/images/hexagon-tile-shower-floor-orlando-fl.webp">
+<meta property="og:image" content="https://posadaremodeling.com/images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,8 +44,8 @@
   },
   "primaryImageOfPage": {
     "@type": "ImageObject",
-    "contentUrl": "https://posadaremodeling.com/images/hexagon-tile-shower-floor-orlando-fl.webp",
-    "caption": "Hexagon mosaic porcelain tile shower floor in an Orlando, FL bathroom remodel"
+    "contentUrl": "https://posadaremodeling.com/images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp",
+    "caption": "Bathroom vanity with a quartz countertop, undermount sink and backlit LED mirror in an Orlando, FL bathroom remodel"
   },
   "video": {
     "@type": "VideoObject",
@@ -93,29 +93,44 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/hexagon-tile-shower-floor-orlando-fl.webp" imagesrcset="images/hexagon-tile-shower-floor-orlando-fl.webp 720w" imagesizes="(max-width: 880px) 100vw, 60vw">
-<link rel="stylesheet" href="assets/posada.css?v=7">
+<link rel="preload" as="image" href="images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp" imagesrcset="images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp 720w" imagesizes="(max-width: 880px) 90vw, 420px">
+<link rel="stylesheet" href="assets/posada.css?v=1792129946">
 <style>
-/* Project page: the hero is one graded still from the walkthrough film (shared .hero.film rules in posada.css). */
-.c1 .hero.film .panel .eyebrow{display:block;margin:0 0 16px;line-height:1.7}
+/* Project page: the hero is one room still from the walkthrough film, framed like a print beside the panel (shared .hero.print rules in posada.css, round 4). The .client review and .next-proj card are shared case-study components in posada.css too. */
 .c1 .glance{margin-top:22px}
 .c1 #what-we-did .split{align-items:start}
 .c1 #what-we-did .media{position:sticky;top:124px;margin-top:40px}
-.c1 #what-we-did .frame img,.c1 #stills .gal img{filter:contrast(1.06) saturate(.94)}
+/* the print still: pull the cyan LED glow toward the palette */
+.c1 #top .hero-media img.still{filter:saturate(.8) sepia(.06) contrast(1.04)}
 .c1 #details .pillars{margin-top:0}
-.c1 .next .svc{border-top:1px solid var(--line);padding-top:26px}
-.c1 .next .svc .num{margin-top:0}
-.c1 .next .svc h3{min-height:0}
-.c1 .next .svc .textlink{align-self:flex-start}
-.c1 .next .svc p a,.c1 .split p a,.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
+.c1 .split p a,.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .nw{white-space:nowrap}
-@media (max-width:880px){.c1 #what-we-did .media{position:static;margin-top:0}.c1 .glance .hide-m{display:none}}
+/* print hero: at 1100-1300px the one-line caption (about 350px) ran past the narrower print and under the panel, so it keeps to the print's width and balances onto two lines there */
+@media (min-width:1100px){.c1 #top .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 839px),420px)}}
+/* 881-1099px: the print is centered above the panel, so the panel is centered under it */
+@media (min-width:881px) and (max-width:1099px){.c1 #top .hero-panel .panel{margin-left:auto;margin-right:auto}}
+/* phones: the last crumb shortens to "Orlando" (the .cr-x rule now lives in posada.css); at 320px the crumb tightens to keep one line */
+@media (max-width:360px){.c1 #top .crumb{letter-spacing:.2em}}
+/* phones: here the title card fills the 380px film block (not a 16:9 grid tile), so its title and circle keep their size */
+@media (max-width:600px){.c1 .video .yt.card::before{inset:14px}.c1 .video .yt.card .tc{gap:12px}.c1 .video .yt.card .tc-t{font-size:30px}.c1 .video .yt.card .play{width:64px;height:64px;margin-top:6px}.c1 .video .yt.card .play svg{width:24px;height:24px}}
+/* top bar, phones: the short consultation line takes line 1 on its own and its separator (.tl-sep, glued with no-break spaces so it can never end a line) is hidden; the stars and 5.0 take line 2 (two lines, about 61px). Shared fix 9 markup: belongs in posada.css once every page carries .tl-sep */
+@media (max-width:600px){.c1 .topline .show-m{display:block}.c1 .topline .tl-sep{display:none}}
+@media (max-width:880px){
+.c1 #what-we-did .media{position:static;margin-top:0}
+.c1 .trust.three .n{font-size:30px}
+.c1 .trust-line{line-height:1.9}
+/* the Orlando labels run longer than the sibling pages' (four lines in a third of a phone), so on a phone the strip becomes three rows: figure left, the two-line label right */
+.c1 #glance .trust.three{grid-template-columns:1fr}
+.c1 #glance .trust.three .cell{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;align-items:center;text-align:left;padding:18px 4px}
+.c1 #glance .trust.three .cell + .cell{border-top:1px solid var(--line)}
+.c1 #glance .trust .l{margin-top:0;letter-spacing:.16em}
+}
 </style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline">Complimentary in-home design consultations across Central Florida<span class="hide-m"> &nbsp;·&nbsp; Evenings &amp; weekends available &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep">&nbsp;·&nbsp;</span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -127,10 +142,10 @@
 <a class="lnk" href="our-work.html">Our Work</a>
 <a class="lnk" href="about.html">Meet Mike</a>
 </nav>
-<a class="logo" href="#top" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo" href="index.html" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <div class="nav-r">
 <a class="tel" href="tel:+14073193503">(407) 319-3503</a>
-<a class="btn" href="contact.html">Book a Consultation</a>
+<a class="btn" href="contact.html?project=bathroom">Book a Consultation</a>
 <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"></path></svg>
 </button>
@@ -146,30 +161,25 @@
 <a href="financing.html">Financing</a>
 <a href="faqs.html">FAQs</a>
 <a class="tel-row" href="tel:+14073193503">(407) 319-3503</a>
-<a class="btn" href="contact.html">Book a Consultation</a>
+<a class="btn" href="contact.html?project=bathroom">Book a Consultation</a>
 </nav>
 </div>
 </div>
 
 <main id="main">
-<section class="hero compact film" id="top">
+<section class="hero compact film print wide" id="top">
 <div class="hero-media">
-<img class="bg" src="images/hexagon-tile-shower-floor-orlando-fl.webp" alt="" aria-hidden="true" width="720" height="540" fetchpriority="high" decoding="async">
-<img class="still" src="images/hexagon-tile-shower-floor-orlando-fl.webp" srcset="images/hexagon-tile-shower-floor-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, 60vw" width="720" height="540" alt="Hexagon mosaic porcelain tile shower floor in an Orlando, FL bathroom remodel" fetchpriority="high" decoding="async">
+<img class="still" src="images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp" srcset="images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp 720w" sizes="(max-width: 880px) 90vw, 420px" width="720" height="540" alt="Bathroom vanity with a quartz countertop, undermount sink and backlit LED mirror in an Orlando, FL bathroom remodel" fetchpriority="high" decoding="async">
+<p class="print-cap">Still from the walkthrough film · Orlando</p>
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
-<div class="crumb"><a href="index.html">Home</a><span>›</span><a href="our-work.html">Our Work</a><span>›</span><span>Orlando full bathroom</span></div>
-<span class="eyebrow">Stills from the <span style="white-space:nowrap">walkthrough film</span></span>
+<div class="crumb"><a href="index.html">Home</a><span>›</span><a href="our-work.html">Our Work</a><span>›</span><span>Orlando<span class="cr-x"> full bathroom</span></span></div>
 <h1>A full bathroom in Orlando, remodeled top to <em>bottom.</em></h1>
-<p>A shower rebuilt from the waterproofing up, with a hexagon floor pitched to a <span class="nw">lift-out</span> drain and barn-door glass. Then <span class="nw">wood-plank</span> porcelain floors and a larger vanity with a built-in linen closet.</p>
+<p>A shower rebuilt from the waterproofing up, with a hexagon floor pitched to a <span class="nw">lift-out</span> drain and barn-door glass. Then <span class="nw">wood-plank</span> porcelain floors and a larger vanity with a built-in <span class="nw">linen closet.</span></p>
 <div class="ctas">
-<a class="btn" href="contact.html">Book a Complimentary Consultation</a>
+<a class="btn" href="contact.html?project=bathroom">Book a Complimentary Consultation</a>
 <a class="textlink" href="#film">Watch the film</a>
-</div>
-<div class="proof">
-<span><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong> · 60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span>
-<span>Veteran-owned · Family-operated · Fully insured</span>
 </div>
 </div>
 </div>
@@ -179,26 +189,24 @@
 <div class="wrap">
 <div class="center"><span class="eyebrow">At a Glance</span></div>
 <div class="trust glance three">
-<div class="cell"><div class="n">3:12</div><div class="l"><span class="hide-m">Walkthrough </span>film with Mike</div></div>
-<div class="cell"><div class="n">3</div><div class="l">Ways to shower<span class="hide-m">: wand, head or rain head</span></div></div>
-<div class="cell"><div class="n">24 in</div><div class="l">Deep linen closet<span class="hide-m">, three rollout trays</span></div></div>
+<div class="cell"><div class="n">3:12</div><div class="l">Walkthrough film<br>with Mike</div></div>
+<div class="cell"><div class="n">3</div><div class="l">Ways to shower:<br>wand, head or rain head</div></div>
+<div class="cell"><div class="n">24 in</div><div class="l">Deep linen closet,<br>three rollout trays</div></div>
 </div>
-<p class="trust-line"><span class="nb">Full bath</span> · <span class="nb">Shower, floor &amp; vanity</span> · <span class="nb">Barn-door glass</span> · <span class="nb">Orlando</span></p>
+<p class="trust-line"><span class="nb">Full bath</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Shower, floor &amp; vanity</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Barn-door glass</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Orlando</span></p>
 </div>
 </section>
 
 <section class="sec" id="film">
 <div class="wrap">
 <div class="video on-navy">
-<a class="vid-media yt person" href="https://www.youtube.com/watch?v=MFE3rgfyzHg" data-yt="MFE3rgfyzHg" data-ratio="9/16" data-title="Full Bathroom Remodel Walkthrough in Orlando FL | Posada Remodeling" aria-label="Play the video: Full Bathroom Remodel Walkthrough in Orlando FL">
-<img src="images/video-full-bathroom-remodel-walkthrough-orlando-fl.webp" srcset="images/video-full-bathroom-remodel-walkthrough-orlando-fl-800.webp 800w, images/video-full-bathroom-remodel-walkthrough-orlando-fl.webp 1280w" sizes="(max-width: 1100px) 100vw, 58vw" width="1280" height="720" alt="Video: full bathroom remodel walkthrough in Orlando, FL" style="object-position:center 22%" loading="lazy" decoding="async">
-<span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span>
-<span class="dur">Play · 3:12</span>
+<a class="vid-media yt card light" href="https://www.youtube.com/watch?v=MFE3rgfyzHg" data-yt="MFE3rgfyzHg" data-ratio="9/16" data-title="Full Bathroom Remodel Walkthrough in Orlando FL | Posada Remodeling" aria-label="Play the video: Full Bathroom Remodel Walkthrough in Orlando FL">
+<span class="tc"><span class="tc-k">Project film · Orlando · 3:12</span><span class="tc-t">A full bathroom, <em>top to bottom.</em></span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></span>
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Project Film · 3:12</span>
 <h3>Walk the finished bathroom <em>with Mike.</em></h3>
-<p>Mike starts inside the shower: the barn-door glass, the Delta transfer valve, the pitched hexagon floor and the drain that lifts out for service. Then the wood-plank porcelain floor, the vanity with its linen closet and rollout trays, the quartz top and the lit mirror. Three minutes and twelve seconds in the finished room. Tap&nbsp;to&nbsp;play.</p>
+<p>Mike starts inside the shower: the barn-door glass, the Delta transfer valve, the pitched hexagon floor and the drain that lifts out for service. Then the wood-plank porcelain floor, the vanity with its linen closet and rollout trays, the quartz top and the LED mirror. Three minutes and twelve seconds in the finished room. Tap&nbsp;to&nbsp;play.</p>
 <div class="ctas">
 <a class="textlink" href="our-work.html#films">All project films</a>
 </div>
@@ -210,7 +218,7 @@
 <section class="sec" id="what-we-did" style="padding-top:0">
 <div class="wrap">
 <div class="split">
-<div class="media"><div class="frame wide"><img src="images/walk-in-shower-barn-door-glass-rain-head-orlando-fl.webp" srcset="images/walk-in-shower-barn-door-glass-rain-head-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, 45vw" width="720" height="540" alt="Walk-in shower remodel in Orlando, FL with a barn-door style glass enclosure, rain shower head and large-format porcelain wall tile" loading="lazy" decoding="async"></div><div class="gal-cap" style="margin-top:18px"><span>The finished shower</span><span>Still from the film</span></div></div>
+<div class="media"><div class="frame wide"><img src="images/shower-niche-hex-tile-grab-bar-orlando-fl.webp" srcset="images/shower-niche-hex-tile-grab-bar-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, 45vw" width="720" height="540" alt="Shower niche lined with hexagon mosaic tile below a rain shower head, with a grab bar, in an Orlando, FL bathroom remodel" loading="lazy" decoding="async"></div><div class="gal-cap" style="margin-top:18px"><span>Hex-tile shower niche</span><span>Still from the film</span></div></div>
 <div>
 <span class="eyebrow">What We Did</span>
 <h2>A full package, from the <em>waterproofing</em> up.</h2>
@@ -228,27 +236,7 @@
 </div>
 </section>
 
-<section class="sec sand on-sand" id="stills">
-<div class="wrap">
-<div class="sec-head">
-<div>
-<span class="eyebrow">Stills From The Film</span>
-<h2>The finished room, frame by <em>frame.</em></h2>
-</div>
-<p>Frames from Mike's walkthrough, taken in the finished room. Tap any photo to enlarge it.</p>
-</div>
-<div class="gal wide">
-<figure><img src="images/shower-niche-hex-tile-grab-bar-orlando-fl.webp" srcset="images/shower-niche-hex-tile-grab-bar-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="720" height="540" alt="Shower niche lined with hexagon mosaic tile below a rain shower head, with a grab bar, in an Orlando, FL bathroom remodel" loading="lazy" decoding="async"><figcaption><span>Hex-tile niche, mitered corners</span><span>Shower</span></figcaption></figure>
-<figure><img src="images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp" srcset="images/bathroom-vanity-quartz-led-mirror-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="720" height="540" alt="Bathroom vanity with a quartz countertop, undermount sink and backlit LED mirror in an Orlando, FL bathroom remodel" loading="lazy" decoding="async"><figcaption><span>Quartz top, lit mirror</span><span>Vanity</span></figcaption></figure>
-<figure><img src="images/white-shaker-vanity-drawer-pull-orlando-fl.webp" srcset="images/white-shaker-vanity-drawer-pull-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, (max-width: 1100px) 50vw, 33vw" width="720" height="540" alt="White shaker vanity drawer with a brushed pull under a quartz countertop in an Orlando, FL bathroom remodel" loading="lazy" decoding="async"><figcaption><span>White shaker drawers, soft-close</span><span>Vanity</span></figcaption></figure>
-</div>
-<div class="rev-links">
-<a class="textlink" href="our-work.html#bathrooms">See more finished bathrooms</a>
-</div>
-</div>
-</section>
-
-<section class="sec" id="details">
+<section class="sec sand on-sand" id="details">
 <div class="wrap">
 <div class="sec-head">
 <div>
@@ -282,33 +270,35 @@
 </div>
 </section>
 
-<section class="sec sand on-sand next" id="next">
+<section class="sec" id="review">
 <div class="wrap">
-<div class="center">
-<span class="eyebrow">Thinking About Something Similar?</span>
-<h2>Start with the bathroom you <em>have.</em></h2>
-<p>Every Posada bathroom begins the same way: a complimentary in-home design consultation where we look at your layout, listen to what is not working, and tell you honestly which budget range the project falls into.</p>
+<div class="client">
+<div>
+<span class="eyebrow">In a Client&rsquo;s Words</span>
+<h2>From another bathroom <em>remodel.</em></h2>
+<div class="score">
+<div class="n">5.0</div>
+<div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
 </div>
-<div class="svc-grid" style="margin-top:64px">
-<figure class="svc">
-<div class="num">01</div>
-<h3>Bathroom remodeling</h3>
-<p>Walk-in showers, tub-to-shower conversions with frameless glass, custom vanities and designer tile, with typical 2026 price ranges published on the page and shower waterproofing warranties in writing.</p>
-<a class="textlink" href="bathroom-remodeling.html">See what a bathroom costs</a>
-</figure>
-<figure class="svc">
-<div class="num">02</div>
-<h3>Our process</h3>
-<p>Seven steps from the first visit to the final walkthrough: a line-item proposal, a design retainer credited to your project, one point of contact and a clean site at the end of every day.</p>
-<a class="textlink" href="our-process.html">See how a project runs</a>
-</figure>
-<figure class="svc">
-<div class="num">03</div>
-<h3>Financing</h3>
-<p>Financing is available through Hearth <span class="nw">(NMLS ID 1628533)</span>, which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Posada is not a lender; rates and terms are set by the lending partner.</p>
-<a class="textlink" href="financing.html">See financing options</a>
-</figure>
+<div class="rev-links">
+<a class="textlink" href="https://maps.google.com/maps?cid=3116045480222163497">Read all reviews on Google</a>
 </div>
+</div>
+<div class="rev-grid one">
+<div class="rev">
+<div class="stars" aria-hidden="true">★★★★★</div>
+<blockquote>&ldquo;The service was seamless from beginning to the end of my bathroom project. Mike and team&rsquo;s client service and attention to detail was outstanding! I love my bathroom, it&rsquo;s beautiful!&rdquo;</blockquote>
+<div class="who">Sherdon T.</div>
+<div class="src">Bathroom remodel · Google review</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec sand on-sand" id="next-project">
+<div class="wrap">
+<a class="next-proj text" href="project-dr-phillips-two-bathrooms.html"><div class="tx"><span class="eyebrow">Next Project</span><h2>Two bathrooms in Dr.&nbsp;Phillips, <em>reimagined.</em></h2><span class="textlink">Read the story</span></div></a>
 </div>
 </section>
 
@@ -319,11 +309,12 @@
 <span class="eyebrow">Begin Here</span>
 <h2>Tell us about <em>your bathroom.</em></h2>
 <p>A complimentary in-home design consultation. We listen first, then tell you honestly which range your bathroom falls into. Evening and weekend consultations available.</p>
-<div class="ctas"><a class="btn" href="contact.html">Book a Complimentary Consultation</a></div>
+<div class="ctas"><a class="btn" href="contact.html?project=bathroom">Book a Complimentary Consultation</a><a class="textlink" href="bathroom-remodeling.html#cost">See what a bathroom costs</a></div>
 </div>
 <div class="side">
 <a class="bigtel" href="tel:+14073193503">(407) 319-3503</a>
 <p>Call or text · We reply within 24 hours</p>
+<a class="textlink" href="sms:+14073193503" style="display:inline-block;margin-top:18px">Text us a photo of your bathroom</a>
 </div>
 </div>
 </div>
@@ -334,15 +325,15 @@
 <div class="wrap">
 <div class="foot-grid">
 <div>
-<a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo foot-logo" href="index.html" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida. Veteran-owned · Family-operated · Fully insured.</p>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br>Veteran-owned&nbsp;· Family-operated&nbsp;· Fully insured.</p>
 <div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a> · <a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
 <a href="https://www.youtube.com/@PosadaRemodelingDesign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg>YouTube</a>
 <a href="https://www.facebook.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"></path></svg>Facebook</a>
-<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5" stroke-linecap="round"></path></svg>Google Reviews</a>
+<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3.5l2.55 5.2 5.7.83-4.13 4.02.98 5.68L12 16.55l-5.1 2.68.98-5.68-4.13-4.02 5.7-.83z" stroke-linejoin="round"></path></svg>Google Reviews</a>
 <a href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M7 9h10M7 12h10M7 15h6" stroke-linecap="round"></path></svg>BBB Accredited</a>
 </div>
 </div>
@@ -365,7 +356,7 @@
 <li><a href="faqs.html">FAQs</a></li>
 <li><a href="Posada-2026-Kitchen-Bath-Guide.pdf">2026 Kitchen &amp; Bath Guide (PDF)</a></li>
 <li><a href="https://posadaremodeling.com/blog/">Blog</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="contact.html?project=bathroom">Contact</a></li>
 </ul>
 </div>
 <div>
@@ -374,8 +365,8 @@
 <li><a href="kitchen-remodeling.html">Orlando</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary &amp; Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo &amp; Windermere</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere</a></li>
 <li><a href="service-areas.html">All service areas</a></li>
 </ul>
 </div>
@@ -390,10 +381,10 @@
 <nav class="sticky-cta" aria-label="Quick contact">
 <a href="tel:+14073193503">Call</a>
 <a href="sms:+14073193503">Text</a>
-<a class="book" href="contact.html">Book Consultation</a>
+<a class="book" href="contact.html?project=bathroom">Book Consultation</a>
 </nav>
 
 </div>
-<script src="assets/posada.js?v=7" defer></script>
+<script src="assets/posada.js?v=1792129946" defer></script>
 </body>
 </html>

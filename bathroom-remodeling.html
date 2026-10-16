@@ -25,30 +25,51 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" imagesrcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=7">
+<link rel="preload" as="image" href="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" imagesrcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-2000.webp 2000w" imagesizes="100vw">
+<link rel="stylesheet" href="assets/posada.css?v=1792129946">
 <style>
 /* calmer line breaks: no single-word last lines in copy, balanced two-line questions and footers */
 .c1 p,.c1 li,.c1 blockquote{text-wrap:pretty}
 .c1 summary,.c1 .promise-foot span{text-wrap:balance}
+/* top bar on phones and tablets: the consultation line and the Google rating each get their own line, and the dot between them hides, so no line starts or ends on a hanging dot (it did at 390 and 360) */
+@media (max-width:880px){.c1 .topline .show-m{display:block}.c1 .topline .tl-sep{display:none}}
 /* hyphenated words never split across lines */
 .c1 .nh{white-space:nowrap}
 /* county labels sit on the same baseline as the city links */
 .c1 .area-list li{align-items:baseline}
-/* hero proof line: each phrase stays whole; the dot before a phrase that starts a new line is clipped (same pattern as financing.html) */
-.c1 .proof .pl{display:block;overflow:hidden;min-width:0}
-.c1 .proof .pl-in{display:flex;flex-wrap:wrap;row-gap:2px;margin-left:-1.7em}
-.c1 .proof .pl-it{white-space:nowrap}
-.c1 .proof .pl-it::before{content:"\00B7";display:inline-block;width:1.7em;text-align:center;letter-spacing:0}
-/* phones: the band above the panel is short, so the crop drops to the tub and brass filler */
-@media (max-width:880px){.c1 .hero-media img{object-position:center 95%!important}}
-@media (min-width:601px) and (max-width:880px){.c1 .hero-media img{object-position:center 80%!important}}
+/* phones: the 360px band shows the leaf wall, the tub and the whole brass filler above the panel (95% left the filler handles at the panel edge once the band grew) */
+@media (max-width:880px){.c1 .hero-media img{object-position:center 100%!important}}
+/* tablets, laptops and desktops (601px and up), round 5: the taller band runs behind the panel, so the crop is pinned 81vw below the photo's top, just under the hand towel on the left wall (at 768x1024 it starts at 60.75%, so the towels no longer show cut off at the band's top edge, as they did with the old tablet rule of center 80%). A strip of the leaf wall stays above the tub and the towel stays out at 1920x970, 1440x790, 1440 tall (the review shot), 1536x730, 1366x657, 1280x640 and 1024x690. Where the band is too tall for its width (about 1380px wide or less on windows over 940px tall) it stops at the photo's bottom edge, so it never leaves a gap. The inline center 90% is the fallback */
+@media (min-width:601px){.c1 #top .hero-media img{object-position:50% max(100%,-81vw)!important}}
+/* desktop (round 6): the towel shadows run down to 68.5% of the photo's height, so from 1101px the crop starts 92vw down (69%), or at the photo's bottom edge when the band is too tall for that */
+@media (min-width:1101px){.c1 #top .hero-media img{object-position:50% max(100%,-92vw)!important}}
+/* desktop, band height (round 6, measured in Chrome): the 92vw pin needs a band no taller than 41.3% of its width, and the band is 653px at 1440x900 and 1366x768 and 732px on windows over 940px tall, so the pin fell back to the photo's bottom edge (62-66% down) and the towel shadows showed in the top-left corner. Where that happens the photo grows just enough for its bottom 31% to fill the band, so it still starts at 69% (about 1.1x at 1440x900, 1.16x at 1366x768, 1.23x at 1440x1440), anchored 70% across, so the zoom trims more of the left wall than of the right and the whole brass filler stays in view; where the band is short enough (1920x1080, 1536x730, 1366x657) this equals the pin above. Tablets and phones keep their rules */
+@media (min-width:1101px){@supports (width:1cqw){.c1 #top .hero-media{container-type:size}.c1 #top .hero-media img{position:absolute;top:calc(max(133.333cqw,322.581cqh) * -.69);left:calc((100cqw - max(100cqw,241.936cqh)) * .7);width:max(100cqw,241.936cqh);height:auto;max-width:none;aspect-ratio:1350/1800}}}
+/* narrow tablets and landscape phones (601-687px): the 360px band is too tall for the 81vw pin to reach (it fell back to the photo's bottom edge and showed the towels cut off, from 55% at 601), so the band is capped at 52.33vw (the photo's bottom 39.25%); the crop then starts at 60.75% there too, under the towels. From 688px up it stays 360px */
+@media (min-width:601px) and (max-width:880px){.c1 #top .hero-media{height:min(360px,52.33vw)}}
+/* gallery captions on two-across phones: a label that needs two lines splits evenly ("Vanity with / drawer bases"), never one word alone */
+.c1 #gallery figcaption > span:first-child{text-wrap:balance}
+/* films: a playing vertical film is sized by its width, so on a phone it stays inside its column (sized by height, it grew to 389px in a 350px column at 390 and its right edge, with the fullscreen button, was cut off); desktop keeps the same 415x738 player */
+.c1 #films .video-grid > .yt-card{min-width:0}
+.c1 #films .yt.vertical.playing{width:min(100%,calc(min(82vh,760px) * 9 / 16));height:auto}
+/* pricing: the Book button and the financing link share one full-width row under both columns, as on the kitchen page */
+.c1 #cost .cost-cta{margin-top:60px;padding-top:48px;border-top:1px solid rgba(111,88,31,.3)}
+@media (max-width:880px){.c1 #cost .cost-cta{margin-top:44px;padding-top:36px}}
+/* gallery: the first row is three finished rooms; a label introduces the second row of close-ups, which are square, so it does not read as a tile catalog. Bronze2 keeps the label AA on sand */
+@media (min-width:881px){.c1 #gallery .gal-label{grid-column:1/-1;margin:18px 0 -8px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--bronze2)}.c1 #gallery .gal figure:nth-of-type(n+4) img{aspect-ratio:1/1}}
+/* phones keep three rows of two: the label hides, and the shared odd-last-tile rule (which counts the label as a child) must not turn the sixth tile into a wide 3:2 tile */
+/* iPads and small laptops (881-1100px): the shared grid drops to two columns there, which would leave the third room and the last close-up alone on their rows around the label, so this gallery stays three across, as the service cards do */
+@media (min-width:881px) and (max-width:1100px){.c1 #gallery .gal{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
+@media (max-width:880px){.c1 #gallery .gal-label{display:none}.c1 #gallery .gal figure:last-child{grid-column:auto}.c1 #gallery .gal figure:last-child img{aspect-ratio:4/5}}
+/* intro: the frameless-glass shower, zoomed 2x on the leaf wall, window, rain head and brass hinge. The toilet (lower left of the photo) and its reflection in the glass stay outside the 4:5 crop: the visible area is 35-85% across and 15-62% down the photo */
+.c1 #intro .frame .crop{position:relative;z-index:1;overflow:hidden;aspect-ratio:4/5}
+.c1 #intro .frame .crop img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;transform:scale(2);transform-origin:70% 26%}
 </style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline">Complimentary in-home design consultations across Central Florida<span class="hide-m"> &nbsp;·&nbsp; Evenings &amp; weekends available &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep"> &nbsp;·&nbsp; </span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -60,10 +81,10 @@
 <a class="lnk" href="our-work.html">Our Work</a>
 <a class="lnk" href="about.html">Meet Mike</a>
 </nav>
-<a class="logo" href="#top" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo" href="index.html" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <div class="nav-r">
 <a class="tel" href="tel:+14073193503">(407) 319-3503</a>
-<a class="btn" href="contact.html">Book a Consultation</a>
+<a class="btn" href="contact.html?project=bathroom">Book a Consultation</a>
 <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"></path></svg>
 </button>
@@ -79,7 +100,7 @@
 <a href="financing.html">Financing</a>
 <a href="faqs.html">FAQs</a>
 <a class="tel-row" href="tel:+14073193503">(407) 319-3503</a>
-<a class="btn" href="contact.html">Book a Consultation</a>
+<a class="btn" href="contact.html?project=bathroom">Book a Consultation</a>
 </nav>
 </div>
 </div>
@@ -87,15 +108,15 @@
 <main id="main">
 <section class="hero compact" id="top">
 <div class="hero-media">
-<img src="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" srcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w" sizes="100vw" width="1350" height="1800" alt="Primary bathroom remodel with a soaking tub and a textured leaf accent wall in Central Florida" style="object-position:center 72%" fetchpriority="high" decoding="async">
+<img src="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" srcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-2000.webp 2000w" sizes="100vw" width="1350" height="1800" alt="Primary bathroom remodel with a soaking tub and a textured leaf accent wall in Central Florida" style="object-position:center 90%" fetchpriority="high" decoding="async">
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
 <div class="crumb"><a href="index.html">Home</a><span>›</span><span>Bathrooms</span></div>
-<h1>Bathroom remodeling in Orlando &amp; <em>Central Florida.</em></h1>
+<h1>Bathroom remodeling in Orlando&nbsp;&amp; <em>Central Florida.</em></h1>
 <p><span class="nh">Walk-in</span> showers, <span class="nh">tub-to-shower</span> conversions, custom vanities and <span class="nh">spa-style</span> primary suites, designed and built by one team from the first drawing to the final walkthrough.</p>
 <div class="ctas">
-<a class="btn" href="contact.html">Book a Complimentary Consultation</a>
+<a class="btn" href="contact.html?project=bathroom">Book a Complimentary Consultation</a>
 <a class="textlink" href="#cost">See bathroom pricing</a>
 </div>
 <div class="proof">
@@ -109,7 +130,7 @@
 <section class="sec" id="intro">
 <div class="wrap">
 <div class="split">
-<div class="media"><div class="frame"><img src="images/floral-tile-shower-niche-dr-phillips-orlando-fl.webp" srcset="images/floral-tile-shower-niche-dr-phillips-orlando-fl-800.webp 640w, images/floral-tile-shower-niche-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 1100px) 100vw, 50vw" width="864" height="1080" alt="Shower niche with floral accent tile and a brass soap dispenser in a Dr. Phillips, Orlando bathroom remodel" loading="lazy" decoding="async"></div></div>
+<div class="media"><div class="frame"><div class="crop"><img src="images/walk-in-shower-remodel-frameless-glass-central-florida.webp" srcset="images/walk-in-shower-remodel-frameless-glass-central-florida-800.webp 600w, images/walk-in-shower-remodel-frameless-glass-central-florida.webp 1350w, images/walk-in-shower-remodel-frameless-glass-central-florida-2000.webp 2000w" sizes="(max-width: 1100px) 200vw, 100vw" width="1350" height="1800" alt="Walk-in shower remodel with frameless glass, large-format tile and brass fixtures in Central Florida" loading="lazy" decoding="async"></div></div></div>
 <div>
 <span class="eyebrow">Bathroom Remodeling</span>
 <h2>Every detail, designed <em>before demolition.</em></h2>
@@ -117,7 +138,7 @@
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><span class="nh">Walk-in</span> showers with <span class="nh">large-format</span> tile and <span class="nh">built-in</span> niches</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><span class="nh">Tub-to-shower</span> conversions with frameless glass</span></li>
-<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Custom vanities, quartz tops and lit mirrors</span></li>
+<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Custom vanities, quartz tops and LED mirrors</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Designer tile for floors, walls and accent features</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><span class="nh">Spa-style</span> primary suites with soaking tubs and rain showers</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Shower waterproofing systems with written warranties</span></li>
@@ -138,17 +159,63 @@
 <a class="btn-line" href="our-work.html">View All Projects</a>
 </div>
 <div class="gal">
-<figure><img src="images/marble-walk-in-shower-remodel-central-florida.webp" srcset="images/marble-walk-in-shower-remodel-central-florida-800.webp 600w, images/marble-walk-in-shower-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Marble-look walk-in shower remodel with a glass enclosure in Central Florida" loading="lazy" decoding="async"><figcaption><span><span class="nh">Marble-look</span> <span class="nh">walk-in</span> shower</span><span>Shower</span></figcaption></figure>
-<figure><img src="images/bathroom-vanity-led-mirror-oak-central-florida.webp" srcset="images/bathroom-vanity-led-mirror-oak-central-florida-800.webp 599w, images/bathroom-vanity-led-mirror-oak-central-florida.webp 1199w" sizes="(max-width: 880px) 100vw, 33vw" width="1199" height="1600" alt="Bathroom remodel with an oak vanity, quartz top and LED mirror in Central Florida" loading="lazy" decoding="async"><figcaption><span>Oak vanity, quartz top</span><span>Vanity</span></figcaption></figure>
-<figure><img src="images/gold-rain-shower-bathroom-remodel-central-florida.webp" srcset="images/gold-rain-shower-bathroom-remodel-central-florida-800.webp 600w, images/gold-rain-shower-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Bathroom remodel with a gold rain shower head and tiled shower niche in Central Florida" loading="lazy" decoding="async"><figcaption><span>Gold rain shower</span><span>Bath</span></figcaption></figure>
-<figure><img src="images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl.webp" srcset="images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl-800.webp 640w, images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 100vw, 33vw" width="864" height="1080" alt="Shower head on glossy pale green tile in a Dr. Phillips, Orlando walk-in shower remodel" loading="lazy" decoding="async"><figcaption><span>Pale green shower tile</span><span>Dr. Phillips</span></figcaption></figure>
-<figure><img src="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp" srcset="images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-curbless-shower-niche-fl.webp 720w" sizes="(max-width: 880px) 100vw, 33vw" width="720" height="900" alt="Curbless walk-in shower with large-format gloss tile, a mitered infinity niche and a handheld shower in Sorrento, FL" loading="lazy" decoding="async"><figcaption><span>Curbless shower &amp; niche</span><span>Sorrento</span></figcaption></figure>
-<figure><img src="images/floating-walnut-vanity-bathroom-remodel-central-florida.webp" srcset="images/floating-walnut-vanity-bathroom-remodel-central-florida-800.webp 800w, images/floating-walnut-vanity-bathroom-remodel-central-florida.webp 1800w" sizes="(max-width: 880px) 100vw, 33vw" width="1800" height="1350" alt="Floating walnut double vanity with an LED mirror in a Central Florida bathroom remodel" style="filter:contrast(1.08) saturate(1.05) brightness(.96)" loading="lazy" decoding="async"><figcaption><span>Floating walnut vanity</span><span>Vanity</span></figcaption></figure>
+<figure><img src="images/marble-walk-in-shower-remodel-central-florida.webp" srcset="images/marble-walk-in-shower-remodel-central-florida-800.webp 600w, images/marble-walk-in-shower-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Marble-look walk-in shower remodel with a glass enclosure in Central Florida" loading="lazy" decoding="async"><figcaption><span><span class="nh">Marble-look</span> shower</span><span>Central&nbsp;Florida</span></figcaption></figure>
+<figure><img src="images/bathroom-vanity-led-mirror-oak-central-florida.webp" srcset="images/bathroom-vanity-led-mirror-oak-central-florida-800.webp 599w, images/bathroom-vanity-led-mirror-oak-central-florida.webp 1199w" sizes="(max-width: 880px) 100vw, 33vw" width="1199" height="1600" alt="Bathroom remodel with an oak vanity, quartz top and LED mirror in Central Florida" loading="lazy" decoding="async"><figcaption><span>Floating vanity</span><span>Central&nbsp;Florida</span></figcaption></figure>
+<figure><img src="images/gold-rain-shower-bathroom-remodel-central-florida.webp" srcset="images/gold-rain-shower-bathroom-remodel-central-florida-800.webp 600w, images/gold-rain-shower-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Bathroom remodel with a gold rain shower head and tiled shower niche in Central Florida" loading="lazy" decoding="async"><figcaption><span>Gold rain shower</span><span>Central&nbsp;Florida</span></figcaption></figure>
+<p class="gal-label">Up close: tile, drawers and drains</p>
+<figure><img src="images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl.webp" srcset="images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl-800.webp 640w, images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 100vw, 33vw" width="864" height="1080" alt="Shower head on glossy pale green tile in a Dr. Phillips, Orlando walk-in shower remodel" loading="lazy" decoding="async"><figcaption><span>Pale green shower tile</span><span>Dr.&nbsp;Phillips</span></figcaption></figure>
+<figure><img src="images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl.webp" srcset="images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl.webp 660w" sizes="(max-width: 880px) 100vw, 33vw" width="660" height="825" alt="White vanity with drawer bases, satin-finish pulls and a marble-look countertop in a Sorrento, FL master bathroom remodel" loading="lazy" decoding="async"><figcaption><span>Vanity with drawer bases</span><span>Sorrento</span></figcaption></figure>
+<figure><img src="images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl.webp" srcset="images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl-800.webp 640w, images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 100vw, 33vw" width="864" height="1080" alt="Hexagon tile shower floor with a square brass drain in a Dr. Phillips, Orlando bathroom remodel" style="object-position:center 0%" loading="lazy" decoding="async"><figcaption><span>Hex floor, brass drain</span><span>Dr.&nbsp;Phillips</span></figcaption></figure>
 </div>
 </div>
 </section>
 
-<section class="sec" id="films">
+<section class="sec" id="reviews">
+<div class="wrap">
+<div class="rev-head">
+<div>
+<span class="eyebrow">Client Stories</span>
+<h2>Bathrooms, in their owners’ <em>words.</em></h2>
+</div>
+<div class="score">
+<div class="n">5.0</div>
+<div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
+</div>
+</div>
+<div class="rev-grid">
+<div class="rev">
+<div class="stars" aria-hidden="true">★★★★★</div>
+<blockquote>“The service was seamless from beginning to the end of my bathroom project. Mike and team’s client service and attention to detail was outstanding! I love my bathroom, it’s beautiful!”</blockquote>
+<div class="who">Sherdon T.</div>
+<div class="src">Bathroom remodel · Google review</div>
+</div>
+<div class="rev">
+<div class="stars" aria-hidden="true">★★★★★</div>
+<blockquote>“Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks phenomenal.”</blockquote>
+<div class="who">Zach K.</div>
+<div class="src"><span class="nh">Walk-in</span> shower remodel · Google review</div>
+</div>
+<div class="rev">
+<div class="stars" aria-hidden="true">★★★★★</div>
+<blockquote>“Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and ideas.”</blockquote>
+<div class="who">Jamie H.</div>
+<div class="src">Three bathrooms &amp; kitchen floors · Google review</div>
+</div>
+<div class="rev">
+<div class="stars" aria-hidden="true">★★★★★</div>
+<blockquote>“Mike and his team are professional, quick to answer questions, take great care with even the smallest details, and they are fun! Our bathroom remodel looks amazing!”</blockquote>
+<div class="who">Nikki B.</div>
+<div class="src">Bathroom remodel · Google review</div>
+</div>
+</div>
+<div class="rev-links">
+<a class="textlink" href="https://maps.google.com/maps?cid=3116045480222163497">Read all reviews on Google</a>
+<a class="bbb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><span class="seal">BBB</span>Accredited business · A rating</a>
+</div>
+</div>
+</section>
+
+<section class="sec" id="films" style="padding-top:0">
 <div class="wrap">
 <div class="sec-head">
 <div>
@@ -159,11 +226,11 @@
 </div>
 <div class="video-grid">
 <div class="yt-card">
-<a class="yt" data-yt="F4Zs3s4YfMk" data-ratio="9/16" data-title="Master Bathroom Remodel in Sorrento FL | Full Walkthrough" href="https://www.youtube.com/watch?v=F4Zs3s4YfMk" aria-label="Play the video: Master Bathroom Remodel in Sorrento FL, full walkthrough"><img src="images/sorrento-master-bathroom-remodel-walk-in-shower-vanity-fl.webp" srcset="images/sorrento-master-bathroom-remodel-walk-in-shower-vanity-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-walk-in-shower-vanity-fl.webp 656w" sizes="(max-width: 1100px) 100vw, 50vw" width="656" height="820" alt="Master bathroom remodel in Sorrento, FL: glass walk-in shower behind a half wall, white vanity cabinetry and marble-look tile floor" style="object-position:center 22%" loading="lazy" decoding="async"><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span><span class="dur">Play · 3:38</span></a>
+<a class="yt card" data-yt="F4Zs3s4YfMk" data-ratio="9/16" data-title="Master Bathroom Remodel in Sorrento FL | Full Walkthrough" href="https://www.youtube.com/watch?v=F4Zs3s4YfMk" aria-label="Play the video: Master Bathroom Remodel in Sorrento FL, full walkthrough"><span class="tc"><span class="tc-k">Project film · Sorrento · 3:38</span><span class="tc-t">A master bathroom, <em>walked through.</em></span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></span></a>
 <div class="cap"><h3>Master bathroom remodel, Sorrento</h3><p>The full walkthrough of a finished primary bathroom in Sorrento, FL.</p><div class="rev-links" style="margin-top:14px"><a class="textlink" href="project-sorrento-master-bathroom.html">See the full project story</a></div></div>
 </div>
 <div class="yt-card">
-<a class="yt person" data-yt="MFE3rgfyzHg" data-ratio="9/16" data-title="Full Bathroom Remodel Walkthrough in Orlando FL | Posada Remodeling" href="https://www.youtube.com/watch?v=MFE3rgfyzHg" aria-label="Play the video: Full Bathroom Remodel Walkthrough in Orlando FL"><img src="images/mike-posada-full-bathroom-remodel-orlando-fl.webp" srcset="images/mike-posada-full-bathroom-remodel-orlando-fl.webp 720w" sizes="(max-width: 1100px) 100vw, 50vw" width="720" height="540" alt="Mike Posada in a finished full bathroom remodel in Orlando, FL, in front of the new walk-in shower" style="object-position:center 100%" loading="lazy" decoding="async"><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span><span class="dur">Play · 3:12</span></a>
+<a class="yt card" data-yt="MFE3rgfyzHg" data-ratio="9/16" data-title="Full Bathroom Remodel Walkthrough in Orlando FL | Posada Remodeling" href="https://www.youtube.com/watch?v=MFE3rgfyzHg" aria-label="Play the video: Full Bathroom Remodel Walkthrough in Orlando FL"><span class="tc"><span class="tc-k">Project film · Orlando · 3:12</span><span class="tc-t">A full bathroom, <em>top to bottom.</em></span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></span></a>
 <div class="cap"><h3>Full bathroom remodel, Orlando</h3><p>A complete bathroom remodel in Orlando, FL, walked through on camera.</p><div class="rev-links" style="margin-top:14px"><a class="textlink" href="project-orlando-full-bathroom.html">See the full project story</a></div></div>
 </div>
 </div>
@@ -179,7 +246,7 @@
 <div>
 <span class="eyebrow">Investment</span>
 <h2 style="font-size:clamp(36px,4vw,54px);margin:16px 0 14px">What a bathroom remodel costs in <em>Central Florida.</em></h2>
-<p style="color:#3B4352;font-size:16px;margin:0 0 28px;max-width:560px">Most companies avoid this subject. We would rather you walk into every estimate, including ours, already knowing what a bathroom really costs. These are typical 2026 ranges from our own local projects.</p>
+<p style="color:#3B4352;font-size:16px;margin:0 0 28px;max-width:560px">These are typical 2026 ranges from our own Central Florida bathrooms, so you can plan with real numbers before anyone draws a line.</p>
 <table class="price-table">
 <thead><tr><th>Bathrooms</th><th style="text-align:right">Typical range</th></tr></thead>
 <tbody>
@@ -188,12 +255,11 @@
 <tr><td>Spa &amp; primary suite</td><td class="amt">$30,000 – $40,000+</td></tr>
 </tbody>
 </table>
-<p class="fine">Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. Planning a kitchen as well? See our <a href="kitchen-remodeling.html" style="border-bottom:1px solid #C4A24E">kitchen remodeling ranges</a>.</p>
-<div class="ctas" style="margin-top:36px"><a class="btn" href="contact.html">Book a Complimentary Consultation</a></div>
+<p class="fine">Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. Planning a kitchen as well? See our <a href="kitchen-remodeling.html" style="border-bottom:1px solid #C4A24E">kitchen remodeling ranges</a> and <a href="faqs.html#both" style="border-bottom:1px solid #C4A24E">how a combined project works</a>.</p>
 </div>
 <div class="fin">
 <span class="eyebrow">What Moves the Number</span>
-<h3>Six choices that set the range.</h3>
+<h3>Six choices that set <em>the range.</em></h3>
 <ul>
 <li><span class="dia" aria-hidden="true"></span><span>Shower size and tile format</span></li>
 <li><span class="dia" aria-hidden="true"></span><span><span class="nh">Tub-to-shower</span> conversion and frameless glass</span></li>
@@ -204,9 +270,9 @@
 </ul>
 <p>A design retainer of $250 per bathroom is credited to your project once the agreement is signed.</p>
 <p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your score. Posada is not a lender; rates and terms are set by the lending partner.</p>
-<div style="margin-top:24px"><a class="textlink" href="financing.html">See financing options</a></div>
 </div>
 </div>
+<div class="ctas cost-cta"><a class="btn" href="contact.html?project=bathroom">Book a Complimentary Consultation</a><a class="textlink" href="financing.html">See financing options</a></div>
 </div>
 </section>
 
@@ -226,7 +292,7 @@
 <p>A <span class="nh">three-year</span> labor and installation warranty on every project we do, bathrooms included.</p>
 </div>
 <div class="tile">
-<div class="big">Lifetime</div>
+<div class="big">Up to lifetime</div>
 <div class="k">Shower waterproofing</div>
 <p><span class="nh">Three-year</span>, <span class="nh">ten-year</span> and lifetime warranties on our shower waterproofing systems, where included.</p>
 </div>
@@ -275,56 +341,11 @@
 </div>
 <div class="step">
 <div class="rn">05</div>
-<h3>Walkthrough &amp; warranty</h3>
+<h3>Walkthrough&nbsp;&amp; warranty</h3>
 <p>A final walkthrough with every detail checked, your written warranty, and a <span class="nh">follow-up</span> from Mike to make sure you love it.</p>
 </div>
 </div>
 <div style="margin-top:48px"><a class="textlink" href="our-process.html">See the full <span class="nh">seven-step</span> process</a></div>
-</div>
-</section>
-
-<section class="sec" id="reviews" style="padding-top:0">
-<div class="wrap">
-<div class="rev-head">
-<div>
-<span class="eyebrow">Client Stories</span>
-<h2>Bathrooms, in their owners’ <em>words.</em></h2>
-</div>
-<div class="score">
-<div class="n">5.0</div>
-<div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
-</div>
-</div>
-<div class="rev-grid">
-<div class="rev">
-<div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“The service was seamless from beginning to the end of my bathroom project. Mike and team’s client service and attention to detail was outstanding! I love my bathroom, it’s beautiful!”</blockquote>
-<div class="who">Sherdon T.</div>
-<div class="src">Bathroom remodel · Google review</div>
-</div>
-<div class="rev">
-<div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks phenomenal.”</blockquote>
-<div class="who">Zach K.</div>
-<div class="src"><span class="nh">Walk-in</span> shower remodel · Google review</div>
-</div>
-<div class="rev">
-<div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and ideas.”</blockquote>
-<div class="who">Jamie H.</div>
-<div class="src">Three bathrooms &amp; kitchen floors · Google review</div>
-</div>
-<div class="rev">
-<div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“Mike and his team are professional, quick to answer questions, take great care with even the smallest details, and they are fun! Our bathroom remodel looks amazing!”</blockquote>
-<div class="who">Nikki B.</div>
-<div class="src">Bathroom remodel · Google review</div>
-</div>
-</div>
-<div class="rev-links">
-<a class="textlink" href="https://maps.google.com/maps?cid=3116045480222163497">Read all reviews on Google</a>
-<a class="bbb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><span class="seal">BBB</span>Accredited business · A rating</a>
-</div>
 </div>
 </section>
 
@@ -364,35 +385,35 @@
 <a class="textlink" href="service-areas.html">All service areas</a>
 </div>
 <ul class="area-list" style="grid-template-columns:1fr">
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-windermere-fl/">Bathroom remodeling in Windermere</a><span>Orange</span></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-garden-fl/">Bathroom remodeling in Winter Garden</a><span>Orange</span></li>
 <li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-park/">Bathroom remodeling in Winter Park</a><span>Orange</span></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-altamonte-springs-fl/">Bathroom remodeling in Altamonte&nbsp;Springs</a><span>Seminole</span></li>
+<li><a href="https://posadaremodeling.com/bathroom-remodeling-casselberry-fl/">Bathroom remodeling in Casselberry</a><span>Seminole</span></li>
 <li><a href="https://posadaremodeling.com/bathroom-remodeling-lake-mary-fl/">Bathroom remodeling in Lake Mary</a><span>Seminole</span></li>
 <li><a href="https://posadaremodeling.com/bathroom-remodeling-longwood-fl/">Bathroom remodeling in Longwood</a><span>Seminole</span></li>
 <li><a href="https://posadaremodeling.com/bathroom-remodeling-oviedo-fl/">Bathroom remodeling in Oviedo</a><span>Seminole</span></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-windermere-fl/">Bathroom remodeling in Windermere</a><span>Orange</span></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-winter-garden-fl/">Bathroom remodeling in Winter Garden</a><span>Orange</span></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-casselberry-fl/">Bathroom remodeling in Casselberry</a><span>Seminole</span></li>
-<li><a href="https://posadaremodeling.com/bathroom-remodeling-altamonte-springs-fl/">Bathroom remodeling in Altamonte&nbsp;Springs</a><span>Seminole</span></li>
 </ul>
 </div>
 </div>
 </section>
 
-<section class="cta-band on-navy"><div class="wrap"><div class="inner"><div><span class="eyebrow">Begin Here</span><h2>Tell us about <em>your&nbsp;bathroom.</em></h2><p>A complimentary <span class="nh">in-home</span> design consultation. We listen first, look at the room, and tell you honestly which range your project falls into.</p><div class="ctas"><a class="btn" href="contact.html">Book a Complimentary Consultation</a></div></div><div class="side"><a class="bigtel" href="tel:+14073193503">(407) 319-3503</a><p>Call or text · We reply within 24 hours</p></div></div></div></section>
+<section class="cta-band on-navy"><div class="wrap"><div class="inner"><div><span class="eyebrow">Begin Here</span><h2>Tell us about <em>your&nbsp;bathroom.</em></h2><p>A complimentary <span class="nh">in-home</span> design consultation. We listen first, look at the room, and tell you honestly which range your project falls into.</p><div class="ctas"><a class="btn" href="contact.html?project=bathroom">Book a Complimentary Consultation</a></div></div><div class="side"><a class="bigtel" href="tel:+14073193503">(407) 319-3503</a><p>Call or text · We reply within 24 hours</p><a class="textlink" href="sms:+14073193503" style="display:inline-block;margin-top:18px">Text us a photo of your bathroom</a></div></div></div></section>
 </main>
 
 <footer class="foot">
 <div class="wrap">
 <div class="foot-grid">
 <div>
-<a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo foot-logo" href="index.html" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida. Veteran-owned · Family-operated · Fully insured.</p>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br>Veteran-owned&nbsp;· Family-operated&nbsp;· Fully insured.</p>
 <div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a> · <a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
 <a href="https://www.youtube.com/@PosadaRemodelingDesign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg>YouTube</a>
 <a href="https://www.facebook.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"></path></svg>Facebook</a>
-<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5" stroke-linecap="round"></path></svg>Google Reviews</a>
+<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3.5l2.55 5.2 5.7.83-4.13 4.02.98 5.68L12 16.55l-5.1 2.68.98-5.68-4.13-4.02 5.7-.83z" stroke-linejoin="round"></path></svg>Google Reviews</a>
 <a href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M7 9h10M7 12h10M7 15h6" stroke-linecap="round"></path></svg>BBB Accredited</a>
 </div>
 </div>
@@ -415,7 +436,7 @@
 <li><a href="faqs.html">FAQs</a></li>
 <li><a href="Posada-2026-Kitchen-Bath-Guide.pdf">2026 Kitchen &amp; Bath Guide (PDF)</a></li>
 <li><a href="https://posadaremodeling.com/blog/">Blog</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="contact.html?project=bathroom">Contact</a></li>
 </ul>
 </div>
 <div>
@@ -424,8 +445,8 @@
 <li><a href="kitchen-remodeling.html">Orlando</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary &amp; Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo &amp; Windermere</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere</a></li>
 <li><a href="service-areas.html">All service areas</a></li>
 </ul>
 </div>
@@ -440,10 +461,10 @@
 <nav class="sticky-cta" aria-label="Quick contact">
 <a href="tel:+14073193503">Call</a>
 <a href="sms:+14073193503">Text</a>
-<a class="book" href="contact.html">Book Consultation</a>
+<a class="book" href="contact.html?project=bathroom">Book Consultation</a>
 </nav>
 
 </div>
-<script src="assets/posada.js?v=7" defer></script>
+<script src="assets/posada.js?v=1792129946" defer></script>
 </body>
 </html>

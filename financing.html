@@ -15,7 +15,7 @@
 <meta property="og:title" content="Remodel Financing in Central Florida | Posada Remodeling &amp; Design">
 <meta property="og:description" content="Remodel financing through Hearth, with 0% APR promotional options for qualified homeowners. Check your options in about a minute with a soft credit check.">
 <meta property="og:url" content="https://posadaremodeling.com/financing/">
-<meta property="og:image" content="https://posadaremodeling.com/images/floating-walnut-vanity-bathroom-remodel-central-florida.webp">
+<meta property="og:image" content="https://posadaremodeling.com/images/marble-walk-in-shower-remodel-central-florida.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,7 +31,7 @@
   },
   "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://posadaremodeling.com/images/floating-walnut-vanity-bathroom-remodel-central-florida.webp"
+    "url": "https://posadaremodeling.com/images/marble-walk-in-shower-remodel-central-florida.webp"
   },
   "about": {
     "@type": "HomeAndConstructionBusiness",
@@ -72,8 +72,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/floating-walnut-vanity-bathroom-remodel-central-florida.webp" imagesrcset="images/floating-walnut-vanity-bathroom-remodel-central-florida-800.webp 800w, images/floating-walnut-vanity-bathroom-remodel-central-florida.webp 1800w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=7">
+<link rel="stylesheet" href="assets/posada.css?v=1792129946">
 <style>
 /* .split.rev shares its class name with the review card; keep the split flat on ivory (same fix as the kitchen page) */
 .c1 .split.rev{background:transparent;border-top:0;padding:0}
@@ -81,21 +80,44 @@
 .c1 .pillar p a,.c1 details p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .pillar p a:hover,.c1 details p a:hover{color:var(--navy)}
 .c1 #what .more{margin-top:56px}
+/* no numerals over these four: the title sits on the pillar rule, one line, so drop the shared top margin and the two-line min-height */
+.c1 #what .pillar h3{margin-top:0;min-height:0}
 /* the guide sits in the narrower financing column, so stack its text above its button */
 .c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:18px}
 .c1 .promise-foot{align-items:center}
-/* hero proof line: each phrase stays whole; the dot before a phrase that starts a new line is clipped */
-.c1 .proof .pl{display:block;overflow:hidden;min-width:0}
-.c1 .proof .pl-in{display:flex;flex-wrap:wrap;row-gap:2px;margin-left:-1.7em}
-.c1 .proof .pl-it{white-space:nowrap}
-.c1 .proof .pl-it::before{content:"\00B7";display:inline-block;width:1.7em;text-align:center;letter-spacing:0}
 .c1 .pillar p a{white-space:nowrap}
+/* Quiet hero (round 6). The hero was a crop of a portrait bath photo that could not fill a landscape band, so the page opens on the
+   serif title like FAQs. Copied from faqs.html: the stat labels wrap as balanced lines, the cells give up side padding on phones,
+   and from 881 to 1100px the lede and buttons stack, because the 5fr column is narrower than the gold button there. The first
+   section loses part of its top padding because the stat row already closes the hero with a rule. The title is set at 19ch,
+   not the shared 13ch: "Spread the investment" is 18.25ch and the whole title 26ch, so from about 530px up it reads in two lines
+   at its natural pause ("Spread the investment / over time."), not three with "Spread the" alone; phones keep three lines. No
+   balance here, which would split it as "Spread the / investment over time." On short windows (760px tall or less) the hero
+   starts 32px higher, so at 1100x700, where the lede and buttons stack, the gold button ends about 36px above the fold. In the
+   lede, "0%&nbsp;APR" never splits at a line end. */
+.c1 #top.quiet h1{max-width:19ch;text-wrap:wrap}
+/* "0% APR" is one figure: it never breaks inside its cell, and below 360px it steps down to 36px so it fits the 128px cell at 320.
+   Phones: the shared .2em tracking set "Promotional options" at 163px, exactly the 390px cell and wider than the 375 and 360 cells,
+   so that label ran to four lines; .15em (and .1em below 375, as FAQs does below 360) keeps it to three. Its line break sits after
+   "options" (as the rating cell's does), because balance alone set it bottom-heavy at 390 ("Promotional / options for / qualified
+   homeowners"). */
+.c1 #top .stat-row .n{white-space:nowrap}
+@media (max-width:430px){.c1 #top .stat-row .l{letter-spacing:.15em}}
+@media (max-width:374px){.c1 #top .stat-row .l{letter-spacing:.1em}}
+@media (max-width:359px){.c1 #top .stat-row .n{font-size:36px}}
+@media (min-width:881px) and (max-height:760px){.c1 #top.quiet{padding-top:72px}}
+.c1 #hearth{padding-top:40px}
+.c1 #top .stat-row .l{text-wrap:balance}
+@media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}
+@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}
+/* top bar, phones: the nowrap rating link always wraps below the consultation line up to 552px wide, so at 600px and under the separator (.tl-sep) is hidden and the rating takes its own line; no "·" hangs at a line edge (two lines, 60.7px, from 360px; three at 320, where the consultation line itself wraps). From 601px the bar stays one line with the dot. Shared round-5 markup; belongs in posada.css once every page carries .tl-sep */
+@media (max-width:600px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block}}
 </style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline">Complimentary in-home design consultations across Central Florida<span class="hide-m"> &nbsp;·&nbsp; Evenings &amp; weekends available &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep"> &nbsp;·&nbsp; </span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -107,7 +129,7 @@
 <a class="lnk" href="our-work.html">Our Work</a>
 <a class="lnk" href="about.html">Meet Mike</a>
 </nav>
-<a class="logo" href="#top" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo" href="index.html" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <div class="nav-r">
 <a class="tel" href="tel:+14073193503">(407) 319-3503</a>
 <a class="btn" href="contact.html">Book a Consultation</a>
@@ -132,23 +154,19 @@
 </div>
 
 <main id="main">
-<section class="hero compact" id="top">
-<div class="hero-media">
-<img src="images/floating-walnut-vanity-bathroom-remodel-central-florida.webp" srcset="images/floating-walnut-vanity-bathroom-remodel-central-florida-800.webp 800w, images/floating-walnut-vanity-bathroom-remodel-central-florida.webp 1800w" sizes="100vw" width="1800" height="1350" alt="Floating walnut double vanity with an LED mirror in a Central Florida bathroom remodel" style="object-position:center 55%;filter:contrast(1.08) saturate(1.05) brightness(.96)" fetchpriority="high" decoding="async">
-</div>
-<div class="hero-panel">
-<div class="panel on-navy">
+<section class="hero quiet" id="top">
+<div class="wrap">
 <div class="crumb"><a href="index.html">Home</a><span>›</span><span>Financing</span></div>
 <h1>Spread the investment <em>over&nbsp;time.</em></h1>
-<p>Financing is available through Hearth, with 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your&nbsp;score.</p>
-<div class="ctas">
-<a class="btn" href="contact.html">Book a Complimentary Consultation</a>
-<a class="textlink" href="https://app.gethearth.com/financing/54980/97055/prequalify?utm_campaign=54980" target="_blank" rel="noopener">Check your options</a>
+<div class="q-row">
+<p class="lede">Financing is available through Hearth, with 0%&nbsp;APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your&nbsp;score.</p>
+<div class="ctas"><a class="btn" href="contact.html">Book a Complimentary Consultation</a><a class="textlink" href="https://app.gethearth.com/financing/54980/97055/prequalify?utm_campaign=54980" target="_blank" rel="noopener">Check your options</a></div>
 </div>
-<div class="proof">
-<span class="pl"><span class="pl-in"><span class="pl-it"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong></span> <span class="pl-it">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span></span>
-<span class="pl"><span class="pl-in"><span class="pl-it">Veteran-owned</span> <span class="pl-it">Family-operated</span> <span class="pl-it">Fully insured</span></span></span>
-</div>
+<div class="stat-row">
+<div class="cell"><div class="n">0% APR</div><div class="l">Promotional options<br>for qualified homeowners</div></div>
+<div class="cell"><div class="n">1 min</div><div class="l">About a minute to check your options</div></div>
+<div class="cell"><div class="n">3</div><div class="l">Steps, from options to start date</div></div>
+<a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
 </div>
 </div>
 </section>
@@ -156,7 +174,7 @@
 <section class="sec" id="hearth">
 <div class="wrap">
 <div class="split rev">
-<div class="media"><div class="frame"><img src="images/bathroom-vanity-led-mirror-dark-wood-central-florida.webp" srcset="images/bathroom-vanity-led-mirror-dark-wood-central-florida-800.webp 600w, images/bathroom-vanity-led-mirror-dark-wood-central-florida.webp 1200w" sizes="(max-width: 1100px) 100vw, 40vw" width="1200" height="1600" alt="Bathroom vanity remodel with dark wood cabinetry and a backlit LED mirror in Central Florida" loading="lazy" decoding="async"></div></div>
+<div class="media"><div class="frame"><img src="images/marble-walk-in-shower-remodel-central-florida.webp" srcset="images/marble-walk-in-shower-remodel-central-florida-800.webp 600w, images/marble-walk-in-shower-remodel-central-florida.webp 1350w" sizes="(max-width: 1100px) 100vw, 40vw" width="1350" height="1800" alt="Marble-look walk-in shower remodel with a glass enclosure in Central Florida" loading="lazy" decoding="async"></div></div>
 <div>
 <span class="eyebrow">Financing Through Hearth</span>
 <h2>Check your options in <em>about a minute.</em></h2>
@@ -186,12 +204,12 @@
 <div class="tile">
 <div class="big">01</div>
 <div class="k">Check your options</div>
-<p>Answer a few questions on Hearth's site. It takes about a minute and uses a soft credit check that does not affect your score.</p>
+<p>Answer a few questions on Hearth&rsquo;s site. It takes about a minute and uses a soft credit check that does not affect your score.</p>
 </div>
 <div class="tile">
 <div class="big">02</div>
 <div class="k">Choose an offer</div>
-<p>Compare options from Hearth's network of lending partners, including 0% APR promotional options for qualified homeowners, and choose the one that fits. Rates and terms are set by the lending partner.</p>
+<p>Compare options from Hearth&rsquo;s network of lending partners, including 0% APR promotional options for qualified homeowners, and choose the one that fits. Rates and terms are set by the lending partner.</p>
 </div>
 <div class="tile">
 <div class="big">03</div>
@@ -213,22 +231,18 @@
 <p>Financing through Hearth can be used toward any project in your written proposal, from a single bathroom refresh to a whole-home remodel. Because every proposal is itemized line by line, you know the exact number before you check your options.</p>
 <div class="pillars">
 <div class="pillar">
-<div class="rn">I</div>
 <h3>Kitchens</h3>
 <p>Cabinetry, quartz and granite counters, islands, lighting and layout changes, from a refresh to a luxury, open-concept <a href="kitchen-remodeling.html">kitchen remodel</a>.</p>
 </div>
 <div class="pillar">
-<div class="rn">II</div>
 <h3>Bathrooms</h3>
 <p>Walk-in showers, tub-to-shower conversions with frameless glass, custom vanities and designer tile, from a <a href="bathroom-remodeling.html">bathroom refresh</a> to a <span style="white-space:nowrap">spa-style</span> primary&nbsp;suite.</p>
 </div>
 <div class="pillar">
-<div class="rn">III</div>
 <h3>Flooring</h3>
 <p>Luxury vinyl plank, SPC and WPC, large-format and wood-look tile, hardwood and engineered wood: <a href="flooring.html">flooring installed</a> room by room or through the whole home.</p>
 </div>
 <div class="pillar">
-<div class="rn">IV</div>
 <h3>Whole home</h3>
 <p>Bonus rooms, feature walls, fireplaces and interior remodels that carry one finish through the house, by request.</p>
 </div>
@@ -257,6 +271,7 @@
 </tbody>
 </table>
 <p class="fine">Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. Flooring is itemized by the square foot in your&nbsp;proposal.</p>
+<p class="fine">Planning several rooms at once? One team designs and builds kitchens, bathrooms and floors together, with every room itemized in your written proposal. <a href="faqs.html#both" style="border-bottom:1px solid #C4A24E">How a combined project works</a>.</p>
 </div>
 <div class="fin">
 <span class="eyebrow">Before You Sign</span>
@@ -274,7 +289,33 @@
 </div>
 </section>
 
-<section class="sec" id="faq">
+<section class="sec" id="review">
+<div class="wrap">
+<div class="client">
+<div>
+<span class="eyebrow">In a Client&rsquo;s Words</span>
+<h2>Numbers you can <em>hold us to.</em></h2>
+<div class="score">
+<div class="n">5.0</div>
+<div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
+</div>
+<div class="rev-links">
+<a class="textlink" href="https://maps.google.com/maps?cid=3116045480222163497">Read all reviews on Google</a>
+</div>
+</div>
+<div class="rev-grid one">
+<div class="rev">
+<div class="stars" aria-hidden="true">★★★★★</div>
+<blockquote>&ldquo;We decided to go with Posada Remodeling for our shower remodel and they did not disappoint! Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks phenomenal.&rdquo;</blockquote>
+<div class="who">Zach K.</div>
+<div class="src">Walk-in shower remodel · Google review</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:0">
 <div class="wrap faq-wrap">
 <div class="center">
 <span class="eyebrow">Good Questions</span>
@@ -310,7 +351,7 @@
 <div class="side">
 <a class="bigtel" href="tel:+14073193503">(407) 319-3503</a>
 <p>Call or text · We reply within 24 hours</p>
-<p>Evening and weekend consultations available</p>
+<a class="textlink" href="sms:+14073193503" style="display:inline-block;margin-top:18px">Text us a photo of the room</a>
 </div>
 </div>
 </div>
@@ -321,15 +362,15 @@
 <div class="wrap">
 <div class="foot-grid">
 <div>
-<a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo foot-logo" href="index.html" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida. Veteran-owned · Family-operated · Fully insured.</p>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br>Veteran-owned&nbsp;· Family-operated&nbsp;· Fully insured.</p>
 <div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a> · <a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
 <a href="https://www.youtube.com/@PosadaRemodelingDesign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg>YouTube</a>
 <a href="https://www.facebook.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"></path></svg>Facebook</a>
-<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5" stroke-linecap="round"></path></svg>Google Reviews</a>
+<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3.5l2.55 5.2 5.7.83-4.13 4.02.98 5.68L12 16.55l-5.1 2.68.98-5.68-4.13-4.02 5.7-.83z" stroke-linejoin="round"></path></svg>Google Reviews</a>
 <a href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M7 9h10M7 12h10M7 15h6" stroke-linecap="round"></path></svg>BBB Accredited</a>
 </div>
 </div>
@@ -361,8 +402,8 @@
 <li><a href="kitchen-remodeling.html">Orlando</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary &amp; Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo &amp; Windermere</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere</a></li>
 <li><a href="service-areas.html">All service areas</a></li>
 </ul>
 </div>
@@ -381,6 +422,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=7" defer></script>
+<script src="assets/posada.js?v=1792129946" defer></script>
 </body>
 </html>

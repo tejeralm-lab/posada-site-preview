@@ -32,12 +32,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/posada.css?v=7">
+<link rel="stylesheet" href="assets/posada.css?v=1792129946">
+<style>
+/* 404: quiet centered message; phone stays on one line; tidy link grid on phones */
+.c1 section.sec.nf{padding-top:110px}
+.c1 .nf h1{font-size:clamp(40px,4.6vw,64px);margin:26px auto 24px;max-width:900px}
+.c1 .nf .center > p{text-wrap:balance}
+.c1 .nf p a{color:var(--navy);border-bottom:1px solid var(--brass);white-space:nowrap}
+.c1 .nf p a:hover{color:var(--bronze)}
+.c1 .nf-links{margin-top:48px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+/* phone top bar: drop the separator and put the rating on its own line, so no line ends on a dot */
+@media (max-width:600px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block}}
+@media (max-width:600px){.c1 section.sec.nf{padding-top:80px}.c1 .nf-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:40px}.c1 .nf-links a{padding:0 12px}.c1 .nf-links .btn{grid-column:1/-1}}
+</style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline">Complimentary in-home design consultations across Central Florida<span class="hide-m"> &nbsp;·&nbsp; Evenings &amp; weekends available &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep"> &nbsp;·&nbsp; </span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -49,7 +61,7 @@
 <a class="lnk" href="our-work.html">Our Work</a>
 <a class="lnk" href="about.html">Meet Mike</a>
 </nav>
-<a class="logo" href="#top" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo" href="index.html" aria-label="Posada Remodeling and Design, home"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <div class="nav-r">
 <a class="tel" href="tel:+14073193503">(407) 319-3503</a>
 <a class="btn" href="contact.html">Book a Consultation</a>
@@ -74,15 +86,15 @@
 </div>
 
 <main id="main">
-<section class="sec" id="top" style="padding-top:110px">
+<section class="sec nf" id="top">
 <div class="wrap center">
 <span class="dia" aria-hidden="true"></span>
-<h1 style="font-size:clamp(40px,4.6vw,64px);margin:26px auto 24px;max-width:900px">That page has <em>moved.</em></h1>
-<p>The page you were looking for is not here anymore. Try one of these, or call us at (407) 319-3503.</p>
-<div style="margin-top:48px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap"><a class="btn-line" href="index.html">Home</a><a class="btn-line" href="kitchen-remodeling.html">Kitchens</a><a class="btn-line" href="bathroom-remodeling.html">Bathrooms</a><a class="btn-line" href="our-work.html">Our Work</a><a class="btn" href="contact.html">Book a Consultation</a></div>
+<h1>That page has <em>moved.</em></h1>
+<p>The page you were looking for is not here anymore. Try one of these, or call us at <a href="tel:+14073193503">(407)&nbsp;319-3503</a>.</p>
+<div class="nf-links"><a class="btn-line" href="index.html">Home</a><a class="btn-line" href="kitchen-remodeling.html">Kitchens</a><a class="btn-line" href="bathroom-remodeling.html">Bathrooms</a><a class="btn-line" href="our-work.html">Our Work</a><a class="btn" href="contact.html">Book a Consultation</a></div>
 </div>
 </section>
-<section class="cta-band on-navy"><div class="wrap"><div class="inner"><div><span class="eyebrow">Begin Here</span><h2>Tell us about <em>your project.</em></h2><p>A complimentary consultation at your home. We listen first, then put real numbers on it.</p><a class="btn" href="contact.html">Book a Complimentary Consultation</a></div><div class="side"><a class="bigtel" href="tel:+14073193503">(407) 319-3503</a><p>Call or text · We reply within 24 hours</p></div></div></div></section>
+<section class="cta-band on-navy"><div class="wrap"><div class="inner"><div><span class="eyebrow">Begin Here</span><h2>Tell us about <em>your project.</em></h2><p>A complimentary consultation at your home. We listen first, then put real numbers on it.</p><div class="ctas"><a class="btn" href="contact.html">Book a Complimentary Consultation</a></div></div><div class="side"><a class="bigtel" href="tel:+14073193503">(407) 319-3503</a><p>Call or text · We reply within 24 hours</p><a class="textlink" href="sms:+14073193503" style="display:inline-block;margin-top:18px">Text us a photo of the room</a></div></div></div></section>
 
 </main>
 
@@ -90,15 +102,15 @@
 <div class="wrap">
 <div class="foot-grid">
 <div>
-<a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
+<a class="logo foot-logo" href="index.html" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="logo/posada-house-mark-gold.png" width="1200" height="520" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida. Veteran-owned · Family-operated · Fully insured.</p>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br>Veteran-owned&nbsp;· Family-operated&nbsp;· Fully insured.</p>
 <div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a> · <a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>
 <a href="https://www.youtube.com/@PosadaRemodelingDesign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"></path></svg>YouTube</a>
 <a href="https://www.facebook.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"></path></svg>Facebook</a>
-<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5h5" stroke-linecap="round"></path></svg>Google Reviews</a>
+<a href="https://maps.google.com/maps?cid=3116045480222163497"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3.5l2.55 5.2 5.7.83-4.13 4.02.98 5.68L12 16.55l-5.1 2.68.98-5.68-4.13-4.02 5.7-.83z" stroke-linejoin="round"></path></svg>Google Reviews</a>
 <a href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"></rect><path d="M7 9h10M7 12h10M7 15h6" stroke-linecap="round"></path></svg>BBB Accredited</a>
 </div>
 </div>
@@ -130,8 +142,8 @@
 <li><a href="kitchen-remodeling.html">Orlando</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-park-fl/">Winter Park</a></li>
 <li><a href="https://posadaremodeling.com/kitchen-remodeling-winter-garden-fl/">Winter Garden</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary &amp; Longwood</a></li>
-<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo &amp; Windermere</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-lake-mary/">Lake Mary</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-longwood-fl/">Longwood</a></li>
+<li><a href="https://posadaremodeling.com/kitchen-remodeling-oviedo-fl/">Oviedo</a> &amp; <a href="https://posadaremodeling.com/kitchen-remodeling-windermere/">Windermere</a></li>
 <li><a href="service-areas.html">All service areas</a></li>
 </ul>
 </div>
@@ -150,6 +162,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=7" defer></script>
+<script src="assets/posada.js?v=1792129946" defer></script>
 </body>
 </html>
