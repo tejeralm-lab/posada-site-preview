@@ -124,10 +124,17 @@
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
     }, {threshold: 0.08, rootMargin: '0px 0px -5% 0px'});
-    var below = [], vh = window.innerHeight;   // read every position first, then write: one layout instead of one per item
-    for (var k = 0; k < items.length; k++) if (items[k].getBoundingClientRect().top >= vh) below.push(k); // on screen already: never hide it
+    var list = Array.prototype.slice.call(items), below = [], vh = window.innerHeight;   // read every position first, then write: one layout
+    for (var k = 0; k < list.length; k++) {
+      var r = list[k].getBoundingClientRect();
+      if (r.height > vh * 1.5) {   // too tall to ever reach the 8% threshold: never hide the block, reveal its children instead
+        for (var c = 0; c < list[k].children.length; c++) if (list.indexOf(list[k].children[c]) < 0) list.push(list[k].children[c]);
+        continue;
+      }
+      if (r.top >= vh) below.push(k);   // on screen already: never hide it
+    }
     for (var b = 0; b < below.length; b++) {
-      var el = items[below[b]]; el.classList.add('rv'); el.style.transitionDelay = ((below[b] % 4) * 70) + 'ms'; io.observe(el);
+      var el = list[below[b]]; el.classList.add('rv'); el.style.transitionDelay = ((below[b] % 4) * 70) + 'ms'; io.observe(el);
     }
   }
   // lightbox for galleries: click, Enter or Space opens; arrows, arrow keys or a swipe step through the set
