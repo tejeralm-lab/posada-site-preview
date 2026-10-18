@@ -25,8 +25,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" imagesrcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-2000.webp 2000w" imagesizes="100vw">
-<link rel="stylesheet" href="assets/posada.css?v=1792129946">
+<link rel="preload" as="image" href="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" imagesrcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w" imagesizes="(max-width: 880px) 90vw, 420px">
+<link rel="stylesheet" href="assets/posada.css?v=1792289244">
 <style>
 /* calmer line breaks: no single-word last lines in copy, balanced two-line questions and footers */
 .c1 p,.c1 li,.c1 blockquote{text-wrap:pretty}
@@ -37,16 +37,9 @@
 .c1 .nh{white-space:nowrap}
 /* county labels sit on the same baseline as the city links */
 .c1 .area-list li{align-items:baseline}
-/* phones: the 360px band shows the leaf wall, the tub and the whole brass filler above the panel (95% left the filler handles at the panel edge once the band grew) */
-@media (max-width:880px){.c1 .hero-media img{object-position:center 100%!important}}
-/* tablets, laptops and desktops (601px and up), round 5: the taller band runs behind the panel, so the crop is pinned 81vw below the photo's top, just under the hand towel on the left wall (at 768x1024 it starts at 60.75%, so the towels no longer show cut off at the band's top edge, as they did with the old tablet rule of center 80%). A strip of the leaf wall stays above the tub and the towel stays out at 1920x970, 1440x790, 1440 tall (the review shot), 1536x730, 1366x657, 1280x640 and 1024x690. Where the band is too tall for its width (about 1380px wide or less on windows over 940px tall) it stops at the photo's bottom edge, so it never leaves a gap. The inline center 90% is the fallback */
-@media (min-width:601px){.c1 #top .hero-media img{object-position:50% max(100%,-81vw)!important}}
-/* desktop (round 6): the towel shadows run down to 68.5% of the photo's height, so from 1101px the crop starts 92vw down (69%), or at the photo's bottom edge when the band is too tall for that */
-@media (min-width:1101px){.c1 #top .hero-media img{object-position:50% max(100%,-92vw)!important}}
-/* desktop, band height (round 6, measured in Chrome): the 92vw pin needs a band no taller than 41.3% of its width, and the band is 653px at 1440x900 and 1366x768 and 732px on windows over 940px tall, so the pin fell back to the photo's bottom edge (62-66% down) and the towel shadows showed in the top-left corner. Where that happens the photo grows just enough for its bottom 31% to fill the band, so it still starts at 69% (about 1.1x at 1440x900, 1.16x at 1366x768, 1.23x at 1440x1440), anchored 70% across, so the zoom trims more of the left wall than of the right and the whole brass filler stays in view; where the band is short enough (1920x1080, 1536x730, 1366x657) this equals the pin above. Tablets and phones keep their rules */
-@media (min-width:1101px){@supports (width:1cqw){.c1 #top .hero-media{container-type:size}.c1 #top .hero-media img{position:absolute;top:calc(max(133.333cqw,322.581cqh) * -.69);left:calc((100cqw - max(100cqw,241.936cqh)) * .7);width:max(100cqw,241.936cqh);height:auto;max-width:none;aspect-ratio:1350/1800}}}
-/* narrow tablets and landscape phones (601-687px): the 360px band is too tall for the 81vw pin to reach (it fell back to the photo's bottom edge and showed the towels cut off, from 55% at 601), so the band is capped at 52.33vw (the photo's bottom 39.25%); the crop then starts at 60.75% there too, under the towels. From 688px up it stays 360px */
-@media (min-width:601px) and (max-width:880px){.c1 #top .hero-media{height:min(360px,52.33vw)}}
+/* hero (round 7): the soaking-tub photo is shown whole, framed like a print on sand beside the navy panel (the shared .hero.compact.film.print layout, as on Sorrento, Orlando and Flooring). The old band crops that showed only the bottom third of the tub are gone. The inline object-position (center 75%) only matters below 1100px, where the stacked print is cropped to at most 340px tall: it keeps the leaf wall, the towels, the whole tub and the brass filler in the strip */
+/* the caption is only as wide as the print (420px at most, not the 456px kept for Flooring's wider print): at 1100-1150px a 456px right-aligned caption would run under the navy panel */
+@media (min-width:1100px){.c1 section.hero.compact.print .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 824px),420px)}}
 /* gallery captions on two-across phones: a label that needs two lines splits evenly ("Vanity with / drawer bases"), never one word alone */
 .c1 #gallery figcaption > span:first-child{text-wrap:balance}
 /* films: a playing vertical film is sized by its width, so on a phone it stays inside its column (sized by height, it grew to 389px in a 350px column at 390 and its right edge, with the fullscreen button, was cut off); desktop keeps the same 415x738 player */
@@ -57,6 +50,9 @@
 @media (max-width:880px){.c1 #cost .cost-cta{margin-top:44px;padding-top:36px}}
 /* gallery: the first row is three finished rooms; a label introduces the second row of close-ups, which are square, so it does not read as a tile catalog. Bronze2 keeps the label AA on sand */
 @media (min-width:881px){.c1 #gallery .gal-label{grid-column:1/-1;margin:18px 0 -8px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--bronze2)}.c1 #gallery .gal figure:nth-of-type(n+4) img{aspect-ratio:1/1}}
+/* up-close row, walnut vanity (round 7): the square tile shows 75% of the 4:3 photo's width, and the photo's two wall outlets sit at 7-12.5% and 86-91.5% across, only 73.5% apart, so no object-position hides both (at 50% the right plate showed as a 7px white tab in the top corner). From 881px the tile zooms the photo 7% inside a clipping wrapper: with object-position 49.5% the window is 14.5-84.5% across, about 25 source px clear of each plate, and every drawer pull stays in frame. Phones keep the plain 4:5 tile (20-80% across), which never reaches the outlets. The focus ring moves to the wrapper, because the clipped img cannot show its own */
+@media (min-width:881px){.c1 #gallery .gal figure:nth-of-type(5) .crop{overflow:hidden;aspect-ratio:1/1}.c1 #gallery .gal figure:nth-of-type(5) .crop img{display:block;height:100%;aspect-ratio:auto;transform:scale(1.07)}.c1 #gallery .gal figure:nth-of-type(5) .crop:has(img:focus-visible){outline:2px solid var(--brass);outline-offset:4px}}
+@supports selector(:has(a)){@media (min-width:881px){.c1 #gallery .gal figure:nth-of-type(5) .crop img:focus-visible{outline:none}}}
 /* phones keep three rows of two: the label hides, and the shared odd-last-tile rule (which counts the label as a child) must not turn the sixth tile into a wide 3:2 tile */
 /* iPads and small laptops (881-1100px): the shared grid drops to two columns there, which would leave the third room and the last close-up alone on their rows around the label, so this gallery stays three across, as the service cards do */
 @media (min-width:881px) and (max-width:1100px){.c1 #gallery .gal{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
@@ -106,21 +102,21 @@
 </div>
 
 <main id="main">
-<section class="hero compact" id="top">
+<section class="hero compact film print" id="top">
 <div class="hero-media">
-<img src="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" srcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-2000.webp 2000w" sizes="100vw" width="1350" height="1800" alt="Primary bathroom remodel with a soaking tub and a textured leaf accent wall in Central Florida" style="object-position:center 90%" fetchpriority="high" decoding="async">
+<img class="still" src="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp" srcset="images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida-800.webp 600w, images/soaking-tub-textured-accent-wall-primary-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 90vw, 420px" width="1350" height="1800" alt="Primary bathroom remodel with a soaking tub and a textured leaf accent wall in Central Florida" style="object-position:center 75%" fetchpriority="high" decoding="async">
+<p class="print-cap">Soaking tub &amp; leaf wall&nbsp;·&nbsp;Central&nbsp;Florida</p>
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
 <div class="crumb"><a href="index.html">Home</a><span>›</span><span>Bathrooms</span></div>
-<h1>Bathroom remodeling in Orlando&nbsp;&amp; <em>Central Florida.</em></h1>
+<h1>Bathroom remodeling in <em>Orlando</em>&nbsp;&amp; Central&nbsp;Florida.</h1>
 <p><span class="nh">Walk-in</span> showers, <span class="nh">tub-to-shower</span> conversions, custom vanities and <span class="nh">spa-style</span> primary suites, designed and built by one team from the first drawing to the final walkthrough.</p>
 <div class="ctas">
 <a class="btn" href="contact.html?project=bathroom">Book a Complimentary Consultation</a>
 <a class="textlink" href="#cost">See bathroom pricing</a>
 </div>
 <div class="proof">
-<span class="pl"><span class="pl-in"><span class="pl-it"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong></span> <span class="pl-it">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span></span>
 <span class="pl"><span class="pl-in"><span class="pl-it">Veteran-owned</span> <span class="pl-it">Family-operated</span> <span class="pl-it">Fully insured</span></span></span>
 </div>
 </div>
@@ -164,7 +160,7 @@
 <figure><img src="images/gold-rain-shower-bathroom-remodel-central-florida.webp" srcset="images/gold-rain-shower-bathroom-remodel-central-florida-800.webp 600w, images/gold-rain-shower-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Bathroom remodel with a gold rain shower head and tiled shower niche in Central Florida" loading="lazy" decoding="async"><figcaption><span>Gold rain shower</span><span>Central&nbsp;Florida</span></figcaption></figure>
 <p class="gal-label">Up close: tile, drawers and drains</p>
 <figure><img src="images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl.webp" srcset="images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl-800.webp 640w, images/shower-head-walk-in-shower-tile-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 100vw, 33vw" width="864" height="1080" alt="Shower head on glossy pale green tile in a Dr. Phillips, Orlando walk-in shower remodel" loading="lazy" decoding="async"><figcaption><span>Pale green shower tile</span><span>Dr.&nbsp;Phillips</span></figcaption></figure>
-<figure><img src="images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl.webp" srcset="images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl-800.webp 640w, images/sorrento-master-bathroom-remodel-vanity-drawer-storage-fl.webp 660w" sizes="(max-width: 880px) 100vw, 33vw" width="660" height="825" alt="White vanity with drawer bases, satin-finish pulls and a marble-look countertop in a Sorrento, FL master bathroom remodel" loading="lazy" decoding="async"><figcaption><span>Vanity with drawer bases</span><span>Sorrento</span></figcaption></figure>
+<figure><div class="crop"><img src="images/floating-walnut-vanity-bathroom-remodel-central-florida.webp" srcset="images/floating-walnut-vanity-bathroom-remodel-central-florida-800.webp 800w, images/floating-walnut-vanity-bathroom-remodel-central-florida.webp 1800w" sizes="(max-width: 880px) 100vw, 640px" width="1800" height="1350" alt="Floating walnut double vanity with an LED mirror in a Central Florida bathroom remodel" style="object-position:49.5% 50%" loading="lazy" decoding="async"></div><figcaption><span>Walnut vanity drawers</span><span>Central&nbsp;Florida</span></figcaption></figure>
 <figure><img src="images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl.webp" srcset="images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl-800.webp 640w, images/hex-tile-shower-floor-brass-drain-dr-phillips-orlando-fl.webp 864w" sizes="(max-width: 880px) 100vw, 33vw" width="864" height="1080" alt="Hexagon tile shower floor with a square brass drain in a Dr. Phillips, Orlando bathroom remodel" style="object-position:center 0%" loading="lazy" decoding="async"><figcaption><span>Hex floor, brass drain</span><span>Dr.&nbsp;Phillips</span></figcaption></figure>
 </div>
 </div>
@@ -423,7 +419,7 @@
 <li><a href="kitchen-remodeling.html">Kitchen Remodeling</a></li>
 <li><a href="bathroom-remodeling.html">Bathroom Remodeling</a></li>
 <li><a href="flooring.html">Flooring</a></li>
-<li><a href="our-work.html">Whole-Home Remodeling</a></li>
+<li><a href="our-work.html#whole-home">Whole-Home Remodeling</a></li>
 <li><a href="financing.html">Financing</a></li>
 </ul>
 </div>
@@ -465,6 +461,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=1792129946" defer></script>
+<script src="assets/posada.js?v=1792289244" defer></script>
 </body>
 </html>

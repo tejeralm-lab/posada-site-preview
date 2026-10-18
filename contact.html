@@ -41,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/posada.css?v=1792129946">
+<link rel="stylesheet" href="assets/posada.css?v=1792289244">
 <style>
 .c1 .next p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .next p a:hover{color:var(--bronze2)}
@@ -73,6 +73,8 @@
 @media (max-width:599px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block;width:fit-content;margin:0 auto}}
 /* round 5: the footer gets an edge after the quiet closing line */
 .c1 .foot{border-top:1px solid var(--line)}
+/* round 7, fix 6. desktop: the contact column stays beside the form while it scrolls. It is about 802px tall, so it sticks only where the window is at least 900px tall (96px under the scrolled 92px header + 802 = 898); on shorter windows it would be cut off at the bottom while stuck, so there it stays as it is today. If the side column grows, raise the min-height to its height plus 96px */
+@media (min-width:881px) and (min-height:900px){.c1 #contact .contact > .side{position:sticky;top:96px;align-self:start}}
 </style>
 </head>
 <body>
@@ -124,7 +126,6 @@
 <h1>Tell us about <em>your project.</em></h1>
 <p class="lead">A complimentary consultation at your home. We listen first, then put real numbers on it. No obligation, and we never share your information.</p>
 <div class="proof">
-<span class="pl"><span class="pl-in"><span class="pl-it"><span class="stars" aria-hidden="true">★★★★★</span> <strong>5.0 on Google</strong></span> <span class="pl-it">60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews</span></span></span>
 <span class="pl"><span class="pl-in"><span class="pl-it">Veteran-owned</span> <span class="pl-it">Family-operated</span> <span class="pl-it">Fully insured</span></span></span>
 </div>
 <form action="thank-you.html" method="get">
@@ -247,7 +248,7 @@
 <li><a href="kitchen-remodeling.html">Kitchen Remodeling</a></li>
 <li><a href="bathroom-remodeling.html">Bathroom Remodeling</a></li>
 <li><a href="flooring.html">Flooring</a></li>
-<li><a href="our-work.html">Whole-Home Remodeling</a></li>
+<li><a href="our-work.html#whole-home">Whole-Home Remodeling</a></li>
 <li><a href="financing.html">Financing</a></li>
 </ul>
 </div>
@@ -289,7 +290,7 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=1792129946" defer></script>
+<script src="assets/posada.js?v=1792289244" defer></script>
 <script>document.querySelectorAll('form[action="thank-you.html"]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();location.href='thank-you.html';});});</script>
 <script>(function(){var m={kitchen:'p-k',bathroom:'p-b',flooring:'p-f','whole-home':'p-w'},k=new URLSearchParams(location.search).get('project');if(!m[k]&&document.referrer){try{var r=new URL(document.referrer);if(r.host===location.host){var pa=r.pathname.toLowerCase();k=/kitchen/.test(pa)?'kitchen':/bath/.test(pa)?'bathroom':/floor/.test(pa)?'flooring':null;}}catch(e){}}var el=document.getElementById(m[k]);if(el&&!document.querySelector('input[name="project"]:checked'))el.checked=true;})();</script>
 </body>

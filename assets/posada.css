@@ -771,3 +771,13 @@ html,body{overflow-x:hidden}
 .c1 p,.c1 li,.c1 blockquote,.c1 figcaption,.c1 .lede{text-wrap:pretty}
 /* right-hand columns on two shared start lines at 1101px and up: the pricing aside starts with the section-head paragraphs (852 at 1440) and the city lists with the split text (768) */
 @media (min-width:1101px){.c1 .invest{grid-template-columns:minmax(0,1fr) minmax(0,460px)}.c1 #areas .areas{grid-template-columns:minmax(0,6fr) minmax(0,6fr)}}
+
+/* ===================== audit round 7 fixes ===================== */
+/* round 7: the navy film card nested in a sand band keeps the navy eyebrow color (brassl on navy is about 9:1) */
+.c1 .on-sand .on-navy .eyebrow,.c1 .on-sand .navy .eyebrow{color:var(--brassl)}
+/* footer: a wrapped link keeps its two lines together; 14.5px x 1.45 + 10px is about 31px per item, the same rhythm as today's 31.2px */
+.c1 .foot ul li{line-height:1.45;padding:5px 0}
+/* review quotes in narrow columns: plain wrapping, because pretty left three-word lines */
+.c1 .rev blockquote{text-wrap:wrap}
+/* round 7: from 1101px the quiet-hero buttons start at the left of their column, so they read with the lede beside them (64px gap) instead of floating at the right edge. 881-1100px pages already stack them under the lede */
+@media (min-width:1101px){.c1 .hero.quiet .ctas{justify-content:flex-start}}

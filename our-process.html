@@ -71,7 +71,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/posada.css?v=1792129946">
+<link rel="stylesheet" href="assets/posada.css?v=1792289244">
 <style>
 .c1 .rev-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:1100px){.c1 .rev-grid.three{grid-template-columns:1fr}}
@@ -109,6 +109,16 @@
 /* the sticky "Seven steps, one team" column carries a booking button beside the timeline. From 1101 to about 1130px the column is
    379-390px wide and the 390px gold button ran past it, so there it gives up 8px of side padding per side and fits */
 @media (min-width:1101px) and (max-width:1140px){.c1 #steps .areas .btn{padding:0 26px}}
+/* round 7: the three people behind the seven steps, under the trust line. The 1.6x zoom inside the round mask frames each face and collar
+   (a plain cover crop of these portrait files leaves a 20px face) */
+.c1 #intro .crew-k{display:block;margin-top:64px}
+.c1 #intro .crew{list-style:none;margin:28px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:24px 64px}
+.c1 #intro .crew li{display:flex;align-items:center;gap:16px;text-align:left}
+.c1 #intro .crew .ph{flex:none;width:72px;height:72px;border-radius:50%;overflow:hidden;outline:1px solid var(--brass);outline-offset:4px}
+.c1 #intro .crew img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scale(1.6);transform-origin:50% 22%}
+.c1 #intro .crew .nm{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mute);line-height:1.5}
+.c1 #intro .crew strong{display:block;margin-bottom:4px;font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--navy)}
+@media (max-width:600px){.c1 #intro .crew{flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;margin:28px auto 0}}
 </style>
 </head>
 <body>
@@ -174,6 +184,12 @@
 <a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
 </div>
 <p class="trust-line"><span class="nb">Veteran-owned</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Family-operated</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep" aria-hidden="true"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
+<span class="eyebrow crew-k">Meet the team</span>
+<ul class="crew">
+<li><span class="ph"><img src="images/mike-posada-owner-founder-headshot.webp" srcset="images/mike-posada-owner-founder-headshot.webp 427w" sizes="72px" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"></span><span class="nm"><strong>Mike Posada</strong>Owner &amp; Founder</span></li>
+<li><span class="ph"><img src="images/josh-castillo-project-manager-posada-remodeling.webp" srcset="images/josh-castillo-project-manager-posada-remodeling.webp 400w" sizes="72px" width="400" height="599" alt="Josh Castillo, project manager at Posada Remodeling and Design" loading="lazy" decoding="async"></span><span class="nm"><strong>Josh Castillo</strong>Project Manager</span></li>
+<li><span class="ph"><img src="images/yani-tejera-interior-design-advisor-posada-remodeling-800.webp" srcset="images/yani-tejera-interior-design-advisor-posada-remodeling-800.webp 400w, images/yani-tejera-interior-design-advisor-posada-remodeling.webp 800w" sizes="72px" width="400" height="558" alt="Yani Tejera, interior design advisor at Posada Remodeling and Design" loading="lazy" decoding="async"></span><span class="nm"><strong>Yani Tejera</strong>Interior Design Advisor</span></li>
+</ul>
 </div>
 </section>
 
@@ -318,7 +334,7 @@
 <div class="rev-grid three">
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was excellent.&rdquo;</blockquote>
+<blockquote>&ldquo;They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was&nbsp;excellent.&rdquo;</blockquote>
 <div class="who">Norman M.</div>
 <div class="src">Remodel · Google review</div>
 </div>
@@ -383,7 +399,7 @@
 <li><a href="kitchen-remodeling.html">Kitchen Remodeling</a></li>
 <li><a href="bathroom-remodeling.html">Bathroom Remodeling</a></li>
 <li><a href="flooring.html">Flooring</a></li>
-<li><a href="our-work.html">Whole-Home Remodeling</a></li>
+<li><a href="our-work.html#whole-home">Whole-Home Remodeling</a></li>
 <li><a href="financing.html">Financing</a></li>
 </ul>
 </div>
@@ -425,6 +441,6 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=1792129946" defer></script>
+<script src="assets/posada.js?v=1792289244" defer></script>
 </body>
 </html>
