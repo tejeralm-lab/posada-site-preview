@@ -29,12 +29,22 @@
       box.appendChild(f);
     });
   })(tiles[i]);
-  // current page in the menu
-  var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  // base path of this site: '' in production, '/posada-site-preview' on the GitHub Pages preview; read from this script's own URL
+  var BASE = (function(){
+    var s = document.currentScript || document.querySelector('script[src*="posada.js"]');
+    try { return s ? new URL(s.getAttribute('src'), location.href).pathname.replace(/\/assets\/posada\.js$/, '') : ''; } catch (e) { return ''; }
+  })();
+  // current page in the menu: compare full pathnames (folder URLs, base-aware), never bare file names
+  var pathOf = function(p){ return p.replace(/index\.html$/, '').replace(/\/?$/, '/').toLowerCase(); };
+  var here = pathOf(location.pathname);
   var navLinks = document.querySelectorAll('.nav .lnk, .mobile-menu a');
   for (var n = 0; n < navLinks.length; n++) {
-    var hrefN = (navLinks[n].getAttribute('href') || '').split('#')[0].toLowerCase();
-    if (hrefN && hrefN === here) navLinks[n].setAttribute('aria-current', 'page');
+    var hrefN = navLinks[n].getAttribute('href') || '';
+    if (!hrefN || hrefN.charAt(0) === '#') continue;
+    try {
+      var u = new URL(hrefN, location.href);
+      if (u.origin === location.origin && !u.search && pathOf(u.pathname) === here) navLinks[n].setAttribute('aria-current', 'page');
+    } catch (e) {}
   }
   // styled photo upload. Each picture is shrunk in the browser to ~1600px (JPEG) before it is sent,
   // so a full set of six fits the 4.5 MB a lead-form request may carry; this mirrors the live site's form.
@@ -97,7 +107,7 @@
         msg.value = (msg.value.trim() ? msg.value.trim() + '\n\n' : '') + extra.join('\n');
       }
       var submit = form.querySelector('button[type=submit]');
-      if (!onLiveDomain) { e.preventDefault(); location.href = 'thank-you.html?preview=1'; return; }
+      if (!onLiveDomain) { e.preventDefault(); location.href = BASE + '/thank-you/?preview=1'; return; }
       if (submit) { submit.disabled = true; submit.textContent = 'Sending…'; }
     });
   })(leadForms[0 + lf]);
@@ -105,7 +115,7 @@
   var tyTitle = document.getElementById('ty-title'), tyLede = document.getElementById('ty-lede');
   if (tyTitle && tyLede && /[?&]error=name/.test(location.search)) {
     tyTitle.innerHTML = 'We didn’t catch <em>your name.</em>';
-    tyLede.innerHTML = 'Your request did not go through because the name field was empty. <a href="contact.html" style="text-decoration:underline">Go back to the form</a>, add your name, and we will reply within 24 hours.';
+    tyLede.innerHTML = 'Your request did not go through because the name field was empty. <a href="' + BASE + '/contact-us/" style="text-decoration:underline">Go back to the form</a>, add your name, and we will reply within 24 hours.';
   }
   // reveal on scroll
   var canObserve = 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
