@@ -206,3 +206,5 @@
     })(pics[j]);
   }
 })();
+// round 11 fix 11: mark the rail guide entry for the section in view (blog posts only; no-op without .toc)
+(function(){var ol=document.querySelector('.toc ol');if(!ol||!('IntersectionObserver' in window))return;var map={};[].forEach.call(ol.querySelectorAll('a[href^="#"]'),function(a){var h=document.getElementById(a.getAttribute('href').slice(1));if(h)map[h.id]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var a=map[e.target.id];if(!a)return;[].forEach.call(ol.querySelectorAll('a[aria-current]'),function(x){x.removeAttribute('aria-current');});a.setAttribute('aria-current','true');var li=a.closest('li');if(li&&(li.offsetTop<ol.scrollTop||li.offsetTop+li.offsetHeight>ol.scrollTop+ol.clientHeight))ol.scrollTop=li.offsetTop-ol.clientHeight/3;});},{rootMargin:'-120px 0px -65% 0px'});Object.keys(map).forEach(function(id){io.observe(document.getElementById(id));});})();
