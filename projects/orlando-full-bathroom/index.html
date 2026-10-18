@@ -162,36 +162,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-/* Project page: the hero is one room still from the walkthrough film, framed like a print beside the panel (shared .hero.print rules in posada.css, round 4). The .client review and .next-proj card are shared case-study components in posada.css too. */
-.c1 .glance{margin-top:22px}
-.c1 #what-we-did .split{align-items:start}
-.c1 #what-we-did .media{position:sticky;top:124px;margin-top:40px}
-/* the print still: pull the cyan LED glow toward the palette */
-.c1 #top .hero-media img.still{filter:saturate(.8) sepia(.06) contrast(1.04)}
-.c1 #details .pillars{margin-top:0}
-.c1 .split p a,.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
-.c1 .nw{white-space:nowrap}
-/* print hero: at 1100-1300px the one-line caption (about 350px) ran past the narrower print and under the panel, so it keeps to the print's width and balances onto two lines there */
-@media (min-width:1100px){.c1 #top .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 839px),420px)}}
-/* 881-1099px: the print is centered above the panel, so the panel is centered under it */
-@media (min-width:881px) and (max-width:1099px){.c1 #top .hero-panel .panel{margin-left:auto;margin-right:auto}}
-/* phones: the last crumb shortens to "Orlando" (the .cr-x rule now lives in posada.css); at 320px the crumb tightens to keep one line */
-@media (max-width:360px){.c1 #top .crumb{letter-spacing:.2em}}
-/* phones: here the title card fills the 380px film block (not a 16:9 grid tile), so its title and circle keep their size */
-@media (max-width:600px){.c1 .video .yt.card::before{inset:14px}.c1 .video .yt.card .tc{gap:12px}.c1 .video .yt.card .tc-t{font-size:30px}.c1 .video .yt.card .play{width:64px;height:64px;margin-top:6px}.c1 .video .yt.card .play svg{width:24px;height:24px}}
-@media (max-width:880px){
-.c1 #what-we-did .media{position:static;margin-top:0}
-.c1 .trust.three .n{font-size:30px}
-.c1 .trust-line{line-height:1.9}
-/* the Orlando labels run longer than the sibling pages' (four lines in a third of a phone), so on a phone the strip becomes three rows: figure left, the two-line label right */
-.c1 #glance .trust.three{grid-template-columns:1fr}
-.c1 #glance .trust.three .cell{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;align-items:center;text-align:left;padding:18px 4px}
-.c1 #glance .trust.three .cell + .cell{border-top:1px solid var(--line)}
-.c1 #glance .trust .l{margin-top:0;letter-spacing:.16em}
-}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 .glance{margin-top:22px}.c1 #what-we-did .split{align-items:start}.c1 #what-we-did .media{position:sticky;top:124px;margin-top:40px}.c1 #top .hero-media img.still{filter:saturate(.8) sepia(.06) contrast(1.04)}.c1 #details .pillars{margin-top:0}.c1 .split p a,.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}.c1 .nw{white-space:nowrap}@media (min-width:1100px){.c1 #top .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 839px),420px)}}@media (min-width:881px) and (max-width:1099px){.c1 #top .hero-panel .panel{margin-left:auto;margin-right:auto}}@media (max-width:360px){.c1 #top .crumb{letter-spacing:.2em}}@media (max-width:600px){.c1 .video .yt.card::before{inset:14px}.c1 .video .yt.card .tc{gap:12px}.c1 .video .yt.card .tc-t{font-size:30px}.c1 .video .yt.card .play{width:64px;height:64px;margin-top:6px}.c1 .video .yt.card .play svg{width:24px;height:24px}}@media (max-width:880px){.c1 #what-we-did .media{position:static;margin-top:0}.c1 .trust.three .n{font-size:30px}.c1 .trust-line{line-height:1.9}.c1 #glance .trust.three{grid-template-columns:1fr}.c1 #glance .trust.three .cell{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;align-items:center;text-align:left;padding:18px 4px}.c1 #glance .trust.three .cell + .cell{border-top:1px solid var(--line)}.c1 #glance .trust .l{margin-top:0;letter-spacing:.16em}}</style>
 </head>
 <body>
 <div class="c1">
@@ -241,7 +213,7 @@
 <div class="hero-panel">
 <div class="panel on-navy">
 <div class="crumb"><a href="/posada-site-preview/">Home</a><span>›</span><a href="/posada-site-preview/gallery/">Our Work</a><span>›</span><span>Orlando<span class="cr-x"> full bathroom</span></span></div>
-<h1>A full bathroom in Orlando, remodeled top to <em>bottom.</em></h1>
+<h1>A full bathroom in Orlando, remodeled top to&nbsp;<em>bottom.</em></h1>
 <p>A shower rebuilt from the waterproofing up, with a hexagon floor pitched to a <span class="nw">lift-out</span> drain and barn-door glass. Then <span class="nw">wood-plank</span> porcelain floors and a larger vanity with a built-in <span class="nw">linen closet.</span></p>
 <div class="ctas">
 <a class="btn" href="/posada-site-preview/contact-us/?project=bathroom">Book a Complimentary Consultation</a>
@@ -259,7 +231,7 @@
 <div class="cell"><div class="n">3</div><div class="l">Ways to shower:<br>wand, head or rain head</div></div>
 <div class="cell"><div class="n">24 in</div><div class="l">Deep linen closet,<br>three rollout trays</div></div>
 </div>
-<p class="trust-line"><span class="nb">Full bath</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Shower, floor &amp; vanity</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Barn-door glass</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Orlando</span></p>
+<p class="trust-line"><span class="nb">Full bath</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Shower, floor &amp; vanity</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Barn-door glass</span><span class="sep" aria-hidden="true"> · </span><span class="nb" style="white-space:nowrap">Orlando</span></p>
 </div>
 </section>
 
@@ -271,7 +243,7 @@
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Project Film · 3:12</span>
-<h3>Walk the finished bathroom <em>with Mike.</em></h3>
+<h3>Walk the finished bathroom <em>with&nbsp;Mike.</em></h3>
 <p>Mike starts inside the shower: the barn-door glass, the Delta transfer valve, the pitched hexagon floor and the drain that lifts out for service. Then the wood-plank porcelain floor, the vanity with its linen closet and rollout trays, the quartz top and the LED mirror. Three minutes and twelve seconds in the finished room. Tap&nbsp;to&nbsp;play.</p>
 <div class="ctas">
 <a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign" rel="noopener">More films on YouTube</a>
@@ -287,7 +259,7 @@
 <div class="media"><div class="frame wide"><img src="/posada-site-preview/images/shower-niche-hex-tile-grab-bar-orlando-fl.webp" srcset="/posada-site-preview/images/shower-niche-hex-tile-grab-bar-orlando-fl.webp 720w" sizes="(max-width: 880px) 100vw, 45vw" width="720" height="540" alt="Shower niche lined with hexagon mosaic tile below a rain shower head, with a grab bar, in an Orlando, FL bathroom remodel" loading="lazy" decoding="async"></div><div class="gal-cap" style="margin-top:18px"><span>Hex-tile shower niche</span><span>Still from the film</span></div></div>
 <div>
 <span class="eyebrow">What We Did</span>
-<h2>A full package, from the <em>waterproofing</em> up.</h2>
+<h2>A full package, from the <em>waterproofing</em>&nbsp;up.</h2>
 <p>The shower was rebuilt with new waterproofing, wall tile and floor; the old flooring gave way to a light <span class="nw">wood-plank</span> porcelain tile; and the vanity grew into a larger piece with a built-in linen closet. Every item below is one Mike points out on camera.</p>
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Barn-door glass with a hydrophobic coating, so water beads off</span></li>
@@ -307,29 +279,29 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Details That Matter</span>
-<h2>What Mike points out on <em>camera.</em></h2>
+<h2>What Mike points out on&nbsp;<em>camera.</em></h2>
 </div>
 <p>The parts of a bathroom you only notice when they are done wrong, named by the owner who oversaw the build.</p>
 </div>
 <div class="pillars">
 <div class="pillar">
 <div class="rn">01</div>
-<h3>A drain you can service</h3>
+<h3>A drain you can&nbsp;service</h3>
 <p>The hexagon floor is pitched all the way to the drain, so water does not pool in the corners or along the edges. The drain has an integrated tile flange: the floor tile sits inside the grate, and the whole grate lifts out for service or maintenance, then drops back in place.</p>
 </div>
 <div class="pillar">
 <div class="rn">02</div>
-<h3>Three ways to shower, one valve</h3>
+<h3>Three ways to shower, one&nbsp;valve</h3>
 <p>A Delta trim kit with a transfer valve runs the handheld wand, the shower head or the rain head above, in whatever combination you want. Two <span class="nw">4-inch</span> recessed lights put real light inside the shower, and there is a grab bar inside plus one at the entry to help you in and out.</p>
 </div>
 <div class="pillar">
 <div class="rn">03</div>
-<h3>Walls that stay simple</h3>
+<h3>Walls that stay&nbsp;simple</h3>
 <p>Large-format porcelain tile on every wall, set in a one-third stagger that looks considered and stays easy to clean. The niche is lined with the same hexagon tile as the floor, with mitered corners and clean silicone lines, and the barn-door glass carries a hydrophobic coating so water beads straight off.</p>
 </div>
 <div class="pillar">
 <div class="rn">04</div>
-<h3>A vanity that works harder</h3>
+<h3>A vanity that works&nbsp;harder</h3>
 <p>A larger white shaker vanity with a triple-stack drawer base, a tilt-out tray at the sink and a <span class="nw">24-inch-deep</span> linen closet with three rollout trays and a shelved cabinet above. Soft-close doors and drawers are standard on every cabinet we install, and so is the silicone mat under the sink that protects the cabinet floor.</p>
 </div>
 </div>
@@ -341,7 +313,7 @@
 <div class="client">
 <div>
 <span class="eyebrow">In a Client&rsquo;s Words</span>
-<h2>From another bathroom <em>remodel.</em></h2>
+<h2>From another bathroom&nbsp;<em>remodel.</em></h2>
 <div class="score">
 <div class="n">5.0</div>
 <div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
@@ -373,7 +345,7 @@
 <div class="inner">
 <div>
 <span class="eyebrow">Begin Here</span>
-<h2>Tell us about <em>your bathroom.</em></h2>
+<h2>Tell us about <em>your&nbsp;bathroom.</em></h2>
 <p>A complimentary in-home design consultation. We listen first, then tell you honestly which range your bathroom falls into. Evening and weekend consultations available.</p>
 <div class="ctas"><a class="btn" href="/posada-site-preview/contact-us/?project=bathroom">Book a Complimentary Consultation</a><a class="textlink" href="/posada-site-preview/bathroom-remodeling/#cost">See what a bathroom costs</a></div>
 </div>

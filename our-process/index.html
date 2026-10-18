@@ -141,54 +141,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-.c1 .rev-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:1100px){.c1 .rev-grid.three{grid-template-columns:1fr}}
-/* closing band on narrow screens: the single column must not grow to the button's nowrap width (keeps scrollWidth at the viewport width) */
-@media (max-width:1100px){.c1 .cta-band .inner{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:880px){.c1 .cta-band .btn{width:100%;white-space:normal;text-align:center;line-height:1.5;padding:14px 20px}}
-/* the trust line sits inside .center, whose paragraphs are capped at 660px: let it run the full strip width so it stays on one line on desktop */
-.c1 .center > p.trust-line{max-width:none}
-/* phrases that must not break at a hyphen or mid-phrase */
-.c1 .nb{white-space:nowrap}
-/* no single-word last lines in body copy */
-.c1 main p,.c1 main blockquote,.c1 main .checks li span{text-wrap:pretty}
-/* trust line under the stat strip wraps to two or three rows on phones: give the rows air (same as index) */
-@media (max-width:880px){.c1 .trust-line{line-height:1.9}}
-/* phones: the insurance pair under the warranty tiles stacks instead of ending its first line on a hanging dot (same pattern as index and p.trust-line) */
-/* no one-word last line in the promise foot on the smallest phones */
-.c1 .promise-foot > span{text-wrap:balance}
-/* tablets (601-799px): the trust line no longer fits on one row and wrapped onto a hanging dot; it breaks after the second phrase instead, into two centered rows */
-@media (min-width:601px) and (max-width:799px){.c1 p.trust-line .sep:nth-child(4){display:block;height:0;overflow:hidden;font-size:0;visibility:hidden}}
-/* quote plate ("A respected home"): beside the copy it fills the column height, like the film title cards on the case studies, so its top and bottom sit level with the text column instead of floating in sand; the taller plate carries a larger quote */
-@media (min-width:881px){.c1 #build .split{align-items:stretch}.c1 #build .split > .media{display:flex}.c1 #build .quote-plate{aspect-ratio:auto;flex:1 1 auto}.c1 #build .quote-plate blockquote{font-size:clamp(32px,3.2vw,46px);line-height:1.2;margin-bottom:34px}}
-/* iPads and small laptops: the plate is about 400px wide, so it takes less padding and the quote keeps four or five lines */
-@media (min-width:881px) and (max-width:1100px){.c1 #build .quote-plate{padding:56px 48px}}
-/* phones: the quote keeps 24px of air inside the brass rule. Phones and the narrow 881-1100px plate: the attribution stacks (name, then role) instead of wrapping onto a hanging dot */
-@media (max-width:880px){.c1 #build .quote-plate{padding:52px 40px 50px}}
-@media (max-width:600px),(min-width:881px) and (max-width:1100px){.c1 .quote-plate figcaption .sep{display:none}.c1 .quote-plate figcaption .nb{display:block;line-height:2}}
-/* the 360px phones: "Schedule & project manager" ran 7px over and left "&" hanging at the line end; one pixel smaller keeps it on one line */
-@media (max-width:374px){.c1 .timeline h3{font-size:29px}}
-/* Quiet hero (round 6): the page opens on the serif title like FAQs, Our Work and Service Areas, and the 7 / 1 / 3 yrs / 5.0 row
-   in #intro stays where it is, so #intro sits closer under the hero. From 881 to 1100px the 5fr column is narrower than the
-   390px gold button, so the lede and buttons stack there as they do on phones (same rule as faqs.html). */
-.c1 #intro{padding-top:40px}
-@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}
-/* the sticky "Seven steps, one team" column carries a booking button beside the timeline. From 1101 to about 1130px the column is
-   379-390px wide and the 390px gold button ran past it, so there it gives up 8px of side padding per side and fits */
-@media (min-width:1101px) and (max-width:1140px){.c1 #steps .areas .btn{padding:0 26px}}
-/* round 7: the three people behind the seven steps, under the trust line. The 1.6x zoom inside the round mask frames each face and collar
-   (a plain cover crop of these portrait files leaves a 20px face) */
-.c1 #intro .crew-k{display:block;margin-top:64px}
-.c1 #intro .crew{list-style:none;margin:28px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:24px 64px}
-.c1 #intro .crew li{display:flex;align-items:center;gap:16px;text-align:left}
-.c1 #intro .crew .ph{flex:none;width:72px;height:72px;border-radius:50%;overflow:hidden;outline:1px solid var(--brass);outline-offset:4px}
-.c1 #intro .crew img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scale(1.6);transform-origin:50% 22%}
-.c1 #intro .crew .nm{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mute);line-height:1.5}
-.c1 #intro .crew strong{display:block;margin-bottom:4px;font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--navy)}
-@media (max-width:600px){.c1 #intro .crew{flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;margin:28px auto 0}}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 .rev-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:1100px){.c1 .rev-grid.three{grid-template-columns:1fr}}@media (max-width:1100px){.c1 .cta-band .inner{grid-template-columns:minmax(0,1fr)}}@media (max-width:880px){.c1 .cta-band .btn{width:100%;white-space:normal;text-align:center;line-height:1.5;padding:14px 20px}}.c1 .center > p.trust-line{max-width:none}.c1 .nb{white-space:nowrap}.c1 main p,.c1 main blockquote,.c1 main .checks li span{text-wrap:pretty}@media (max-width:880px){.c1 .trust-line{line-height:1.9}}.c1 .promise-foot > span{text-wrap:balance}@media (min-width:601px) and (max-width:799px){.c1 p.trust-line .sep:nth-child(4){display:block;height:0;overflow:hidden;font-size:0;visibility:hidden}}@media (min-width:881px){.c1 #build .split{align-items:stretch}.c1 #build .split > .media{display:flex}.c1 #build .quote-plate{aspect-ratio:auto;flex:1 1 auto}.c1 #build .quote-plate blockquote{font-size:clamp(32px,3.2vw,46px);line-height:1.2;margin-bottom:34px}}@media (min-width:881px) and (max-width:1100px){.c1 #build .quote-plate{padding:56px 48px}}@media (max-width:880px){.c1 #build .quote-plate{padding:52px 40px 50px}}@media (max-width:600px),(min-width:881px) and (max-width:1100px){.c1 .quote-plate figcaption .sep{display:none}.c1 .quote-plate figcaption .nb{display:block;line-height:2}}@media (max-width:374px){.c1 .timeline h3{font-size:29px}}.c1 #intro{padding-top:40px}@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}@media (min-width:1101px) and (max-width:1140px){.c1 #steps .areas .btn{padding:0 26px}}.c1 #intro .crew-k{display:block;margin-top:64px}.c1 #intro .crew{list-style:none;margin:28px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:24px 64px}.c1 #intro .crew li{display:flex;align-items:center;gap:16px;text-align:left}.c1 #intro .crew .ph{flex:none;width:72px;height:72px;border-radius:50%;overflow:hidden;outline:1px solid var(--brass);outline-offset:4px}.c1 #intro .crew img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transform:scale(1.6);transform-origin:50% 22%}.c1 #intro .crew .nm{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--mute);line-height:1.5}.c1 #intro .crew strong{display:block;margin-bottom:4px;font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--navy)}@media (max-width:600px){.c1 #intro .crew{flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;margin:28px auto 0}}</style>
 </head>
 <body>
 <div class="c1">
@@ -233,7 +187,7 @@
 <section class="hero quiet" id="top">
 <div class="wrap">
 <div class="crumb"><a href="/posada-site-preview/">Home</a><span>›</span><span>Our Process</span></div>
-<h1>Every project, <em>step by step.</em></h1>
+<h1>Every project, <em>step by&nbsp;step.</em></h1>
 <div class="q-row">
 <p class="lede">You will always know what happens next, who is in your home, and what it costs. This is how a Posada remodel works, from the first conversation to the follow-up after your final walkthrough.</p>
 <div class="ctas"><a class="btn" href="/posada-site-preview/contact-us/">Book a Complimentary Consultation</a><a class="textlink" href="#steps">See the seven steps</a></div>
@@ -244,15 +198,15 @@
 <section class="sec" id="intro">
 <div class="wrap center">
 <span class="dia" aria-hidden="true"></span>
-<h2>A clear plan before anyone <em style="white-space:nowrap">touches a wall.</em></h2>
-<p>Every Posada remodel follows seven steps: an <span class="nb">in-home</span> consultation, a design retainer ($250 per bathroom or $500 per kitchen, credited to your project once the agreement is signed), a <span class="nb">line-item</span> proposal, material selections, design and renderings, approval and signing, then scheduling with your project manager. Mike Posada oversees every project and follows up after completion. Each step below ends with something in your hands, and you decide when to take the next&nbsp;one.</p>
+<h2>A clear plan before anyone <em style="white-space:nowrap">touches a&nbsp;wall.</em></h2>
+<p>Every Posada remodel follows seven steps: an <span class="nb" style="white-space:nowrap">in-home</span> consultation, a design retainer ($250 per bathroom or $500 per kitchen, credited to your project once the agreement is signed), a <span class="nb" style="white-space:nowrap">line-item</span> proposal, material selections, design and renderings, approval and signing, then scheduling with your project manager. Mike Posada oversees every project and follows up after completion. Each step below ends with something in your hands, and you decide when to take the next&nbsp;one.</p>
 <div class="stat-row">
 <div class="cell"><div class="n">7</div><div class="l">Steps, consultation<br>to follow-up</div></div>
 <div class="cell"><div class="n">1</div><div class="l">Point of contact<br>during the build</div></div>
 <div class="cell"><div class="n">3 yrs</div><div class="l">Labor and installation<br>warranty</div></div>
 <a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
 </div>
-<p class="trust-line"><span class="nb">Veteran-owned</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Family-operated</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep" aria-hidden="true"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
+<p class="trust-line"><span class="nb" style="white-space:nowrap">Veteran-owned</span><span class="sep" aria-hidden="true"> · </span><span class="nb" style="white-space:nowrap">Family-operated</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep" aria-hidden="true"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
 <span class="eyebrow crew-k">Meet the team</span>
 <ul class="crew">
 <li><span class="ph"><img src="/posada-site-preview/images/mike-posada-owner-founder-headshot.webp" srcset="/posada-site-preview/images/mike-posada-owner-founder-headshot.webp 427w" sizes="72px" width="427" height="640" alt="Mike Posada, owner and founder of Posada Remodeling and Design" loading="lazy" decoding="async"></span><span class="nm"><strong>Mike Posada</strong>Owner &amp; Founder</span></li>
@@ -267,7 +221,7 @@
 <div class="areas">
 <div style="position:sticky;top:132px">
 <span class="eyebrow">How It Works</span>
-<h2>Seven steps, <em>one team.</em></h2>
+<h2>Seven steps, <em>one&nbsp;team.</em></h2>
 <p>From the first visit to the final walkthrough, the people you meet at the consultation are the people who build your room. Nothing is handed off, and nothing is lost in between.</p>
 <p>Typical investment ranges are published on our <a href="/posada-site-preview/kitchen-remodeling/" style="border-bottom:1px solid #C4A24E">kitchen</a> and <a href="/posada-site-preview/bathroom-remodeling/" style="border-bottom:1px solid #C4A24E">bathroom</a> pages, so you can walk into step one already knowing what projects really cost.</p>
 <div class="ctas" style="margin-top:28px"><a class="btn" href="/posada-site-preview/contact-us/">Book a Complimentary Consultation</a><a class="textlink" href="/posada-site-preview/faqs/">Read the FAQs</a></div>
@@ -318,7 +272,7 @@
 <li>
 <div class="rn">07</div>
 <div>
-<h3>Schedule &amp; project manager</h3>
+<h3>Schedule &amp; project&nbsp;manager</h3>
 <p>Your start date is set and your project manager is introduced. From here you have one point of contact for every question, and Mike oversees the project personally from the first day to the final walkthrough.</p>
 </div>
 </li>
@@ -332,13 +286,13 @@
 <div class="split">
 <div class="media">
 <figure class="quote-plate">
-<blockquote>&ldquo;Your home isn&rsquo;t just another project&nbsp;&mdash; it&rsquo;s a responsibility we take personally.&rdquo;</blockquote>
-<figcaption><span class="nb">Mike Posada</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Owner &amp; Founder</span></figcaption>
+<blockquote>&ldquo;Your home isn&rsquo;t just another project&nbsp;&mdash; it&rsquo;s a responsibility we take&nbsp;personally.&rdquo;</blockquote>
+<figcaption><span class="nb">Mike Posada</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Owner &amp;&nbsp;Founder</span></figcaption>
 </figure>
 </div>
 <div>
 <span class="eyebrow">During the Build</span>
-<h2>A respected home, <em>every day.</em></h2>
+<h2>A respected home, <em>every&nbsp;day.</em></h2>
 <p>A remodel means people in your home for weeks. We hold ourselves to a few simple rules so that time is as easy on your family as it can be.</p>
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Our own team does the work, led by Mike and your project manager.</span></li>
@@ -360,7 +314,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">After the Walkthrough</span>
-<h2>Finished, checked and <em>backed in writing.</em></h2>
+<h2>Finished, checked and <em>backed in&nbsp;writing.</em></h2>
 </div>
 <p style="color:rgba(246,242,236,.82)">A final walkthrough with every detail checked, then a follow-up from Mike to make sure you love it.</p>
 </div>
@@ -373,7 +327,7 @@
 <div class="tile">
 <div class="big">Lifetime</div>
 <div class="k">Cabinetry</div>
-<p>A lifetime warranty on the cabinetry we install. Shower waterproofing systems carry <span class="nb">3-year</span>, <span class="nb">10-year</span> and lifetime warranties, where included.</p>
+<p>A lifetime warranty on the cabinetry we install. Shower waterproofing systems carry <span class="nb" style="white-space:nowrap">3-year</span>, <span class="nb" style="white-space:nowrap">10-year</span> and lifetime warranties, where included.</p>
 </div>
 <div class="tile">
 <div class="big">In writing</div>
@@ -393,7 +347,7 @@
 <div class="rev-head">
 <div>
 <span class="eyebrow">Client Stories</span>
-<h2>What the process <em>feels like.</em></h2>
+<h2>What the process <em>feels&nbsp;like.</em></h2>
 </div>
 <div class="score">
 <div class="n">5.0</div>
@@ -432,7 +386,7 @@
 <div class="inner">
 <div>
 <span class="eyebrow">Begin Here</span>
-<h2>Step one is a <em>conversation.</em></h2>
+<h2>Step one is a&nbsp;<em>conversation.</em></h2>
 <p>A complimentary in-home design consultation, at a time that works for you. We listen first, then tell you which range your project falls into. No obligation.</p>
 <a class="btn" href="/posada-site-preview/contact-us/">Book a Complimentary Consultation</a>
 </div>

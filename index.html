@@ -401,54 +401,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-.c1 p,.c1 li,.c1 blockquote,.c1 figcaption,.c1 summary,.c1 .owner-cue span,.c1 .micro{text-wrap:pretty}
-.c1 .on-navy h3 em{color:var(--brassl)}
-.c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:16px}
-.c1 .fin .guide p{max-width:none}
-.c1 #investment .fin ul{margin-bottom:24px}
-.c1 #investment .fin .ctas{row-gap:18px}
-.c1 .rev-links .quiet{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
-.c1 .rev-links .quiet a{color:var(--bronze2);border-bottom:1px solid var(--line);padding-bottom:3px;margin-left:6px}
-.c1 .rev-links .quiet a:hover{color:var(--navy);border-color:var(--brass)}
-.c1 .promise-foot .nb,.c1 .owner-cue .nb{white-space:nowrap}
-/* phones: the insurance pair stacks instead of ending its first line on a hanging dot (same pattern as p.trust-line) */
-.c1 #investment .sec-head h2{max-width:640px}
-/* round 6: the combined-project link under the price table stays on one line (at 1101px it split as 'How a / combined project works') */
-.c1 #investment p.fine a{white-space:nowrap}
-.c1 #areas .areas{gap:72px}
-.c1 #areas .area-list{grid-template-columns:1fr}
-.c1 #areas .area-list li{align-items:center;gap:16px;padding:0}
-.c1 #areas .area-list li .city{padding:12px 0;font-size:15.5px;letter-spacing:0;text-transform:none;color:var(--navy)}
-.c1 #areas .area-list li .go{display:flex;gap:6px;flex-shrink:0}
-.c1 #areas .area-list li .go a{display:inline-flex;align-items:center;min-height:44px;padding-left:14px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--bronze2);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:6px}
-.c1 #areas .area-list li .go a:hover,.c1 #areas .area-list li .go a:focus-visible{color:var(--navy);text-decoration-color:var(--brass)}
-.c1 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-/* round 5: "What Happens Next" fills the navy column beside the form (wording from contact.html's three steps). The heading block spans both columns, so from 1101px the side starts level with the Name field and ends level with the submit button instead of leaving empty navy beside it. Step 01 reads "We call or text to set a time that suits you" (contact.html step 1) rather than the round-5 text "We reply within 24 hours, by call or text": this same column already says "We reply within 24 hours" under the phone number, and the owner-cue says it again beside the submit button, so a third copy would repeat it verbatim within one band (on phones, within about one screen) */
-.c1 #contact .contact{row-gap:0}.c1 #contact .c-head{grid-column:1 / -1}
-@media (max-width:1100px){.c1 #contact .side{margin-top:56px}}
-/* the optional "Best time to reach you" select reads like the text fields beside it: no native box or indent, the same underline height, and a thin brass chevron (same rule as contact.html) */
-.c1 #contact select{-webkit-appearance:none;appearance:none;height:45px;line-height:24px;padding:10px 30px 10px 0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23D9C58A' stroke-width='1.3'/%3E%3C/svg%3E") no-repeat right 4px center/12px 8px}
-/* hero crop: the img's inline object-position is center 4%, not the round-5 text's 8%. Measured under the new band: at 1920x970 (photo 1920x692), 8% lets the top ~10px of the outlet on the island's end panel into the bottom of the photo and cuts the cap off the front lantern; 4% keeps the lantern cap and chain ring and keeps the outlet out at 1920x970, 1440x790 and 1280x640 (only a pixel or two to spare at 1920x970, so do not raise it) */
-/* round 6: the kicker names Winter Park; on phones it tightens to .14em at 10px so it holds 3 lines (4 without this) and sits quieter under the headline */
-@media (max-width:600px){.c1 .panel .kicker{letter-spacing:.14em;font-size:10px}}
-/* footer about line: the trust phrases need about 296px on one line. At 881-1000px the first footer column is 268-314px, and they wrapped onto a hanging dot plus "Fully insured." alone (881-953px); phones narrower than 360px do the same. In those bands each phrase takes its own line; everywhere else it stays one line. The phone and email line under the address hung its dot in the same bands (881-955px, under 340px), so it stacks there too */
-.c1 .foot .about .nb{white-space:nowrap}
-@media (min-width:881px) and (max-width:1000px),(max-width:359px){.c1 .foot .about .sep,.c1 .foot .nap .sep{display:none}.c1 .foot .about .nb,.c1 .foot .nap a{display:block}}
-.c1 .side .next-steps{list-style:none;margin:6px 0 0;padding:0}.c1 .side .next-steps li{display:flex;gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid var(--lined);font-size:15px;line-height:1.6;color:rgba(246,242,236,.86)}.c1 .side .next-steps li:first-child{border-top:0;padding-top:0}.c1 .side .next-steps span{font-family:var(--serif);font-size:22px;color:var(--brassl);min-width:28px}
-@media (max-width:880px){
-.c1 .trust.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.c1 .trust.three .cell{padding:24px 6px}
-.c1 .trust.three .cell:nth-child(n+3){border-top:0}
-.c1 .trust.three .n{font-size:30px}
-.c1 .trust.three .l{letter-spacing:.14em}
-.c1 .trust-line{line-height:1.9}
-/* tablets too (601-880): the long home trust line wrapped onto a hanging dot at 601-800, so it stacks as it does on phones */
-.c1 p.trust-line .sep{display:none}
-.c1 p.trust-line .nb{display:block}
-}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 p,.c1 li,.c1 blockquote,.c1 figcaption,.c1 summary,.c1 .owner-cue span,.c1 .micro{text-wrap:pretty}.c1 .on-navy h3 em{color:var(--brassl)}.c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:16px}.c1 .fin .guide p{max-width:none}.c1 #investment .fin ul{margin-bottom:24px}.c1 #investment .fin .ctas{row-gap:18px}.c1 .rev-links .quiet{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}.c1 .rev-links .quiet a{color:var(--bronze2);border-bottom:1px solid var(--line);padding-bottom:3px;margin-left:6px}.c1 .rev-links .quiet a:hover{color:var(--navy);border-color:var(--brass)}.c1 .promise-foot .nb,.c1 .owner-cue .nb{white-space:nowrap}.c1 #investment .sec-head h2{max-width:640px}.c1 #investment p.fine a{white-space:nowrap}.c1 #areas .areas{gap:72px}.c1 #areas .area-list li{align-items:center;gap:16px;padding:0}.c1 #areas .area-list li .city{padding:12px 0;font-size:15.5px;letter-spacing:0;text-transform:none;color:var(--navy)}.c1 #areas .area-list li .go{display:flex;gap:6px;flex-shrink:0}.c1 #areas .area-list li .go a{display:inline-flex;align-items:center;min-height:44px;padding-left:14px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--bronze2);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:6px}.c1 #areas .area-list li .go a:hover,.c1 #areas .area-list li .go a:focus-visible{color:var(--navy);text-decoration-color:var(--brass)}.c1 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}.c1 #contact .contact{row-gap:0}.c1 #contact .c-head{grid-column:1 / -1}@media (max-width:1100px){.c1 #contact .side{margin-top:56px}}.c1 #contact select{-webkit-appearance:none;appearance:none;height:45px;line-height:24px;padding:10px 30px 10px 0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23D9C58A' stroke-width='1.3'/%3E%3C/svg%3E") no-repeat right 4px center/12px 8px}@media (max-width:600px){.c1 .panel .kicker{letter-spacing:.14em;font-size:10px}}.c1 .foot .about .nb{white-space:nowrap}@media (min-width:881px) and (max-width:1000px),(max-width:359px){.c1 .foot .about .sep,.c1 .foot .nap .sep{display:none}.c1 .foot .about .nb,.c1 .foot .nap a{display:block}}.c1 .side .next-steps{list-style:none;margin:6px 0 0;padding:0}.c1 .side .next-steps li{display:flex;gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid var(--lined);font-size:15px;line-height:1.6;color:rgba(246,242,236,.86)}.c1 .side .next-steps li:first-child{border-top:0;padding-top:0}.c1 .side .next-steps span{font-family:var(--serif);font-size:22px;color:var(--brassl);min-width:28px}@media (max-width:880px){.c1 .trust.three{grid-template-columns:repeat(3,minmax(0,1fr))}.c1 .trust.three .cell{padding:24px 6px}.c1 .trust.three .cell:nth-child(n+3){border-top:0}.c1 .trust.three .n{font-size:30px}.c1 .trust.three .l{letter-spacing:.14em}.c1 .trust-line{line-height:1.9}.c1 p.trust-line .sep{display:none}.c1 p.trust-line .nb{display:block}}</style>
 </head>
 <body>
 <div class="c1">
@@ -496,7 +450,7 @@
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
-<h1><span class="kicker">Luxury kitchen, bathroom&nbsp;&amp; flooring remodeling in Orlando, Winter&nbsp;Park&nbsp;&amp; Central Florida</span> The kitchen you&rsquo;ve been <em>picturing</em>, finished to the last detail.</h1>
+<h1><span class="kicker">Luxury kitchen, bathroom&nbsp;&amp; flooring remodeling in Orlando, Winter&nbsp;Park&nbsp;&amp; Central Florida</span> The kitchen you&rsquo;ve been <em>picturing</em>, finished to the last&nbsp;detail.</h1>
 <p>One team designs, prices and builds your remodel, from the first sketch to the final walkthrough.</p>
 <div class="ctas">
 <a class="btn" href="#contact">Book a Complimentary Consultation</a>
@@ -513,15 +467,15 @@
 <div class="cell"><div class="n">14+</div><div class="l">Years of remodeling<br>experience</div></div>
 <div class="cell"><div class="n">3 yrs</div><div class="l">Labor &amp; installation<br>warranty</div></div>
 </div>
-<p class="trust-line"><span class="nb">Veteran-owned</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Family-operated</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep" aria-hidden="true"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
+<p class="trust-line"><span class="nb" style="white-space:nowrap">Veteran-owned</span><span class="sep" aria-hidden="true"> · </span><span class="nb" style="white-space:nowrap">Family-operated</span><span class="sep" aria-hidden="true"> · </span><span class="nb">Fully insured, certificate on request</span><span class="sep" aria-hidden="true"> · </span><a class="nb" href="https://www.bbb.org/us/fl/casselberry/profile/kitchen-remodel/posada-remodeling-design-0733-235971795" rel="noopener">BBB Accredited, A rating</a></p>
 </div>
 </section>
 
 <section class="sec" id="why">
 <div class="wrap center">
 <span class="dia" aria-hidden="true"></span>
-<h2>We build for people who <em>notice</em> the details.</h2>
-<p>Posada Remodeling &amp; Design is a <span class="nb">veteran-owned</span>, <span class="nb">family-operated</span> kitchen, bathroom and flooring design and remodeling studio in Casselberry, Florida, serving Orlando and Central Florida. Owner Mike Posada personally oversees every project. Kitchens typically run $15,000 to $80,000+ and bathrooms $8,000 to $40,000+. <a href="#investment">Ranges reflect typical Central Florida projects in 2026.</a> Your written proposal is exact. Call or text <a href="tel:+14073193503">(407)&nbsp;319-3503</a> to book a complimentary <span class="nb">in-home</span> design consultation.</p>
+<h2>We build for people who <em>notice</em> the&nbsp;details.</h2>
+<p>Posada Remodeling &amp; Design is a <span class="nb" style="white-space:nowrap">veteran-owned</span>, <span class="nb" style="white-space:nowrap">family-operated</span> kitchen, bathroom and flooring design and remodeling studio in Casselberry, Florida, serving Orlando and Central Florida. Owner Mike Posada personally oversees every project. Kitchens typically run $15,000 to $80,000+ and bathrooms $8,000 to $40,000+. <a href="#investment">Ranges reflect typical Central Florida projects in 2026.</a> Your written proposal is exact. Call or text <a href="tel:+14073193503">(407)&nbsp;319-3503</a> to book a complimentary <span class="nb" style="white-space:nowrap">in-home</span> design consultation.</p>
 <div class="pillars">
 <div class="pillar">
 <div class="rn">I</div>
@@ -530,7 +484,7 @@
 </div>
 <div class="pillar">
 <div class="rn">II</div>
-<h3>Mike on every project</h3>
+<h3>Mike on every&nbsp;project</h3>
 <p>The owner personally oversees your remodel and keeps you posted, with a dedicated project manager on site.</p>
 </div>
 <div class="pillar">
@@ -552,7 +506,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">What We Do</span>
-<h2>Three rooms, <em>one standard.</em></h2>
+<h2>Three rooms, <em>one&nbsp;standard.</em></h2>
 </div>
 <p>Each project is designed and built by the same team, so the finish you approve on paper is the finish you live with.</p>
 </div>
@@ -561,30 +515,30 @@
 <div class="ph"><img src="/posada-site-preview/images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl.webp" srcset="/posada-site-preview/images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl-800.webp 600w, /posada-site-preview/images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl-800w.webp 800w, /posada-site-preview/images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl-1000.webp 1000w, /posada-site-preview/images/kitchen-island-seating-wood-look-tile-floor-winter-garden-fl.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Kitchen island with seating for three and wood-look tile flooring in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"></div>
 <figcaption>
 <div class="num">01</div>
-<h3>Kitchen Remodeling in Orlando</h3>
+<h3>Kitchen remodeling in Orlando</h3>
 <p>Custom and semi-custom cabinetry, quartz and granite counters, islands, backsplashes and custom wood range hoods.</p>
 <p class="range">Typical investment $15,000 to $80,000+</p>
-<a class="textlink" href="/posada-site-preview/kitchen-remodeling/">Explore kitchens</a>
+<a class="textlink" href="/posada-site-preview/kitchen-remodeling/">Explore&nbsp;kitchens</a>
 </figcaption>
 </figure>
 <figure class="svc" id="bathrooms">
 <div class="ph"><img src="/posada-site-preview/images/gold-rain-shower-bathroom-remodel-central-florida.webp" srcset="/posada-site-preview/images/gold-rain-shower-bathroom-remodel-central-florida-800.webp 600w, /posada-site-preview/images/gold-rain-shower-bathroom-remodel-central-florida-800w.webp 800w, /posada-site-preview/images/gold-rain-shower-bathroom-remodel-central-florida-1000.webp 1000w, /posada-site-preview/images/gold-rain-shower-bathroom-remodel-central-florida.webp 1350w" sizes="(max-width: 880px) 100vw, 33vw" width="1350" height="1800" alt="Bathroom remodel with a gold rain shower head and tiled shower niche in Central Florida" loading="lazy" decoding="async" style="object-position:center 40%"></div>
 <figcaption>
 <div class="num">02</div>
-<h3>Bathrooms &amp; Walk-In Showers</h3>
+<h3>Bathrooms &amp; walk-in showers</h3>
 <p>Walk-in showers, tub-to-shower conversions with frameless glass, custom vanities, designer tile and <span style="white-space:nowrap">spa-style</span> primary suites.</p>
 <p class="range">Typical investment $8,000 to $40,000+</p>
-<a class="textlink" href="/posada-site-preview/bathroom-remodeling/">Explore bathrooms</a>
+<a class="textlink" href="/posada-site-preview/bathroom-remodeling/">Explore&nbsp;bathrooms</a>
 </figcaption>
 </figure>
 <figure class="svc" id="flooring">
 <div class="ph"><img src="/posada-site-preview/images/wide-plank-flooring-installation-living-room-central-florida.webp" srcset="/posada-site-preview/images/wide-plank-flooring-installation-living-room-central-florida-800.webp 800w, /posada-site-preview/images/wide-plank-flooring-installation-living-room-central-florida.webp 900w" sizes="(max-width: 880px) 100vw, 60vw" width="900" height="504" alt="Wide plank flooring installation in a Central Florida living room" loading="lazy" decoding="async"></div>
 <figcaption>
 <div class="num">03</div>
-<h3>Flooring for Florida Homes</h3>
+<h3>Flooring for Florida homes</h3>
 <p>Luxury vinyl plank, SPC and WPC, tile and hardwood, installed as one continuous floor through the whole home.</p>
 <p class="range">Itemized by the square foot in your proposal</p>
-<a class="textlink" href="/posada-site-preview/flooring/">Explore flooring</a>
+<a class="textlink" href="/posada-site-preview/flooring/">Explore&nbsp;flooring</a>
 </figcaption>
 </figure>
 </div>
@@ -598,7 +552,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Our Work</span>
-<h2>Designed, built and finished by <em>our own team.</em></h2>
+<h2>Designed, built and finished by <em>our own&nbsp;team.</em></h2>
 </div>
 <a class="btn-line" href="/posada-site-preview/gallery/">View All Projects</a>
 </div>
@@ -618,7 +572,7 @@
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Project Films</span>
-<h3>Walk two finished bathrooms <em>with Mike.</em></h3>
+<h3>Walk two finished bathrooms <em>with&nbsp;Mike.</em></h3>
 <p>Short films of real Posada projects, explained by the owner: the tile, the valves, the niche, the details you only notice once you live with them. This one is a two-bathroom remodel in Dr. Phillips.</p>
 <div class="rev-links" style="margin-top:0"><a class="textlink" href="/posada-site-preview/projects/dr-phillips-two-bathrooms/">Read the project story</a><a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign">More films on YouTube</a></div>
 </div>
@@ -635,8 +589,8 @@
 </div>
 <div>
 <span class="eyebrow">Meet the Owner</span>
-<h2>Mike Posada, <em>owner &amp; founder.</em></h2>
-<blockquote>&ldquo;Choosing a remodeler is a decision about trust. You are welcoming a team into the heart of your home, and that is something we never take lightly.&rdquo;</blockquote>
+<h2>Mike Posada, <em>owner &amp;&nbsp;founder.</em></h2>
+<blockquote>&ldquo;Choosing a remodeler is a decision about trust. You are welcoming a team into the heart of your home, and that is something we never take&nbsp;lightly.&rdquo;</blockquote>
 <p>Mike learned the craft working alongside his father, where quality was never optional. After military service and a career in law enforcement, he built Posada on the same discipline: honest numbers, clear communication, and craftsmanship the family is proud to sign its name to.</p>
 <p>With more than fourteen years of remodeling experience, Mike personally oversees every kitchen, bathroom and flooring project the studio takes on.</p>
 <div class="sig">— Mike</div>
@@ -658,7 +612,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">How It Works</span>
-<h2>From first visit to <em>final walkthrough.</em></h2>
+<h2>From first visit to <em>final&nbsp;walkthrough.</em></h2>
 </div>
 <p>You will always know what happens next, who is in your home, and what it costs.</p>
 </div>
@@ -697,7 +651,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">The Posada Promise</span>
-<h2>A big investment deserves <em>real guarantees.</em></h2>
+<h2>A big investment deserves <em>real&nbsp;guarantees.</em></h2>
 </div>
 </div>
 <div class="promise">
@@ -729,7 +683,7 @@
 <div class="rev-head">
 <div>
 <span class="eyebrow">Client Stories</span>
-<h2>What Central Florida <em>homeowners say.</em></h2>
+<h2>What Central Florida <em>homeowners&nbsp;say.</em></h2>
 </div>
 <div class="score">
 <div class="n">5.0</div>
@@ -739,25 +693,25 @@
 <div class="rev-grid">
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;We chose Posada for our new floors and full kitchen remodel and we couldn&rsquo;t be happier. Mike and his team are professional, hard workers, and very detail oriented. They were respectful to our home and went above and beyond to satisfy our vision.&rdquo;</blockquote>
+<blockquote>&ldquo;We chose Posada for our new floors and full kitchen remodel and we couldn&rsquo;t be happier. Mike and his team are professional, hard workers, and very detail oriented. They were respectful to our home and went above and beyond to satisfy our&nbsp;vision.&rdquo;</blockquote>
 <div class="who">Christina A.</div>
 <div class="src">Full kitchen remodel &amp; new floors · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was excellent.&rdquo;</blockquote>
+<blockquote>&ldquo;They provided a highly detailed quote complete with itemized pricing. Started the project exactly when they said they would and completed it one week earlier than expected. Pricing was reasonable and the quality was&nbsp;excellent.&rdquo;</blockquote>
 <div class="who">Norman M.</div>
 <div class="src">Remodel · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and ideas.&rdquo;</blockquote>
+<blockquote>&ldquo;Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and&nbsp;ideas.&rdquo;</blockquote>
 <div class="who">Jamie H.</div>
 <div class="src">Three bathrooms &amp; kitchen floors · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;Mike and his team did an excellent job remodeling our kitchen. His attention to detail and willingness to satisfy us were top notch. We felt heard when we made suggestions. We would hire him and his team again in an instant.&rdquo;</blockquote>
+<blockquote>&ldquo;Mike and his team did an excellent job remodeling our kitchen. His attention to detail and willingness to satisfy us were top notch. We felt heard when we made suggestions. We would hire him and his team again in an&nbsp;instant.&rdquo;</blockquote>
 <div class="who">Michel B.</div>
 <div class="src">Kitchen remodel · Google review</div>
 </div>
@@ -775,7 +729,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Investment</span>
-<h2>What a remodel costs in <em>Central Florida.</em></h2>
+<h2>What a remodel costs in <em>Central&nbsp;Florida.</em></h2>
 </div>
 <p>Most companies avoid this subject. We would rather you walk into every estimate, including ours, already knowing what projects really cost. These are typical 2026 ranges from our own local projects.</p>
 </div>
@@ -798,7 +752,7 @@
 </div>
 <div class="fin">
 <span class="eyebrow">Financing</span>
-<h3>Spread the investment <em>over time.</em></h3>
+<h3>Spread the investment <em>over&nbsp;time.</em></h3>
 <p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners.</p>
 <ul>
 <li><span class="dia" aria-hidden="true"></span><span>Checking your options takes about a minute</span></li>
@@ -817,7 +771,7 @@
 <div class="areas">
 <div>
 <span class="eyebrow">Where We Work</span>
-<h2>From Casselberry, across <em>Central Florida.</em></h2>
+<h2>From Casselberry, across <em>Central&nbsp;Florida.</em></h2>
 <p>Kitchen, bathroom and flooring remodeling across Orange, Seminole, Osceola and Lake counties. Design consultations in Winter Garden by appointment.</p>
 <a class="textlink" href="/posada-site-preview/service-areas/">All service areas</a>
 </div>
@@ -842,31 +796,31 @@
 <h2>Before you <em>call.</em></h2>
 </div>
 <details open>
-<summary>How much does a kitchen remodel cost in Orlando?</summary>
+<summary>How much does a kitchen remodel cost in&nbsp;Orlando?</summary>
 <p>Most Posada kitchens fall into three ranges: a refresh at about $15,000 to $25,000, a full remodel at $25,000 to $50,000, and a luxury kitchen with custom cabinetry at $50,000 to $80,000 and up. Your exact number depends on layout, cabinetry and finishes, which is why you receive an itemized written proposal before any work begins. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. The full breakdown is in our <a href="/posada-site-preview/kitchen-remodel-cost-central-florida/">2026 kitchen remodel cost guide</a>.</p>
 </details>
 <details>
-<summary>How much does a bathroom remodel cost?</summary>
+<summary>How much does a bathroom remodel&nbsp;cost?</summary>
 <p>A bathroom refresh typically runs $8,000 to $15,000, a full bathroom remodel $15,000 to $30,000, and a spa-style primary suite with a custom walk-in shower $30,000 to $40,000 and up. Tub-to-shower conversions, custom vanities and designer tile are priced line by line in your proposal, so you know what each choice costs before you decide. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. See the <a href="/posada-site-preview/bathroom-remodel-cost-central-florida/">2026 bathroom remodel cost guide</a>.</p>
 </details>
 <details>
-<summary>How long will my remodel take?</summary>
+<summary>How long will my remodel&nbsp;take?</summary>
 <p>Industry guides put most bathroom remodels at one to four weeks of construction and a midrange kitchen at roughly four to eight weeks, or eight to twelve weeks or more with layout changes. Custom cabinetry and countertop fabrication add lead time, so your schedule is set once your selections are final. More in our guide to <a href="/posada-site-preview/how-long-does-a-remodel-take/">how long a remodel takes</a>.</p>
 </details>
 <details>
-<summary>Do I need a permit, and who handles it?</summary>
+<summary>Do I need a permit, and who handles&nbsp;it?</summary>
 <p>Only for some work: in Orange County, for example, moving plumbing, electrical or walls needs a permit, while new finished flooring or replacing cabinets and countertops in the same layout does not. When your project needs a permit, it is included: we coordinate it through our licensed general contractor partner, so you do not manage the paperwork or inspections yourself. More in our <a href="/posada-site-preview/kitchen-bathroom-remodel-permits-florida/">Florida remodel permit guide</a>.</p>
 </details>
 <details>
-<summary>Can we stay in our home during the remodel?</summary>
+<summary>Can we stay in our home during the&nbsp;remodel?</summary>
 <p>Most families do. A kitchen or bath is out of service while the work happens, so we walk through what to expect and the order of work at your consultation. Clients regularly note in their reviews that the team was respectful of their home, cleaned up at the end of each day and communicated what was planned next.</p>
 </details>
 <details>
-<summary>Do you offer financing?</summary>
+<summary>Do you offer&nbsp;financing?</summary>
 <p>Yes. Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your score. Posada is not a lender; rates and terms are set by the lending partner. See <a href="/posada-site-preview/financing/">how financing works</a>, or how homeowners <a href="/posada-site-preview/kitchen-remodel-financing-ocoee-fl/">finance a kitchen remodel</a>.</p>
 </details>
 <details>
-<summary>How do I choose a kitchen and bath remodeler in Orlando?</summary>
+<summary>How do I choose a kitchen and bath remodeler in&nbsp;Orlando?</summary>
 <p>Compare written, itemized proposals line by line, so every bid describes the same job. Ask who will be in your home and who your one point of contact is, and ask for complete written warranty terms before you sign. Ask for proof of insurance: Posada is fully insured, with a certificate of insurance on request, and BBB Accredited with an A rating. Ask how permits are handled. Permits included when your project needs one; we coordinate it through our licensed general contractor partner. Then look at finished work, like the kitchens and bathrooms in <a href="/posada-site-preview/gallery/">our gallery</a>. Our full checklist: <a href="/posada-site-preview/questions-to-ask-before-hiring-a-remodeler/">questions to ask before hiring a remodeler</a>.</p>
 </details>
 </div>
@@ -877,7 +831,7 @@
 <div class="contact">
 <div class="c-head">
 <span class="eyebrow">Begin Here</span>
-<h2>Tell us about <em>your project.</em></h2>
+<h2>Tell us about <em>your&nbsp;project.</em></h2>
 <p class="lead">A complimentary consultation at your home. We listen first, then put real numbers on it. No obligation, and we never share your information.</p>
 </div>
 <div>
@@ -942,7 +896,7 @@
 <div>
 <a class="logo foot-logo" href="#top" aria-label="Posada Remodeling and Design"><img class="logo-mark" src="/posada-site-preview/logo/posada-house-mark-gold-174.webp" width="399" height="174" alt=""><span class="logo-word">POSADA</span></a>
 <p class="tagline">Luxury spaces, thoughtfully crafted.</p>
-<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br><span class="nb">Veteran-owned</span><span class="sep">&nbsp;· </span><span class="nb">Family-operated</span><span class="sep">&nbsp;· </span><span class="nb">Fully insured.</span></p>
+<p class="about">A kitchen, bathroom and flooring design and remodeling studio serving Orlando and Central Florida.<br><span class="nb" style="white-space:nowrap">Veteran-owned</span><span class="sep">&nbsp;· </span><span class="nb" style="white-space:nowrap">Family-operated</span><span class="sep">&nbsp;· </span><span class="nb">Fully insured.</span></p>
 <div class="nap">Posada Remodeling &amp; Design<br>130 Live Oaks Blvd, Casselberry, FL 32707<br><a href="tel:+14073193503">(407) 319-3503</a><span class="sep"> · </span><a href="mailto:info@posadaremodeling.com">info@posadaremodeling.com</a></div>
 <div class="social">
 <a href="https://www.instagram.com/posadaremodelingdesign/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>Instagram</a>

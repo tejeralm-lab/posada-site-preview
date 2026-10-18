@@ -145,33 +145,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-/* flooring page: three-column variants of the shared pillars and steps grids (three across down to tablet, no 2 + 1 orphan) */
-.c1 .pillars.three,.c1 .steps.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (min-width:881px) and (max-width:1100px){
-.c1 .pillars.three .pillar{padding-right:24px}
-.c1 .pillars.three .pillar + .pillar{padding-left:24px}
-.c1 .pillars.three .pillar:nth-child(3){border-left:1px solid var(--line);border-top:0;margin-top:0}
-.c1 .steps.three .step{padding-right:22px}
-.c1 .steps.three .step + .step{padding-left:22px}
-.c1 .steps.three .step:nth-child(3){border-left:1px solid var(--line);border-top:0;margin-top:0}
-/* "Best for" labels: one line at tablet widths (no lone "BEST FOR ·") */
-.c1 .pillars.three .eyebrow{letter-spacing:.16em}
-}
-@media (max-width:880px){.c1 .pillars.three,.c1 .steps.three{grid-template-columns:1fr}}
-/* finished rooms: two photos, two across from tablet up (no lone tile) */
-@media (min-width:881px){.c1 #rooms .gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
-/* intro: photo top-aligned with the eyebrow */
-.c1 #intro .split{align-items:start}
-.c1 #intro .frame{margin-top:6px}
-/* inline links in body copy */
-/* wide screens: Mike's creed sits right under the photo, and the two travel together beside the text */
-.c1 #intro .creed{margin:0 28px 0 0;font-family:var(--serif);font-size:25px;font-style:italic;line-height:1.4;color:var(--navy);border-left:1px solid var(--brass);padding-left:24px}
-.c1 #intro .creed .by{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
-@media (min-width:1101px){.c1 #intro .media{align-self:start;position:sticky;top:140px}.c1 #intro .frame{margin-bottom:56px}}
-@media (max-width:1100px){.c1 #intro .creed{display:none}}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 .pillars.three,.c1 .steps.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media (min-width:881px) and (max-width:1100px){.c1 .pillars.three .pillar{padding-right:24px}.c1 .pillars.three .pillar + .pillar{padding-left:24px}.c1 .pillars.three .pillar:nth-child(3){border-left:1px solid var(--line);border-top:0;margin-top:0}.c1 .steps.three .step{padding-right:22px}.c1 .steps.three .step + .step{padding-left:22px}.c1 .steps.three .step:nth-child(3){border-left:1px solid var(--line);border-top:0;margin-top:0}.c1 .pillars.three .eyebrow{letter-spacing:.16em}}@media (max-width:880px){.c1 .pillars.three,.c1 .steps.three{grid-template-columns:1fr}}@media (min-width:881px){.c1 #rooms .gal{grid-template-columns:repeat(2,minmax(0,1fr))}}.c1 #intro .split{align-items:start}.c1 #intro .frame{margin-top:6px}.c1 #intro .creed{margin:0 28px 0 0;font-family:var(--serif);font-size:25px;font-style:italic;line-height:1.4;color:var(--navy);border-left:1px solid var(--brass);padding-left:24px}.c1 #intro .creed .by{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}@media (min-width:1101px){.c1 #intro .media{align-self:start;position:sticky;top:140px}.c1 #intro .frame{margin-bottom:56px}}@media (max-width:1100px){.c1 #intro .creed{display:none}}</style>
 </head>
 <body>
 <div class="c1">
@@ -213,7 +188,6 @@
 </div>
 
 <main id="main">
-<!-- PAGE CONTENT STARTS -->
 <section class="hero compact film print wide" id="top">
 <div class="hero-media">
 <img class="still" src="/posada-site-preview/images/wide-plank-flooring-installation-living-room-central-florida.webp" srcset="/posada-site-preview/images/wide-plank-flooring-installation-living-room-central-florida-800.webp 800w, /posada-site-preview/images/wide-plank-flooring-installation-living-room-central-florida.webp 900w" sizes="(max-width: 880px) 100vw, 456px" width="900" height="504" alt="Wide plank flooring installation in a Central Florida living room" fetchpriority="high" decoding="async">
@@ -246,10 +220,10 @@
 </div>
 <div>
 <span class="eyebrow">Flooring</span>
-<h2>Installed by the team that <em>remodels the room.</em></h2>
-<p class="answer">Posada Remodeling &amp; Design installs luxury vinyl plank (SPC and WPC), <span class="nb">large-format</span> and <span class="nb">wood-look</span> tile, and hardwood and engineered wood floors across Orlando and Central Florida, on their own or as part of a kitchen, bathroom or <span class="nb">whole-home</span> remodel. Removal, prep and daily <span class="nb">clean-up</span> are included, and flooring is <a href="#investment">itemized by the square foot in your proposal</a>. Call or text <a href="tel:+14073193503">(407)&nbsp;319-3503</a> to book a complimentary <span class="nb">in-home</span> design consultation.</p>
+<h2>Installed by the team that <em>remodels the&nbsp;room.</em></h2>
+<p class="answer">Posada Remodeling &amp; Design installs luxury vinyl plank (SPC and WPC), <span class="nb" style="white-space:nowrap">large-format</span> and <span class="nb" style="white-space:nowrap">wood-look</span> tile, and hardwood and engineered wood floors across Orlando and Central Florida, on their own or as part of a kitchen, bathroom or <span class="nb" style="white-space:nowrap">whole-home</span> remodel. Removal, prep and daily <span class="nb" style="white-space:nowrap">clean-up</span> are included, and flooring is <a href="#investment">itemized by the square foot in your proposal</a>. Call or text <a href="tel:+14073193503">(407)&nbsp;319-3503</a> to book a complimentary <span class="nb" style="white-space:nowrap">in-home</span> design consultation.</p>
 <p>A floor touches every other decision in a remodel: the cabinet toe kicks, the shower curb, the threshold at the patio door. When one team handles all of it, the transitions line up and nothing is left for someone else to finish.</p>
-<p>Posada installs floors on their own or as part of a kitchen, bathroom or whole-home remodel, across <a href="/posada-site-preview/service-areas/">Orange, Seminole, Osceola and Lake counties</a>. Removal of the old floor, subfloor prep and daily clean-up are part of the job, and each is spelled out in your proposal.</p>
+<p>We install across <a href="/posada-site-preview/service-areas/">Orange, Seminole, Osceola and Lake counties</a>, and every step, from taking up the old floor to the last transition, is its own line in your proposal.</p>
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Luxury vinyl plank (LVP)</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>SPC and WPC vinyl with a waterproof core</span></li>
@@ -268,7 +242,7 @@
 <section class="sec sand on-sand" id="guide">
 <div class="wrap center">
 <span class="dia" aria-hidden="true"></span>
-<h2>Which floor for a <em>Florida home.</em></h2>
+<h2>Which floor for a <em>Florida&nbsp;home.</em></h2>
 <p>Humidity, pets, sandy feet and busy kitchens are the real test. Here is how the three families compare, honestly, so you can choose with your eyes open.</p>
 <div class="pillars three">
 <div class="pillar">
@@ -285,7 +259,7 @@
 </div>
 <div class="pillar">
 <div class="rn">III</div>
-<h3>Hardwood &amp; engineered wood</h3>
+<h3>Hardwood &amp; engineered&nbsp;wood</h3>
 <p>Nothing else has the depth, feel or resale appeal of real wood. In our climate, engineered wood is the steadier choice: its layered core moves less with humidity than solid planks do. Keep it out of wet rooms, expect a scratch or two from larger dogs, and let the air conditioning keep the indoor humidity&nbsp;even.</p>
 <div style="margin-top:20px"><span class="eyebrow">Best for · Living&nbsp;areas</span></div>
 </div>
@@ -299,7 +273,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Our Work</span>
-<h2>Floors in <em>finished rooms.</em></h2>
+<h2>Floors in <em>finished&nbsp;rooms.</em></h2>
 </div>
 <p>A Winter Garden kitchen with wood-look tile, and a bonus room from a Central Florida project. The floor is the part you walk on every day, so it has to look right with everything&nbsp;above&nbsp;it.</p>
 </div>
@@ -316,7 +290,7 @@
 <div class="rev-head">
 <div>
 <span class="eyebrow">Client Stories</span>
-<h2>Floors our clients <em>live on.</em></h2>
+<h2>Floors our clients <em>live&nbsp;on.</em></h2>
 </div>
 <div class="score">
 <div class="n">5.0</div>
@@ -349,7 +323,7 @@
 <div class="invest">
 <div>
 <span class="eyebrow">Investment</span>
-<h2 style="font-size:clamp(36px,4vw,54px);margin:16px 0 14px">Priced by the <em>square foot.</em></h2>
+<h2 style="font-size:clamp(36px,4vw,54px);margin:16px 0 14px">Priced by the <em>square&nbsp;foot.</em></h2>
 <p style="color:#3B4352;font-size:16px;margin:0 0 10px;max-width:560px">You will not find a flooring price table here, because no two floors are alike. Everything is itemized by the square foot in your written proposal, each on its own line, so you can compare two materials or leave something out and see exactly what&nbsp;changes.</p>
 <ul class="checks" style="max-width:560px;margin-top:28px">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Material, priced per square foot for the product you choose</span></li>
@@ -363,7 +337,7 @@
 </div>
 <div class="fin">
 <span class="eyebrow">Financing</span>
-<h3>Spread the investment <em>over time.</em></h3>
+<h3>Spread the investment <em>over&nbsp;time.</em></h3>
 <p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners.</p>
 <ul>
 <li><span class="dia" aria-hidden="true"></span><span>Checking your options takes about a minute</span></li>
@@ -384,7 +358,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">How It Works</span>
-<h2>Three steps to a <em>new floor.</em></h2>
+<h2>Three steps to a <em>new&nbsp;floor.</em></h2>
 </div>
 <p>The same clear process as every Posada project, with one point of contact from the first visit to the final walkthrough.</p>
 </div>
@@ -416,7 +390,7 @@
 <h2>Before you <em>choose&nbsp;a&nbsp;floor.</em></h2>
 </div>
 <details open>
-<summary>Which flooring holds up best in Florida humidity?</summary>
+<summary>Which flooring holds up best in Florida&nbsp;humidity?</summary>
 <p>Luxury vinyl plank with an SPC or WPC core and porcelain tile are the two safest choices. Both are waterproof through and through, so summer humidity, tracked-in rain and the occasional spill do not swell or stain them. Real wood can work in an air-conditioned Florida home, and engineered wood is the steadier option because its layered core moves less than solid planks. Keep wood out of bathrooms and laundry rooms, and keep the indoor humidity&nbsp;even.</p>
 </details>
 <details>
@@ -424,19 +398,19 @@
 <p>Not usually. Orange County, for example, does not require a permit for new finished flooring, while moving plumbing, electrical or walls as part of a larger remodel does. When your project needs a permit, it is included: we coordinate it through our licensed general contractor partner.</p>
 </details>
 <details>
-<summary>Do you remove the old floor and prep the subfloor?</summary>
+<summary>Do you remove the old floor and prep the&nbsp;subfloor?</summary>
 <p>Yes. Removal of the existing floor and subfloor prep are part of every flooring installation, and each is listed by the square foot in your written proposal. A flat, sound subfloor is what keeps planks tight and tile from cracking, so it is never skipped. Our own team does the work, and the site is cleaned at the end of every day.</p>
 </details>
 <details>
-<summary>How much does flooring installation cost in Orlando?</summary>
+<summary>How much does flooring installation cost in&nbsp;Orlando?</summary>
 <p>Flooring is itemized by the square foot in your proposal. The number depends on the material (luxury vinyl plank, SPC, WPC, tile or hardwood), the square footage, the condition of the subfloor and the layout. We measure at the consultation and put every line in writing.</p>
 </details>
 <details>
-<summary>What is the difference between LVP, SPC and WPC?</summary>
+<summary>What is the difference between LVP, SPC and&nbsp;WPC?</summary>
 <p>All three are vinyl plank floors. SPC has a rigid stone-plastic core for stability; WPC has a wood-plastic core that feels slightly softer underfoot; LVP is the broad name for the category. We help you choose by room, pets and humidity.</p>
 </details>
 <details>
-<summary>Do you install tile, wood-look tile and hardwood floors?</summary>
+<summary>Do you install tile, wood-look tile and hardwood&nbsp;floors?</summary>
 <p>Yes. Alongside luxury vinyl plank, we install large-format and wood-look tile, and hardwood and engineered wood, in single rooms or through the whole home, with removal of the old floor, subfloor prep and daily clean-up spelled out in your proposal.</p>
 </details>
 <div style="margin-top:40px;text-align:center"><a class="textlink" href="/posada-site-preview/faqs/">More answers on our FAQ page</a></div>
@@ -448,7 +422,7 @@
 <div class="inner">
 <div>
 <span class="eyebrow">Begin Here</span>
-<h2>Let&rsquo;s talk about <em>floors.</em></h2>
+<h2>Let&rsquo;s talk about&nbsp;<em>floors.</em></h2>
 <p>A complimentary in-home design consultation. We look at the space, talk through the options honestly, and follow up with a written proposal itemized by the square foot.</p>
 <div class="ctas"><a class="btn" href="/posada-site-preview/contact-us/?project=flooring">Book a Complimentary Consultation</a></div>
 </div>
@@ -460,7 +434,6 @@
 </div>
 </div>
 </section>
-<!-- PAGE CONTENT ENDS -->
 </main>
 
 <footer class="foot">

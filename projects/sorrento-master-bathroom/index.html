@@ -162,39 +162,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-/* Project page: print hero (all of its layout lives in posada.css, .hero.print): the hex-floor still, framed like a print beside the navy panel, captioned under it. Its inline object-position (center 100%) only matters below 1100px, where the print is cropped to at most 340px tall: it keeps the bottom edge, so the whole square drain shows (centered, the drain's lower frame was cut off at 390) */
-.c1 p,.c1 li,.c1 figcaption{text-wrap:pretty}
-.c1 main h2{text-wrap:balance}
-.c1 .on-navy h3 em{color:var(--brassl)}
-.c1 .glance{margin-top:22px}
-.c1 .trust-line{line-height:1.9}
-.c1 .gal figcaption > span + span{white-space:nowrap;flex:none}
-.c1 .video .vid-copy .ctas{gap:28px}
-/* the long "what we did" column scrolls past a photo that stays in view below the 132px sticky header (only on screens tall enough to show the whole frame) */
-.c1 #what-we-did .split{align-items:start}
-.c1 #what-we-did .media{margin-top:40px}
-@media (min-width:881px) and (min-height:860px){.c1 #what-we-did .media{position:sticky;top:164px}}
-.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
-/* the caption is only as wide as the print (420px at most here, not the 456px kept for Flooring's wider print): at 1100-1150px a 456px right-aligned caption ran 6px under the navy panel and lost its first letters. The non-breaking spaces keep "film · Sorrento" together, so no line starts or ends with the dot */
-@media (min-width:1100px){.c1 section.hero.compact.print .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 824px),420px)}}
-/* the client review (.client) and the next-project card (.next-proj) are shared case-study components in posada.css. The next card points to another bathroom (Orlando), so it is text only (.next-proj.text, round 5) */
-/* the review heading stops at 50px: at the shared 56px, 'From another walk-in' could not fit the 463px column and 'walk-in' stood alone on the middle of three lines */
-.c1 #review .client h2{font-size:clamp(36px,4vw,50px)}
-/* the closing band's inline links (our process, financing) read as links on navy */
-.c1 .cta-band p a{color:var(--ivory);border-bottom:1px solid rgba(217,197,138,.6);padding-bottom:1px;white-space:nowrap}
-.c1 .cta-band p a:hover{color:var(--brassl);border-bottom-color:var(--brassl)}
-/* film: the title card fills the tile beside the copy, so the copy column sets the height on desktop. Stacked, the card is 16:9, and 4:3 on phones so the label, the two-line title and the circle keep room inside the brass frame */
-@media (max-width:1100px){.c1 .video .vid-media:not(.playing){aspect-ratio:16/9;min-height:0}}
-@media (max-width:880px){
-.c1 #what-we-did .media{margin-top:0}
-.c1 .trust.three .cell{padding:24px 6px}
-.c1 .trust.three .n{font-size:30px}
-.c1 .trust.three .l{letter-spacing:.14em}
-}
-@media (max-width:600px){.c1 .video .vid-media:not(.playing){aspect-ratio:4/3}}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 p,.c1 li,.c1 figcaption{text-wrap:pretty}.c1 main h2{text-wrap:balance}.c1 .on-navy h3 em{color:var(--brassl)}.c1 .glance{margin-top:22px}.c1 .trust-line{line-height:1.9}.c1 .gal figcaption > span + span{white-space:nowrap;flex:none}.c1 .video .vid-copy .ctas{gap:28px}.c1 #what-we-did .split{align-items:start}.c1 #what-we-did .media{margin-top:40px}@media (min-width:881px) and (min-height:860px){.c1 #what-we-did .media{position:sticky;top:164px}}.c1 .pillar p a{color:var(--bronze);border-bottom:1px solid var(--brass)}@media (min-width:1100px){.c1 section.hero.compact.print .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 824px),420px)}}.c1 #review .client h2{font-size:clamp(36px,4vw,50px)}.c1 .cta-band p a{color:var(--ivory);border-bottom:1px solid rgba(217,197,138,.6);padding-bottom:1px;white-space:nowrap}.c1 .cta-band p a:hover{color:var(--brassl);border-bottom-color:var(--brassl)}@media (max-width:1100px){.c1 .video .vid-media:not(.playing){aspect-ratio:16/9;min-height:0}}@media (max-width:880px){.c1 #what-we-did .media{margin-top:0}.c1 .trust.three .cell{padding:24px 6px}.c1 .trust.three .n{font-size:30px}.c1 .trust.three .l{letter-spacing:.14em}}@media (max-width:600px){.c1 .video .vid-media:not(.playing){aspect-ratio:4/3}}</style>
 </head>
 <body>
 <div class="c1">
@@ -244,7 +213,7 @@
 <div class="hero-panel">
 <div class="panel on-navy">
 <div class="crumb"><a href="/posada-site-preview/">Home</a><span>›</span><a href="/posada-site-preview/gallery/">Our Work</a><span>›</span><span>Sorrento<span class="cr-x"> master bathroom</span></span></div>
-<h1>A master bathroom in Sorrento, remodeled around <em>daily life.</em></h1>
+<h1>A master bathroom in Sorrento, remodeled around <em>daily&nbsp;life.</em></h1>
 <p>A tub the owners had no use for became a long vanity with real drawer storage, a 30-inch toilet room grew to 48, and the shower went curbless with a mitered infinity niche. Filmed and explained by Mike and the team that built it.</p>
 <div class="ctas">
 <a class="btn" href="/posada-site-preview/contact-us/?project=bathroom">Book a Complimentary Consultation</a>
@@ -274,7 +243,7 @@
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Filmed on Site</span>
-<h3>Walk the finished bathroom with <em>Mike and Cameron.</em></h3>
+<h3>Walk the finished bathroom with <em>Mike and&nbsp;Cameron.</em></h3>
 <p>Mike starts at the vanity wall where the tub used to be and the toilet room he pushed out to 48 inches, then hands over to Cameron, our tile installer, inside the curbless shower: the 2 by 4 foot tile, the mitered infinity niche, the leveling clips and the lift-out drain. Three minutes and <span class="nb" style="white-space:nowrap">thirty-eight</span> seconds with the people who built it. Tap to play.</p>
 <div class="ctas">
 <a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign" rel="noopener">More films on YouTube</a>
@@ -314,24 +283,24 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Details That Matter</span>
-<h2>What Cameron points out <em>inside the shower.</em></h2>
+<h2>What Cameron points out <em>inside the&nbsp;shower.</em></h2>
 </div>
 <p>The parts of a shower you only notice when they are done wrong, explained by the tile installer himself.</p>
 </div>
 <div class="pillars">
 <div class="pillar">
 <div class="rn">01</div>
-<h3>Curbless, pitched to drain</h3>
+<h3>Curbless, pitched to&nbsp;drain</h3>
 <p>The curb is gone, so the floor tile runs straight into the shower with nothing to step over. The shower floor is pitched at the proper angle so water goes where it should, and the hex mosaic carries a square tile-in drain that lifts out and sits right back in place.</p>
 </div>
 <div class="pillar">
 <div class="rn">02</div>
-<h3>An infinity niche, no metal</h3>
+<h3>An infinity niche, no&nbsp;metal</h3>
 <p>The niche in the back wall is built with mitered edges and finished with epoxy, so there is no metal trim breaking up the tile. The result reads more modern, and nothing interrupts the line of the wall.</p>
 </div>
 <div class="pillar">
 <div class="rn">03</div>
-<h3>Leveling clips, no lippage</h3>
+<h3>Leveling clips, no&nbsp;lippage</h3>
 <p>Large-format tile is very hard to set flat without them. Clips every six to ten inches, depending on the material, keep every edge flush so there is no lippage, and the inside corners are finished in silicone.</p>
 </div>
 <div class="pillar">
@@ -348,7 +317,7 @@
 <div class="client">
 <div>
 <span class="eyebrow">In a Client’s Words</span>
-<h2>From another <span class="nb" style="white-space:nowrap">walk-in</span> <em>shower remodel.</em></h2>
+<h2>From another <span class="nb" style="white-space:nowrap">walk-in</span> <em>shower&nbsp;remodel.</em></h2>
 <div class="score">
 <div class="n">5.0</div>
 <div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
@@ -360,7 +329,7 @@
 <div class="rev-grid one">
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;We decided to go with Posada Remodeling for our shower remodel and they did not disappoint! Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks phenomenal.&rdquo;</blockquote>
+<blockquote>&ldquo;We decided to go with Posada Remodeling for our shower remodel and they did not disappoint! Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks&nbsp;phenomenal.&rdquo;</blockquote>
 <div class="who">Zach K.</div>
 <div class="src">Walk-in shower remodel · Google review</div>
 </div>
@@ -374,7 +343,7 @@
 <a class="next-proj text" href="/posada-site-preview/projects/orlando-full-bathroom/">
 <div class="tx">
 <span class="eyebrow">Next Project</span>
-<h2>A full bathroom in Orlando, remodeled top to <em>bottom.</em></h2>
+<h2>A full bathroom in Orlando, remodeled top to&nbsp;<em>bottom.</em></h2>
 <span class="textlink">Read the story</span>
 </div>
 </a>
@@ -386,7 +355,7 @@
 <div class="inner">
 <div>
 <span class="eyebrow">Begin Here</span>
-<h2>Tell us about <em>your bathroom.</em></h2>
+<h2>Tell us about <em>your&nbsp;bathroom.</em></h2>
 <p>A complimentary in-home design consultation. We listen first, then tell you honestly which range your bathroom falls into. Evening and weekend consultations available. Every project follows <a href="/posada-site-preview/our-process/">the same seven steps</a>, and <a href="/posada-site-preview/financing/">financing</a> is available.</p>
 <div class="ctas"><a class="btn" href="/posada-site-preview/contact-us/?project=bathroom">Book a Complimentary Consultation</a><a class="textlink" href="/posada-site-preview/bathroom-remodeling/#cost">See what a bathroom costs</a></div>
 </div>

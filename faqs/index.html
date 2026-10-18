@@ -137,45 +137,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-/* Questions wrap as balanced lines and answers never end on a lone word ("project?", "permit."). */
-.c1 summary{text-wrap:balance}
-.c1 main p{text-wrap:pretty}
-@media (max-width:880px){.c1 .cta-band .btn{width:100%;white-space:normal;text-align:center;line-height:1.5;padding:14px 20px}}
-/* Quiet hero (round 5). "Good questions," is 13.2ch wide in Cormorant, so the shared 13ch measure dropped "Good" onto a line
-   of its own; 14ch sets the title as two lines at every width ("Good questions, / before you call."). The 01-04 index labels
-   keep each "&" tied to both neighbours, and on phones the cells give up most of their side padding, so no label ends or
-   starts a line with "&" (Design & materials is 144px of tracked caps, wider than a 20px-padded cell at 390; below 360 the
-   tracking eases so it still fits). From 881 to 1100px the 5fr column is narrower than the 390px gold button, which
-   overflowed into the lede, so the lede and buttons stack there as they do on phones. */
-.c1 #top h1{max-width:14ch}
-.c1 #top .stat-row .l{text-wrap:balance}
-@media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}
-@media (max-width:359px){.c1 #top .stat-row .l{letter-spacing:.1em}}
-@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}
-/* below 360px the tracking eases from .26em to .17em so "Complimentary in-home consultations" still fits one line at 320 */
-@media (max-width:359px){.c1 .topline{letter-spacing:.17em}}
-/* FAQ group cells (round 6). The 01-04 cells are links to #cost, #timeline, #design and #warranty, but they looked exactly like the
-   static stat rows on About and Our Process; a sand hover, a bronze numeral and a small down arrow under each label mark them as jumps. */
-.c1 #top .stat-row a.cell{transition:background-color .25s}
-.c1 #top .stat-row a.cell:hover{background:var(--sand)}
-.c1 #top .stat-row a.cell:hover .n{color:var(--bronze)}
-.c1 #top .stat-row a.cell .l::after{content:"\2193";display:block;margin-top:8px;letter-spacing:0;color:var(--bronze2)}
-/* On phones "Timeline & living at home" takes two lines; the label column fills the cell and the arrow sits at its foot, so the
-   arrows in a row stay on one line while the labels keep a shared top line. */
-.c1 #top .stat-row a.cell{display:flex;flex-direction:column}
-.c1 #top .stat-row a.cell .l{flex:1;display:flex;flex-direction:column;justify-content:space-between}
-/* faqs.html#both (round 6, linked from the price tables). On arrival the sticky nav shrinks (132 to 92px on desktop, 104 to 84px
-   on phones) and the section rises out of its reveal offset after the scroll is set, so with only the shared 110px padding the
-   question landed at 42px, its first line under the 92px header. The extra margin lands it at 106px or lower at 1440 and 154px at 390. */
-.c1 #both{scroll-margin-top:64px}
-/* The open mark (an en dash, 15.5px) is wider than the closed "+" (11.9px), so a question near the edge re-wrapped as it opened
-   (the new combined-project question went from two lines to three at 390, the kitchen-cost question at 393). Both marks now sit
-   right-aligned in one 16px box with a 20px gap, the same text width as the closed state, so no question moves when tapped. */
-.c1 summary{gap:20px}
-.c1 summary::after{width:16px;text-align:right}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 summary{text-wrap:balance}.c1 main p{text-wrap:pretty}@media (max-width:880px){.c1 .cta-band .btn{width:100%;white-space:normal;text-align:center;line-height:1.5;padding:14px 20px}}.c1 #top h1{max-width:14ch}.c1 #top .stat-row .l{text-wrap:balance}@media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}@media (max-width:359px){.c1 #top .stat-row .l{letter-spacing:.1em}}@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}@media (max-width:359px){.c1 .topline{letter-spacing:.17em}}.c1 #top .stat-row a.cell{transition:background-color .25s}.c1 #top .stat-row a.cell:hover{background:var(--sand)}.c1 #top .stat-row a.cell:hover .n{color:var(--bronze)}.c1 #top .stat-row a.cell .l::after{content:"\2193";display:block;margin-top:8px;letter-spacing:0;color:var(--bronze2)}.c1 #top .stat-row a.cell{display:flex;flex-direction:column}.c1 #top .stat-row a.cell .l{flex:1;display:flex;flex-direction:column;justify-content:space-between}.c1 #both{scroll-margin-top:64px}.c1 summary{gap:20px}.c1 summary::after{width:16px;text-align:right}</style>
 </head>
 <body>
 <div class="c1">
@@ -242,32 +205,32 @@
 <div class="areas">
 <div>
 <span class="eyebrow">01 · Cost &amp; Financing</span>
-<h2>What it costs, and <em>how to pay for it.</em></h2>
+<h2>What it costs, and <em>how to pay for&nbsp;it.</em></h2>
 <p>Typical 2026 ranges for Central Florida projects, how financing through Hearth works, the design retainer explained, and planning several rooms as one project.</p>
 <a class="textlink" href="/posada-site-preview/financing/">See financing options</a>
 </div>
 <div class="prose">
 <details open>
-<summary>How much does a kitchen remodel cost in Orlando and Central Florida?</summary>
+<summary>How much does a kitchen remodel cost in Orlando and Central&nbsp;Florida?</summary>
 <p>Most Posada kitchen remodels cost $15,000 to $80,000+, in three typical ranges. A refresh and update runs $15,000 to $25,000. A full remodel runs $25,000 to $50,000. A luxury or open-concept kitchen runs $50,000 to $80,000 and up. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact, itemized line by line, so you see what each choice costs before you decide. Our <a href="/posada-site-preview/kitchen-remodeling/">kitchen remodeling page</a> explains what moves the number. Our <a href="/posada-site-preview/kitchen-remodel-cost-central-florida/">2026 kitchen remodel cost guide</a> breaks it down.</p>
 </details>
 <details>
-<summary>How much does a bathroom remodel cost?</summary>
+<summary>How much does a bathroom remodel&nbsp;cost?</summary>
 <p>Most Posada bathroom remodels cost $8,000 to $40,000+, in three typical ranges. A refresh and update runs $8,000 to $15,000. A full bathroom remodel runs $15,000 to $30,000. A spa-style primary suite runs $30,000 to $40,000 and up. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. Tub-to-shower conversions, frameless glass, custom vanities and designer tile are each priced as their own line, and new flooring is itemized by the square foot. See <a href="/posada-site-preview/bathroom-remodeling/">bathroom remodeling</a> for the details. Our <a href="/posada-site-preview/bathroom-remodel-cost-central-florida/">2026 bathroom remodel cost guide</a> breaks it down.</p>
 </details>
 <details>
-<summary>Do you offer financing?</summary>
+<summary>Do you offer&nbsp;financing?</summary>
 <p>Yes. Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your score. Posada is not a lender; rates and terms are set by the lending partner. You can check your options on our <a href="/posada-site-preview/financing/">financing page</a> before or after your consultation.</p>
 </details>
 <details>
-<summary>What is the design retainer, and does it count toward my project?</summary>
+<summary>What is the design retainer, and does it count toward my&nbsp;project?</summary>
 <p>The in-home consultation is complimentary. Design work begins with a design retainer of $250 per bathroom or $500 per kitchen, credited to your project once the agreement is signed. It comes before your proposal, material selections and renderings, so you see your new room on paper before anyone touches a wall. We disclose it in step two of <a href="/posada-site-preview/our-process/">our process</a>, never as a surprise.</p>
 </details>
 <details>
-<summary>How are payments structured?</summary>
+<summary>How are payments&nbsp;structured?</summary>
 <p>The design retainer is $250 per bathroom or $500 per kitchen, credited to your project once the agreement is signed. The payment schedule for the build is set out in your agreement, and every line is itemized in your written proposal.</p>
 </details>
-<details id="both"><summary>Can you remodel the kitchen, bathrooms and floors in one project?</summary><p>Yes. One team designs, prices and builds every room, and your project manager is your one point of contact through the build. Your line-item proposal lists labor, materials and timeline, so you can see what each part costs and choose the upgrades you want. The design retainer is $250 per bathroom or $500 per kitchen, credited to your project once the agreement is signed. Reviewing three bathrooms and new kitchen floors, Jamie H. wrote that they would 100% work with the team again.</p></details>
+<details id="both"><summary>Can you remodel the kitchen, bathrooms and floors in one&nbsp;project?</summary><p>Yes. One team designs, prices and builds every room, and your project manager is your one point of contact through the build. Your line-item proposal lists labor, materials and timeline, so you can see what each part costs and choose the upgrades you want. The design retainer is $250 per bathroom or $500 per kitchen, credited to your project once the agreement is signed. Reviewing three bathrooms and new kitchen floors, Jamie H. wrote that they would 100% work with the team again.</p></details>
 </div>
 </div>
 </div>
@@ -278,21 +241,21 @@
 <div class="areas">
 <div>
 <span class="eyebrow">02 · Timeline &amp; Living at Home</span>
-<h2>How long it takes, and <em>what it is like.</em></h2>
+<h2>How long it takes, and <em>what it is&nbsp;like.</em></h2>
 <p>Honest industry ranges for construction time, what happens while the room is out of service, and who will be in your home.</p>
 <a class="textlink" href="/posada-site-preview/our-process/">See every step</a>
 </div>
 <div class="prose">
 <details open>
-<summary>How long does a kitchen or bathroom remodel take?</summary>
+<summary>How long does a kitchen or bathroom remodel&nbsp;take?</summary>
 <p>Industry guides put a midrange kitchen remodel at roughly four to eight weeks of construction, and a full remodel with layout changes at eight to twelve weeks or more. The same guides put most bathroom remodels at one to four weeks. Your schedule is set once your selections are final. Custom cabinetry and countertop fabrication add lead time before work begins, which is one reason we finish the design before demolition. More in our guide to <a href="/posada-site-preview/how-long-does-a-remodel-take/">how long a remodel takes</a>.</p>
 </details>
 <details>
-<summary>Can we stay in our home during the remodel?</summary>
+<summary>Can we stay in our home during the&nbsp;remodel?</summary>
 <p>Most families do. The kitchen or bathroom being remodeled is out of service while the work happens, so at your consultation we walk through what to expect, the order of work and where the crew will be each day. Our own team works in your home, the site is cleaned at the end of every day, and you have one point of contact for the whole project. Reviewing a full kitchen remodel and new floors, Christina A. wrote that the team was respectful to their home.</p>
 </details>
 <details>
-<summary>Who will actually be in my home?</summary>
+<summary>Who will actually be in my&nbsp;home?</summary>
 <p>Our own team, led by people you will have already met. Mike Posada, the owner, personally oversees every project, and your project manager is your one point of contact on site, so you always know who is in your home and what happens next. Reviewing a room remodel, Joyce P. wrote that Mike keeps you posted on day and arrival times. After completion, Mike follows up to make sure you are happy with the work. <a href="/posada-site-preview/about/">Meet the team</a>.</p>
 </details>
 </div>
@@ -311,19 +274,19 @@
 </div>
 <div class="prose">
 <details open>
-<summary>Do you handle the design, or do I need my own designer?</summary>
+<summary>Do you handle the design, or do I need my own&nbsp;designer?</summary>
 <p>We do the design. Posada is a kitchen and bath design and remodeling studio, so layout, cabinetry, counters, tile, fixtures and lighting are chosen with you and shown in renderings before anyone touches a wall. Yani Tejera, our interior design advisor, guides your selections, and the same team that designs your room builds it, so the finish you approve on paper is the finish you live with.</p>
 </details>
 <details>
-<summary>Do you carry in-stock cabinets for a faster turnaround?</summary>
+<summary>Do you carry in-stock cabinets for a faster&nbsp;turnaround?</summary>
 <p>Yes. Alongside custom and semi-custom cabinetry in classic overlay and premium inset, we offer in-stock framed and frameless collections with a one to two week turnaround. Shaker doors come in white, grey, pearl, blue, natural, onyx and cashmere, and euro-style doors in glossy white and natural oak. Every cabinet we install carries a lifetime warranty. Ask at your consultation which collection fits your budget range, or read more on our <a href="/posada-site-preview/kitchen-remodeling/">kitchen page</a>.</p>
 </details>
 <details>
-<summary>Do you do tub-to-shower conversions?</summary>
+<summary>Do you do tub-to-shower&nbsp;conversions?</summary>
 <p>Yes. The tub comes out, the new shower is waterproofed and tiled, and frameless glass finishes it. Keeping the drain where it is keeps the scope simple. See our <a href="/posada-site-preview/tub-to-shower-conversion-cost/">tub-to-shower conversion guide</a>.</p>
 </details>
 <details>
-<summary>Do I need a permit, and who handles it?</summary>
+<summary>Do I need a permit, and who handles&nbsp;it?</summary>
 <p>Only for some work. In Orange County, for example, moving plumbing, electrical or walls needs a permit, while new finished flooring or replacing cabinets and countertops in the same layout does not. Permits included when your project needs one; we coordinate it through our licensed general contractor partner. You do not manage the paperwork or inspections yourself, and we tell you at the proposal stage whether your project needs one. See our <a href="/posada-site-preview/kitchen-bathroom-remodel-permits-florida/">Florida remodel permit guide</a>.</p>
 </details>
 </div>
@@ -342,7 +305,7 @@
 </div>
 <div class="prose">
 <details open>
-<summary>What do your warranties cover?</summary>
+<summary>What do your warranties&nbsp;cover?</summary>
 <p>Every project carries a 3-year labor and installation warranty. The cabinetry we install carries a lifetime warranty. Shower waterproofing systems carry 3-year, 10-year and lifetime warranties, where included. You receive complete written warranty terms before you sign, so there is nothing to interpret later. After the final walkthrough, Mike follows up personally to make sure you are happy with the work.</p>
 </details>
 <details>
@@ -350,11 +313,11 @@
 <p>Yes. Posada Remodeling &amp; Design is fully insured, and a certificate of insurance is available on request. We are veteran-owned, family-operated and BBB Accredited with an A rating, with a 5.0 rating on Google across more than 60 <span class="nb" style="white-space:nowrap">five-star</span> reviews. Ask for the certificate at your consultation or by email at any time, and we will send it over.</p>
 </details>
 <details>
-<summary>What areas do you serve?</summary>
+<summary>What areas do you&nbsp;serve?</summary>
 <p>We work across Orange, Seminole, Osceola and Lake counties from our design studio at 130 Live Oaks Blvd in Casselberry, open by appointment. That includes Orlando, Winter Park, Winter Garden, Lake Mary, Longwood, Oviedo, Windermere, Casselberry, Altamonte Springs, Sanford, Dr. Phillips and Lake Nona. For west Orlando homeowners, design consultations are held in Winter Garden, by appointment. See the full list on our <a href="/posada-site-preview/service-areas/">service areas page</a>.</p>
 </details>
 <details>
-<summary>How do we get started?</summary>
+<summary>How do we get&nbsp;started?</summary>
 <p>Call or text <a href="tel:+14073193503">(407) 319-3503</a>, or send the short form on our <a href="/posada-site-preview/contact-us/">contact page</a>. We reply within 24 hours and schedule a complimentary in-home design consultation; evening and weekend consultations are available. At the visit we listen first, then tell you honestly which budget range your project falls into. From there you receive a line-item proposal with labor, materials and timeline, and you choose the upgrades you want.</p>
 </details>
 </div>
@@ -367,7 +330,7 @@
 <div class="inner">
 <div>
 <span class="eyebrow">Begin Here</span>
-<h2>Still have a <em>question?</em></h2>
+<h2>Still have a&nbsp;<em>question?</em></h2>
 <p>Ask it at a complimentary in-home consultation. We listen first, then put honest numbers on your project. No obligation.</p>
 <a class="btn" href="/posada-site-preview/contact-us/">Book a Complimentary Consultation</a>
 </div>

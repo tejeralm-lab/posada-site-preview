@@ -141,45 +141,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-/* .split.rev shares its class name with the review card; keep the split flat on ivory (same fix as the kitchen page) */
-.c1 .split.rev{background:transparent;border-top:0;padding:0}
-/* inline links inside body copy */
-/* no numerals over these four: the title sits on the pillar rule, so drop the shared top margin. The shared two-line min-height
-   stays (above 880px): "Bathroom remodel financing" takes two lines in the 4-column row at 1440, and the min-height keeps all four
-   pillar texts starting on one line. */
-.c1 #what .pillar h3{margin-top:0}
-/* the guide sits in the narrower financing column, so stack its text above its button */
-.c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:18px}
-.c1 .promise-foot{align-items:center}
-.c1 .pillar p a{white-space:nowrap}
-/* Quiet hero (round 6). The hero was a crop of a portrait bath photo that could not fill a landscape band, so the page opens on the
-   serif title like FAQs. Copied from faqs.html: the stat labels wrap as balanced lines, the cells give up side padding on phones,
-   and from 881 to 1100px the lede and buttons stack, because the 5fr column is narrower than the gold button there. The first
-   section loses part of its top padding because the stat row already closes the hero with a rule. The title is set at 19ch,
-   not the shared 13ch: "Spread the investment" is 18.25ch and the whole title 26ch, so from about 530px up it reads in two lines
-   at its natural pause ("Spread the investment / over time."), not three with "Spread the" alone; phones keep three lines. No
-   balance here, which would split it as "Spread the / investment over time." On short windows (760px tall or less) the hero
-   starts 32px higher, so at 1100x700, where the lede and buttons stack, the gold button ends about 36px above the fold. In the
-   lede, "0%&nbsp;APR" never splits at a line end. */
-.c1 #top.quiet h1{max-width:19ch;text-wrap:wrap}
-/* "0% APR" is one figure: it never breaks inside its cell, and below 360px it steps down to 36px so it fits the 128px cell at 320.
-   Phones: the shared .2em tracking set "Promotional options" at 163px, exactly the 390px cell and wider than the 375 and 360 cells,
-   so that label ran to four lines; .15em (and .1em below 375, as FAQs does below 360) keeps it to three. Its line break sits after
-   "options" (as the rating cell's does), because balance alone set it bottom-heavy at 390 ("Promotional / options for / qualified
-   homeowners"). */
-.c1 #top .stat-row .n{white-space:nowrap}
-@media (max-width:430px){.c1 #top .stat-row .l{letter-spacing:.15em}}
-@media (max-width:374px){.c1 #top .stat-row .l{letter-spacing:.1em}}
-@media (max-width:359px){.c1 #top .stat-row .n{font-size:36px}}
-@media (min-width:881px) and (max-height:760px){.c1 #top.quiet{padding-top:72px}}
-.c1 #hearth{padding-top:40px}
-.c1 #top .stat-row .l{text-wrap:balance}
-@media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}
-@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}
-@media (min-width:881px){.c1 #top .stat-row{grid-template-columns:repeat(3,minmax(0,1fr))}.c1 #top .stat-row .cell:nth-child(3){border-left:1px solid var(--line);border-top:0}}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 .split.rev{background:transparent;border-top:0;padding:0}.c1 #what .pillar h3{margin-top:0}.c1 .fin .guide{flex-direction:column;align-items:flex-start;gap:18px}.c1 .promise-foot{align-items:center}.c1 .pillar p a{white-space:nowrap}.c1 #top.quiet h1{max-width:19ch;text-wrap:wrap}.c1 #top .stat-row .n{white-space:nowrap}@media (max-width:430px){.c1 #top .stat-row .l{letter-spacing:.15em}}@media (max-width:374px){.c1 #top .stat-row .l{letter-spacing:.1em}}@media (max-width:359px){.c1 #top .stat-row .n{font-size:36px}}@media (min-width:881px) and (max-height:760px){.c1 #top.quiet{padding-top:72px}}.c1 #hearth{padding-top:40px}.c1 #top .stat-row .l{text-wrap:balance}@media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}@media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}@media (min-width:881px){.c1 #top .stat-row{grid-template-columns:repeat(3,minmax(0,1fr))}.c1 #top .stat-row .cell:nth-child(3){border-left:1px solid var(--line);border-top:0}}</style>
 </head>
 <body>
 <div class="c1">
@@ -243,7 +206,7 @@
 <div class="media"><div class="frame"><img src="/posada-site-preview/images/marble-walk-in-shower-remodel-central-florida.webp" srcset="/posada-site-preview/images/marble-walk-in-shower-remodel-central-florida-800.webp 600w, /posada-site-preview/images/marble-walk-in-shower-remodel-central-florida-800w.webp 800w, /posada-site-preview/images/marble-walk-in-shower-remodel-central-florida-1000.webp 1000w, /posada-site-preview/images/marble-walk-in-shower-remodel-central-florida.webp 1350w" sizes="(max-width: 1100px) 100vw, 40vw" width="1350" height="1800" alt="Marble-look walk-in shower remodel with a glass enclosure in Central Florida" loading="lazy" decoding="async"></div></div>
 <div>
 <span class="eyebrow">Financing Through Hearth</span>
-<h2>Check your options in <em>about a minute.</em></h2>
+<h2>Check your options in <em>about a&nbsp;minute.</em></h2>
 <p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your score. Posada is not a lender; rates and terms are set by the lending&nbsp;partner.</p>
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>0% APR promotional options for qualified&nbsp;homeowners</span></li>
@@ -262,7 +225,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">How It Works</span>
-<h2>Three steps, <em>start to finish.</em></h2>
+<h2>Three steps, <em>start to&nbsp;finish.</em></h2>
 </div>
 </div>
 <div class="promise">
@@ -292,7 +255,7 @@
 <section class="sec" id="what">
 <div class="wrap center">
 <span class="eyebrow">What You Can Finance</span>
-<h2>Any Posada project, <em>large or small.</em></h2>
+<h2>Any Posada project, <em>large or&nbsp;small.</em></h2>
 <p>Financing through Hearth can be used toward any project in your written proposal, from a single bathroom refresh to a whole-home remodel. Because every proposal is itemized line by line, you know the exact number before you check your options.</p>
 <div class="pillars">
 <div class="pillar">
@@ -359,7 +322,7 @@
 <div class="client">
 <div>
 <span class="eyebrow">In a Client&rsquo;s Words</span>
-<h2>Numbers you can <em>hold us to.</em></h2>
+<h2>Numbers you can <em>hold us&nbsp;to.</em></h2>
 <div class="score">
 <div class="n">5.0</div>
 <div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
@@ -371,7 +334,7 @@
 <div class="rev-grid one">
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>&ldquo;We decided to go with Posada Remodeling for our shower remodel and they did not disappoint! Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks phenomenal.&rdquo;</blockquote>
+<blockquote>&ldquo;We decided to go with Posada Remodeling for our shower remodel and they did not disappoint! Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks&nbsp;phenomenal.&rdquo;</blockquote>
 <div class="who">Zach K.</div>
 <div class="src">Walk-in shower remodel · Google review</div>
 </div>
@@ -384,34 +347,34 @@
 <div class="wrap faq-wrap">
 <div class="center">
 <span class="eyebrow">Good Questions</span>
-<h2>Plain answers about <em>financing.</em></h2>
+<h2>Plain answers about&nbsp;<em>financing.</em></h2>
 </div>
 <details open>
-<summary>Does checking my options affect my credit score?</summary>
+<summary>Does checking my options affect my credit&nbsp;score?</summary>
 <p>No. Checking your options through Hearth uses a soft credit check that does not affect your score, and it takes about a minute. If you go on to accept an offer, the lending partner sets the rates, terms and any further steps.</p>
 </details>
 <details>
-<summary>Is Posada the lender?</summary>
+<summary>Is Posada the&nbsp;lender?</summary>
 <p>No. Posada is not a lender. Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, and rates and terms are set by the lending partner. Your loan agreement is with that partner. Your proposal, remodeling agreement and warranty are with Posada.</p>
 </details>
 <details>
-<summary>Can I combine financing with the design retainer?</summary>
+<summary>Can I combine financing with the design&nbsp;retainer?</summary>
 <p>Yes. The design retainer is $250 per bathroom or $500 per kitchen, and it is credited to your project once the agreement is signed. Financing changes how you pay for the project; it does not change the retainer or the credit. The retainer is step 02 of <a href="/posada-site-preview/our-process/">our process</a>.</p>
 </details>
 <details>
-<summary>How do I finance a kitchen or bathroom remodel?</summary>
+<summary>How do I finance a kitchen or bathroom&nbsp;remodel?</summary>
 <p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your score. Posada is not a lender; rates and terms are set by the lending partner. You can also pay from savings or through your own bank.</p>
 </details>
 <details>
-<summary>Do I have to use financing if I check my options?</summary>
+<summary>Do I have to use financing if I check my&nbsp;options?</summary>
 <p>No. Checking your options uses a soft credit check that does not affect your score, and you choose whether to accept an offer from a lending partner. You can also pay from savings or through your own bank.</p>
 </details>
 <details>
-<summary>Do I need home equity to finance a remodel?</summary>
+<summary>Do I need home equity to finance a&nbsp;remodel?</summary>
 <p>Not necessarily. Some homeowners use a home equity loan or line of credit through their own bank; others check options through Hearth, which works with a network of lending partners. What you qualify for is decided by the lending partner. Posada is not a lender.</p>
 </details>
 <details>
-<summary>Can I finance part of the project and pay the rest?</summary>
+<summary>Can I finance part of the project and pay the&nbsp;rest?</summary>
 <p>How you pay is your choice. The payment schedule is set out in your agreement, and any amount you finance, with its rate and terms, is set by the lending partner.</p>
 </details>
 <div class="rev-links" style="justify-content:center">

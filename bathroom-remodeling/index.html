@@ -146,39 +146,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-/* calmer line breaks: no single-word last lines in copy, balanced two-line questions and footers */
-.c1 p,.c1 li,.c1 blockquote{text-wrap:pretty}
-.c1 summary,.c1 .promise-foot span{text-wrap:balance}
-/* hyphenated words never split across lines */
-.c1 .nh{white-space:nowrap}
-/* county labels sit on the same baseline as the city links */
-.c1 .area-list li{align-items:baseline}
-/* hero (round 7): the soaking-tub photo is shown whole, framed like a print on sand beside the navy panel (the shared .hero.compact.film.print layout, as on Sorrento, Orlando and Flooring). The old band crops that showed only the bottom third of the tub are gone. The inline object-position (center 75%) only matters below 1100px, where the stacked print is cropped to at most 340px tall: it keeps the leaf wall, the towels, the whole tub and the brass filler in the strip */
-/* the caption is only as wide as the print (420px at most, not the 456px kept for Flooring's wider print): at 1100-1150px a 456px right-aligned caption would run under the navy panel */
-@media (min-width:1100px){.c1 section.hero.compact.print .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 824px),420px)}}
-/* gallery captions on two-across phones: a label that needs two lines splits evenly ("Vanity with / drawer bases"), never one word alone */
-.c1 #gallery figcaption > span:first-child{text-wrap:balance}
-/* films: a playing vertical film is sized by its width, so on a phone it stays inside its column (sized by height, it grew to 389px in a 350px column at 390 and its right edge, with the fullscreen button, was cut off); desktop keeps the same 415x738 player */
-.c1 #films .video-grid > .yt-card{min-width:0}
-.c1 #films .yt.vertical.playing{width:min(100%,calc(min(82vh,760px) * 9 / 16));height:auto}
-/* pricing: the Book button and the financing link share one full-width row under both columns, as on the kitchen page */
-.c1 #cost .cost-cta{margin-top:60px;padding-top:48px;border-top:1px solid rgba(111,88,31,.3)}
-@media (max-width:880px){.c1 #cost .cost-cta{margin-top:44px;padding-top:36px}}
-/* gallery: the first row is three finished rooms; a label introduces the second row of close-ups, which are square, so it does not read as a tile catalog. Bronze2 keeps the label AA on sand */
-@media (min-width:881px){.c1 #gallery .gal-label{grid-column:1/-1;margin:18px 0 -8px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--bronze2)}.c1 #gallery .gal figure:nth-of-type(n+4) img{aspect-ratio:1/1}}
-/* up-close row, walnut vanity (round 7): the square tile shows 75% of the 4:3 photo's width, and the photo's two wall outlets sit at 7-12.5% and 86-91.5% across, only 73.5% apart, so no object-position hides both (at 50% the right plate showed as a 7px white tab in the top corner). From 881px the tile zooms the photo 7% inside a clipping wrapper: with object-position 49.5% the window is 14.5-84.5% across, about 25 source px clear of each plate, and every drawer pull stays in frame. Phones keep the plain 4:5 tile (20-80% across), which never reaches the outlets. The focus ring moves to the wrapper, because the clipped img cannot show its own */
-@media (min-width:881px){.c1 #gallery .gal figure:nth-of-type(5) .crop{overflow:hidden;aspect-ratio:1/1}.c1 #gallery .gal figure:nth-of-type(5) .crop img{display:block;height:100%;aspect-ratio:auto;transform:scale(1.07)}.c1 #gallery .gal figure:nth-of-type(5) .crop:has(img:focus-visible){outline:2px solid var(--brass);outline-offset:4px}}
-@supports selector(:has(a)){@media (min-width:881px){.c1 #gallery .gal figure:nth-of-type(5) .crop img:focus-visible{outline:none}}}
-/* phones keep three rows of two: the label hides, and the shared odd-last-tile rule (which counts the label as a child) must not turn the sixth tile into a wide 3:2 tile */
-/* iPads and small laptops (881-1100px): the shared grid drops to two columns there, which would leave the third room and the last close-up alone on their rows around the label, so this gallery stays three across, as the service cards do */
-@media (min-width:881px) and (max-width:1100px){.c1 #gallery .gal{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
-@media (max-width:880px){.c1 #gallery .gal-label{display:none}.c1 #gallery .gal figure:last-child{grid-column:auto}.c1 #gallery .gal figure:last-child img{aspect-ratio:4/5}}
-/* intro: the frameless-glass shower, zoomed 2x on the leaf wall, window, rain head and brass hinge. The toilet (lower left of the photo) and its reflection in the glass stay outside the 4:5 crop: the visible area is 35-85% across and 15-62% down the photo */
-.c1 #intro .frame .crop{position:relative;z-index:1;overflow:hidden;aspect-ratio:4/5}
-.c1 #intro .frame .crop img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;transform:scale(2);transform-origin:70% 26%}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 p,.c1 li,.c1 blockquote{text-wrap:pretty}.c1 summary,.c1 .promise-foot span{text-wrap:balance}.c1 .nh{white-space:nowrap}.c1 .area-list li{align-items:baseline}@media (min-width:1100px){.c1 section.hero.compact.print .print-cap{max-width:clamp(260px,calc(min(100vw,1280px) - 824px),420px)}}.c1 #gallery figcaption > span:first-child{text-wrap:balance}.c1 #films .video-grid > .yt-card{min-width:0}.c1 #films .yt.vertical.playing{width:min(100%,calc(min(82vh,760px) * 9 / 16));height:auto}.c1 #cost .cost-cta{margin-top:60px;padding-top:48px;border-top:1px solid rgba(111,88,31,.3)}@media (max-width:880px){.c1 #cost .cost-cta{margin-top:44px;padding-top:36px}}@media (min-width:881px){.c1 #gallery .gal-label{grid-column:1/-1;margin:18px 0 -8px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--bronze2)}.c1 #gallery .gal figure:nth-of-type(n+4) img{aspect-ratio:1/1}}@media (min-width:881px){.c1 #gallery .gal figure:nth-of-type(5) .crop{overflow:hidden;aspect-ratio:1/1}.c1 #gallery .gal figure:nth-of-type(5) .crop img{display:block;height:100%;aspect-ratio:auto;transform:scale(1.07)}.c1 #gallery .gal figure:nth-of-type(5) .crop:has(img:focus-visible){outline:2px solid var(--brass);outline-offset:4px}}@supports selector(:has(a)){@media (min-width:881px){.c1 #gallery .gal figure:nth-of-type(5) .crop img:focus-visible{outline:none}}}@media (min-width:881px) and (max-width:1100px){.c1 #gallery .gal{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}@media (max-width:880px){.c1 #gallery .gal-label{display:none}.c1 #gallery .gal figure:last-child{grid-column:auto}.c1 #gallery .gal figure:last-child img{aspect-ratio:4/5}}.c1 #intro .frame .crop{position:relative;z-index:1;overflow:hidden;aspect-ratio:4/5}.c1 #intro .frame .crop img{display:block;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;transform:scale(2);transform-origin:70% 26%}</style>
 </head>
 <body>
 <div class="c1">
@@ -247,8 +216,8 @@
 <div class="media"><div class="frame"><div class="crop"><img src="/posada-site-preview/images/walk-in-shower-remodel-frameless-glass-central-florida.webp" srcset="/posada-site-preview/images/walk-in-shower-remodel-frameless-glass-central-florida-800.webp 600w, /posada-site-preview/images/walk-in-shower-remodel-frameless-glass-central-florida-800w.webp 800w, /posada-site-preview/images/walk-in-shower-remodel-frameless-glass-central-florida-1000.webp 1000w, /posada-site-preview/images/walk-in-shower-remodel-frameless-glass-central-florida.webp 1350w, /posada-site-preview/images/walk-in-shower-remodel-frameless-glass-central-florida-2000.webp 2000w" sizes="(max-width: 1100px) 200vw, 100vw" width="1350" height="1800" alt="Walk-in shower remodel with frameless glass, large-format tile and brass fixtures in Central Florida" loading="lazy" decoding="async"></div></div></div>
 <div>
 <span class="eyebrow">Bathroom Remodeling</span>
-<h2>Every detail, designed <em>before demolition.</em></h2>
-<p class="answer">Posada Remodeling &amp; Design designs and builds bathroom remodels in Orlando and across Central Florida from its studio in Casselberry. A refresh and update typically runs $8,000 to $15,000, a full remodel $15,000 to $30,000, and a spa or primary suite $30,000 to $40,000+. <a href="#cost">Ranges reflect typical Central Florida projects in 2026.</a> Your written proposal is exact. Call or text <a href="tel:+14073193503">(407)&nbsp;319-3503</a> to book a complimentary <span class="nb">in-home</span> design consultation.</p>
+<h2>Every detail, designed <em>before&nbsp;demolition.</em></h2>
+<p class="answer">Posada Remodeling &amp; Design designs and builds bathroom remodels in Orlando and across Central Florida from its studio in Casselberry. A refresh and update typically runs $8,000 to $15,000, a full remodel $15,000 to $30,000, and a spa or primary suite $30,000 to $40,000+. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact. Call or text <a href="tel:+14073193503">(407)&nbsp;319-3503</a> to book a complimentary <span class="nb" style="white-space:nowrap">in-home</span> design consultation.</p>
 <p>A bathroom is the smallest room in the house that has to work perfectly every day. We design it with you, price every line, and build it with our own team, so the shower you approve in the rendering is the shower you step into.</p>
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span><span class="nh">Walk-in</span> showers with <span class="nh">large-format</span> tile and <span class="nh">built-in</span> niches</span></li>
@@ -269,7 +238,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Recent Bathrooms</span>
-<h2>Walk-in showers, vanities and <em>primary suites.</em></h2>
+<h2>Walk-in showers, vanities and <em>primary&nbsp;suites.</em></h2>
 </div>
 <a class="btn-line" href="/posada-site-preview/gallery/">View All Projects</a>
 </div>
@@ -290,7 +259,7 @@
 <div class="rev-head">
 <div>
 <span class="eyebrow">Client Stories</span>
-<h2>Bathrooms, in their owners’ <em>words.</em></h2>
+<h2>Bathrooms, in their owners’&nbsp;<em>words.</em></h2>
 </div>
 <div class="score">
 <div class="n">5.0</div>
@@ -300,25 +269,25 @@
 <div class="rev-grid">
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“The service was seamless from beginning to the end of my bathroom project. Mike and team’s client service and attention to detail was outstanding! I love my bathroom, it’s beautiful!”</blockquote>
+<blockquote>“The service was seamless from beginning to the end of my bathroom project. Mike and team’s client service and attention to detail was outstanding! I love my bathroom, it’s&nbsp;beautiful!”</blockquote>
 <div class="who">Sherdon T.</div>
 <div class="src">Bathroom remodel · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks phenomenal.”</blockquote>
+<blockquote>“Not only was the price very reasonable, but they also went above and beyond to make sure our shower was repaired correctly when an unforeseen issue arose. The shower looks&nbsp;phenomenal.”</blockquote>
 <div class="who">Zach K.</div>
 <div class="src"><span class="nh">Walk-in</span> shower remodel · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and ideas.”</blockquote>
+<blockquote>“Used Mike and team for 3 bathrooms (two total gut, one floors, cabinets and counters) and all my kitchen floors. We would 100% work with them again. Mike helped with design and tons of questions and&nbsp;ideas.”</blockquote>
 <div class="who">Jamie H.</div>
 <div class="src">Three bathrooms &amp; kitchen floors · Google review</div>
 </div>
 <div class="rev">
 <div class="stars" aria-hidden="true">★★★★★</div>
-<blockquote>“Mike and his team are professional, quick to answer questions, take great care with even the smallest details, and they are fun! Our bathroom remodel looks amazing!”</blockquote>
+<blockquote>“Mike and his team are professional, quick to answer questions, take great care with even the smallest details, and they are fun! Our bathroom remodel looks&nbsp;amazing!”</blockquote>
 <div class="who">Nikki B.</div>
 <div class="src">Bathroom remodel · Google review</div>
 </div>
@@ -335,18 +304,18 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Project Films</span>
-<h2>Bathroom renovations in Orlando and Sorrento, <em>start to finish.</em></h2>
+<h2>Bathroom renovations in Orlando and Sorrento, <em>start to&nbsp;finish.</em></h2>
 </div>
 <p>Short walkthroughs of real Posada bathrooms, explained by the owner: the tile, the valves, the niche, and the details you only notice once you live with them. Planning your own? Start with our guides to <a href="/posada-site-preview/tub-to-shower-conversion-cost/" style="border-bottom:1px solid #C4A24E">tub-to-shower conversions</a>, <a href="/posada-site-preview/wet-room-bathroom-guide/" style="border-bottom:1px solid #C4A24E">wet room bathrooms</a> and <a href="/posada-site-preview/spa-bathroom-ideas/" style="border-bottom:1px solid #C4A24E">spa bathroom ideas</a>.</p>
 </div>
 <div class="video-grid">
 <div class="yt-card">
 <a class="yt card" data-yt="F4Zs3s4YfMk" data-ratio="9/16" data-title="Master Bathroom Remodel in Sorrento FL | Full Walkthrough" href="https://www.youtube.com/watch?v=F4Zs3s4YfMk" aria-label="Play the video: Master Bathroom Remodel in Sorrento FL, full walkthrough"><span class="tc"><span class="tc-k">Project film · Sorrento · 3:38</span><span class="tc-t">A master bathroom, <em>walked through.</em></span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></span></a>
-<div class="cap"><h3>Master bathroom remodel, Sorrento</h3><p>The full walkthrough of a finished primary bathroom in Sorrento, FL.</p><div class="rev-links" style="margin-top:14px"><a class="textlink" href="/posada-site-preview/projects/sorrento-master-bathroom/">See the full project story</a></div></div>
+<div class="cap"><h3>Master bathroom remodel,&nbsp;Sorrento</h3><p>The full walkthrough of a finished primary bathroom in Sorrento, FL.</p><div class="rev-links" style="margin-top:14px"><a class="textlink" href="/posada-site-preview/projects/sorrento-master-bathroom/">See the full project story</a></div></div>
 </div>
 <div class="yt-card">
 <a class="yt card" data-yt="MFE3rgfyzHg" data-ratio="9/16" data-title="Full Bathroom Remodel Walkthrough in Orlando FL | Posada Remodeling" href="https://www.youtube.com/watch?v=MFE3rgfyzHg" aria-label="Play the video: Full Bathroom Remodel Walkthrough in Orlando FL"><span class="tc"><span class="tc-k">Project film · Orlando · 3:12</span><span class="tc-t">A full bathroom, <em>top to bottom.</em></span><span class="play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></span></span></a>
-<div class="cap"><h3>Full bathroom remodel, Orlando</h3><p>A complete bathroom remodel in Orlando, FL, walked through on camera.</p><div class="rev-links" style="margin-top:14px"><a class="textlink" href="/posada-site-preview/projects/orlando-full-bathroom/">See the full project story</a></div></div>
+<div class="cap"><h3>Full bathroom remodel,&nbsp;Orlando</h3><p>A complete bathroom remodel in Orlando, FL, walked through on camera.</p><div class="rev-links" style="margin-top:14px"><a class="textlink" href="/posada-site-preview/projects/orlando-full-bathroom/">See the full project story</a></div></div>
 </div>
 </div>
 <div class="ctas" style="margin-top:48px">
@@ -360,7 +329,7 @@
 <div class="invest">
 <div>
 <span class="eyebrow">Investment</span>
-<h2 style="font-size:clamp(36px,4vw,54px);margin:16px 0 14px">How much does a bathroom remodel cost in <em>Orlando?</em></h2>
+<h2 style="font-size:clamp(36px,4vw,54px);margin:16px 0 14px">How much does a bathroom remodel cost in&nbsp;<em>Orlando?</em></h2>
 <p style="color:#3B4352;font-size:16px;margin:0 0 28px;max-width:560px">These are typical 2026 ranges from our own Central Florida bathrooms, so you can plan with real numbers before anyone draws a line.</p>
 <table class="price-table">
 <thead><tr><th>Bathrooms</th><th style="text-align:right">Typical range</th></tr></thead>
@@ -374,7 +343,7 @@
 </div>
 <div class="fin">
 <span class="eyebrow">What Moves the Number</span>
-<h3>Six choices that set <em>the range.</em></h3>
+<h3>Six choices that set <em>the&nbsp;range.</em></h3>
 <ul>
 <li><span class="dia" aria-hidden="true"></span><span>Shower size and tile format</span></li>
 <li><span class="dia" aria-hidden="true"></span><span><span class="nh">Tub-to-shower</span> conversion and frameless glass</span></li>
@@ -396,7 +365,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">The Posada Promise</span>
-<h2>A shower should stay dry <em>behind the tile.</em></h2>
+<h2>A shower should stay dry <em>behind the&nbsp;tile.</em></h2>
 </div>
 <p style="color:rgba(246,242,236,.82)">Most shower problems start where you cannot see them. That is why the waterproofing, the labor and the terms are all in writing before you sign.</p>
 </div>
@@ -429,7 +398,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">How It Works</span>
-<h2>Your bathroom, <em>step by step.</em></h2>
+<h2>Your bathroom, <em>step by&nbsp;step.</em></h2>
 </div>
 <p>You will always know what happens next, who is in your home, and what it costs.</p>
 </div>
@@ -471,39 +440,39 @@
 <h2>Bathroom questions, <em>answered.</em></h2>
 </div>
 <details open>
-<summary>How much does a bathroom remodel cost in Orlando?</summary>
+<summary>How much does a bathroom remodel cost in&nbsp;Orlando?</summary>
 <p>A bathroom refresh typically runs $8,000 to $15,000, a full bathroom remodel $15,000 to $30,000, and a <span class="nh">spa-style</span> primary suite with a custom <span class="nh">walk-in</span> shower $30,000 to $40,000 and up. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact: tile, glass, vanity and fixtures are priced line by line, so you know what each choice costs before you decide.</p>
 </details>
 <details>
-<summary>How long does a bathroom remodel take?</summary>
+<summary>How long does a bathroom remodel&nbsp;take?</summary>
 <p>Industry guides put most bathroom remodels at roughly one to four weeks of construction, with primary suites that move plumbing or walls at the longer end. Custom vanities and frameless glass add fabrication lead time, so your schedule is set once your selections are final. We walk through the order of work at your consultation, so you know when the room will be out of service.</p>
 </details>
 <details>
-<summary><span>Can you convert my tub into a <span style="white-space:nowrap">walk-in</span> shower?</span></summary>
+<summary><span>Can you convert my tub into a <span style="white-space:nowrap">walk-in</span>&nbsp;shower?</span></summary>
 <p>Yes. In a <span class="nh">tub-to-shower</span> conversion the tub comes out, the new shower is waterproofed and tiled, and frameless glass finishes it. Keeping the drain and plumbing where they are keeps the scope simple. Moving plumbing, electrical or walls adds scope and typically requires a permit. Permits included when your project needs one; we coordinate it through our licensed general contractor partner. Costs and options are in our <a href="/posada-site-preview/tub-to-shower-conversion-cost/">tub-to-shower conversion guide</a>.</p>
 </details>
 <details>
-<summary>What warranty comes with a new shower?</summary>
+<summary>What warranty comes with a new&nbsp;shower?</summary>
 <p>Every project carries a <span class="nh">three-year</span> labor and installation warranty. Shower waterproofing systems, where included, carry <span class="nh">three-year</span>, <span class="nh">ten-year</span> and lifetime warranties. You receive complete written warranty terms before you sign, and Posada is fully insured, with a certificate of insurance on request.</p>
 </details>
 <details>
-<summary>What does a $10,000 bathroom remodel look like?</summary>
+<summary>What does a $10,000 bathroom remodel look&nbsp;like?</summary>
 <p>$10,000 sits in our refresh and update range, $8,000 to $15,000. That is where most <span class="nh">tub-to-shower</span> conversions and small-bathroom updates land, with the plumbing kept where it is. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact, and tile, glass, vanity and fixtures are each priced as their own line.</p>
 </details>
 <details>
-<summary>Is $5,000 enough to remodel a bathroom?</summary>
+<summary>Is $5,000 enough to remodel a&nbsp;bathroom?</summary>
 <p>For a full bathroom remodel, usually not: our refresh and update range starts at $8,000. A smaller scope may fit, and at the complimentary consultation we tell you honestly what your budget covers before any design work begins. Ranges reflect typical Central Florida projects in 2026. Your written proposal is exact.</p>
 </details>
 <details>
-<summary>Do I need a permit for a bathroom remodel?</summary>
+<summary>Do I need a permit for a bathroom&nbsp;remodel?</summary>
 <p>Only for some work. Replacing tile, a vanity or fixtures in the same spot usually does not need one, while moving plumbing, electrical or walls does in Orange County, for example. Permits included when your project needs one; we coordinate it through our licensed general contractor partner. Our <a href="/posada-site-preview/kitchen-bathroom-remodel-permits-florida/">Florida remodel permit guide</a> covers the details.</p>
 </details>
 <details>
-<summary>Is a bathroom renovation the same as a bathroom remodel?</summary>
+<summary>Is a bathroom renovation the same as a bathroom&nbsp;remodel?</summary>
 <p>Loosely, yes. A renovation usually refreshes what is already there, such as tile, vanity, fixtures and lighting, while a remodel can also move plumbing, electrical or walls. Industry guides put most bathroom remodels at roughly one to four weeks of construction, with layout changes at the longer end. We price both the same way: every line itemized in your written proposal.</p>
 </details>
 <details>
-<summary>Do you offer custom bathrooms or standard packages?</summary>
+<summary>Do you offer custom bathrooms or standard&nbsp;packages?</summary>
 <p>Every bathroom is designed for your room, with renderings before anything is ordered. The design retainer is $250 per bathroom, credited to your project once the agreement is signed.</p>
 </details>
 <div style="margin-top:40px;text-align:center"><a class="textlink" href="/posada-site-preview/faqs/">See all remodeling FAQs</a></div>
@@ -515,11 +484,11 @@
 <div class="areas">
 <div>
 <span class="eyebrow">Where We Work</span>
-<h2>Bathroom remodeling across <em>Greater Orlando.</em></h2>
+<h2>Bathroom remodeling across <em>Greater&nbsp;Orlando.</em></h2>
 <p>Bathroom remodeling across Orange, Seminole, Osceola and Lake counties, from our Casselberry studio. Design consultations in Winter Garden, by appointment.</p>
 <a class="textlink" href="/posada-site-preview/service-areas/">All service areas</a>
 </div>
-<ul class="area-list" style="grid-template-columns:1fr">
+<ul class="area-list">
 <li><a href="/posada-site-preview/bathroom-remodeling-windermere-fl/">Bathroom remodeling in Windermere</a><span>Orange</span></li>
 <li><a href="/posada-site-preview/bathroom-remodeling-winter-garden-fl/">Bathroom remodeling in Winter Garden</a><span>Orange</span></li>
 <li><a href="/posada-site-preview/bathroom-remodeling-winter-park/">Bathroom remodeling in Winter Park</a><span>Orange</span></li>

@@ -163,33 +163,8 @@
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/jost-v20-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/posada-site-preview/assets/fonts/cormorant-garamond-v21-latin-300italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=5c3c200c1d">
-<style>
-.c1 p,.c1 li,.c1 blockquote,.c1 figcaption{text-wrap:pretty}
-.c1 h2,.c1 h3{text-wrap:balance}
-.c1 .nb{white-space:nowrap}
-.c1 .glance{margin-top:22px}
-.c1 .film-quote{margin:0 0 20px;font-family:var(--serif);font-size:24px;font-style:italic;line-height:1.4;color:var(--navy);border-left:1px solid var(--brass);padding-left:22px}
-.c1 .film-quote cite{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze2)}
-.c1 .pillars{margin-top:64px}
-@media (min-width:881px) and (max-width:1100px){.c1 #stills .gal{grid-template-columns:repeat(3,minmax(0,1fr))}}
-/* the sink photo starts with the checklist instead of floating mid-height beside it, and stays in view below the sticky header on windows tall enough to show the whole frame (the Orlando and Sorrento pattern) */
-@media (min-width:1101px){.c1 #what-we-did .split{align-items:start}.c1 #what-we-did .media{margin-top:40px}}
-@media (min-width:1101px) and (min-height:860px){.c1 #what-we-did .media{position:sticky;top:124px}}
-/* the glance trust-line is one line from 1280px; below that it would wrap with a dot hanging at a line end, so it breaks on purpose into two rows (at the middle dot), and below 721px each phrase takes its own line as on phones */
-@media (min-width:721px) and (max-width:1279px){.c1 p.trust-line{line-height:1.9}.c1 p.trust-line .sep.mid{display:block;height:0;overflow:hidden}}
-@media (max-width:720px){.c1 p.trust-line .sep{display:none}.c1 p.trust-line .nb{display:block}}
-@media (max-width:880px){
-.c1 .film-quote{font-size:21px}
-.c1 .trust.three .n{font-size:30px}
-.c1 .trust.three .l{letter-spacing:.14em}
-.c1 .trust-line{line-height:1.9}
-}
-/* round 8: the coffee bar is a print hero (film print classes, as Sorrento). The 1228x1800 photo is taller (1.466:1) than the 656x820 Sorrento still the shared 420/408/336px caps were tuned for, and this panel is shorter than Sorrento's, so the print takes its own caps, one per shared height guard (measured in dist, print bottom vs panel bottom): tall windows 352px (352x516 vs the 525px panel, 8px short); 761-940px tall windows 296px (296x434 vs the 436px panel at 1440x900, 1366x768 and 1280x800); 760px and under 266px (266x390 vs the 391px panel). Selectors match the shared guards' specificity */
-@media (min-width:1100px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),352px)}.c1 section.hero.compact.print .print-cap{max-width:352px}}
-@media (min-width:1100px) and (min-height:761px) and (max-height:940px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),296px)}}
-@media (min-width:1100px) and (max-height:760px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),266px)}}
-</style>
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=6cfd535c7d">
+<style>.c1 p,.c1 li,.c1 blockquote,.c1 figcaption{text-wrap:pretty}.c1 h2,.c1 h3{text-wrap:balance}.c1 .nb{white-space:nowrap}.c1 .glance{margin-top:22px}.c1 .film-quote{margin:0 0 20px;font-family:var(--serif);font-size:24px;font-style:italic;line-height:1.4;color:var(--navy);border-left:1px solid var(--brass);padding-left:22px}.c1 .film-quote cite{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--bronze2)}.c1 .pillars{margin-top:64px}@media (min-width:881px) and (max-width:1100px){.c1 #stills .gal{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1101px){.c1 #what-we-did .split{align-items:start}.c1 #what-we-did .media{margin-top:40px}}@media (min-width:1101px) and (min-height:860px){.c1 #what-we-did .media{position:sticky;top:124px}}@media (min-width:721px) and (max-width:1279px){.c1 p.trust-line{line-height:1.9}.c1 p.trust-line .sep.mid{display:block;height:0;overflow:hidden}}@media (max-width:720px){.c1 p.trust-line .sep{display:none}.c1 p.trust-line .nb{display:block}}@media (max-width:880px){.c1 .film-quote{font-size:21px}.c1 .trust.three .n{font-size:30px}.c1 .trust.three .l{letter-spacing:.14em}.c1 .trust-line{line-height:1.9}}@media (min-width:1100px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),352px)}.c1 section.hero.compact.print .print-cap{max-width:352px}}@media (min-width:1100px) and (min-height:761px) and (max-height:940px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),296px)}}@media (min-width:1100px) and (max-height:760px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),266px)}}</style>
 </head>
 <body>
 <div class="c1">
@@ -239,7 +214,7 @@
 <div class="hero-panel">
 <div class="panel on-navy">
 <div class="crumb"><a href="/posada-site-preview/">Home</a><span>›</span><a href="/posada-site-preview/gallery/">Our Work</a><span>›</span><span>Winter Garden<span class="cr-x"> kitchen</span></span></div>
-<h1>A Winter Garden kitchen made for <em>every morning.</em></h1>
+<h1>A Winter Garden kitchen made for <em>every&nbsp;morning.</em></h1>
 <p>A coffee bar under brick herringbone, a pot filler over the range, a workstation farm sink and an island that seats three. A real Posada project, toured on film by Mike.</p>
 <div class="ctas">
 <a class="btn" href="/posada-site-preview/contact-us/?project=kitchen">Book a Complimentary Consultation</a>
@@ -266,7 +241,7 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Project Film · 8:07</span>
-<h2>Walk through it <em>with Mike.</em></h2>
+<h2>Walk through it <em>with&nbsp;Mike.</em></h2>
 </div>
 <p>Eight minutes in the finished kitchen, explained by the owner: the coffee bar, the lift-up doors, the pot filler, the touchless hood, the workstation sink and the island. Tap to play.</p>
 </div>
@@ -278,7 +253,7 @@
 </a>
 <div class="vid-copy">
 <span class="eyebrow">Kitchen Remodel Tour</span>
-<h3>Coffee bar, pot filler and smart storage.</h3>
+<h3>Coffee bar, pot filler and smart&nbsp;storage.</h3>
 <p>Mike opens every door and drawer: why the coffee bar doors sit on the counter, what a pot filler is for and what it is not, how the hood turns on without a touch, and how three stools tuck under a 12-inch overhang. Filmed in the finished kitchen.</p>
 <a class="textlink" href="https://www.youtube.com/@PosadaRemodelingDesign">More films on YouTube</a>
 </div>
@@ -292,8 +267,8 @@
 <div class="media"><div class="frame"><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-farmhouse-workstation-sink-fl.webp 608w" sizes="(max-width: 1100px) 100vw, 50vw" width="608" height="760" alt="Apron-front workstation farm sink with a sliding cutting board and matte black faucet in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"></div></div>
 <div>
 <span class="eyebrow">What We Did</span>
-<h2>Every piece earns <em>its place.</em></h2>
-<blockquote class="film-quote">&ldquo;Everything can look good. But is it functional? Do you have kids? How often do you cook? Do you entertain a lot?&rdquo;<cite>Mike Posada, in the film</cite></blockquote>
+<h2>Every piece earns <em>its&nbsp;place.</em></h2>
+<blockquote class="film-quote">&ldquo;Everything can look good. But is it functional? Do you have kids? How often do you cook? Do you entertain a lot?&rdquo;<cite>Mike Posada, in the&nbsp;film</cite></blockquote>
 <p>That was the test for every choice in this kitchen. Here is what went in, as Mike explains it on camera.</p>
 <ul class="checks">
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>A coffee bar on a full-height brick herringbone backsplash, with floating mitered wood shelves and sconces that dim for the evening</span></li>
@@ -315,14 +290,14 @@
 <div class="sec-head">
 <div>
 <span class="eyebrow">Stills From the Film</span>
-<h2>The details, <em>up close.</em></h2>
+<h2>The details, <em>up&nbsp;close.</em></h2>
 </div>
 <p>Frames from Mike&rsquo;s walkthrough of the finished kitchen, not a staged photo shoot. Tap any still to enlarge it.</p>
 </div>
 <div class="gal">
-<figure><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Custom wood range hood and wall-mounted pot filler above the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pot filler &amp; wood hood</span><span>Range wall</span></figcaption></figure>
-<figure><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Deep soft-close drawer for pots and pans beside the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pots &amp; pans drawer</span><span>Beside the range</span></figcaption></figure>
-<figure><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Winter Garden, FL kitchen remodel with lantern pendants over the quartz island, white and wood cabinetry and a custom wood range hood" loading="lazy" decoding="async"><figcaption><span>Lantern pendants</span><span>Over the island</span></figcaption></figure>
+<figure><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-pot-filler-wood-range-hood-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Custom wood range hood and wall-mounted pot filler above the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pot filler &amp; wood hood</span><span>Range&nbsp;wall</span></figcaption></figure>
+<figure><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-pots-and-pans-drawer-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Deep soft-close drawer for pots and pans beside the range in a Winter Garden, FL kitchen remodel" loading="lazy" decoding="async"><figcaption><span>Pots &amp; pans drawer</span><span>Beside the&nbsp;range</span></figcaption></figure>
+<figure><img src="/posada-site-preview/images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp" srcset="/posada-site-preview/images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl-800.webp 480w, /posada-site-preview/images/winter-garden-kitchen-remodel-wood-range-hood-quartz-island-fl.webp 608w" sizes="(max-width: 880px) 100vw, 33vw" width="608" height="760" alt="Winter Garden, FL kitchen remodel with lantern pendants over the quartz island, white and wood cabinetry and a custom wood range hood" loading="lazy" decoding="async"><figcaption><span>Lantern pendants</span><span>Over the&nbsp;island</span></figcaption></figure>
 </div>
 <div class="rev-links">
 <a class="textlink" href="/posada-site-preview/gallery/">See more of our work</a>
@@ -334,7 +309,7 @@
 <div class="wrap">
 <div class="center">
 <span class="eyebrow">Details That Matter</span>
-<h2>Four things Mike explains <em>on camera.</em></h2>
+<h2>Four things Mike explains <em>on&nbsp;camera.</em></h2>
 <p>Small decisions, made before demolition, that decide whether a kitchen is still a pleasure to use ten years from now.</p>
 </div>
 <div class="pillars">
@@ -345,18 +320,18 @@
 </div>
 <div class="pillar">
 <div class="rn">02</div>
-<h3>A hood you never touch</h3>
+<h3>A hood you never&nbsp;touch</h3>
 <p>Hands covered in flour or raw meat? Wave under the wood hood and the exhaust comes on; wave again and it stops. The surface behind the range is durable and anti-microbial, so a spaghetti splash wipes straight off, and the quartz counter beside it cleans the same way.</p>
 </div>
 <div class="pillar">
 <div class="rn">03</div>
-<h3>The sink is a workstation</h3>
+<h3>The sink is a&nbsp;workstation</h3>
 <p>A 36-inch apron-front farm sink with a single deep basin. A sliding cutting board or drying rack rides on the rim, so you can prep over the drain instead of the island. The Moen single-handle faucet is paired with an air switch for the disposal, so you never reach for a wall switch with wet hands.</p>
 </div>
 <div class="pillar">
 <div class="rn">04</div>
-<h3>Doors that lift, drawers that glide</h3>
-<p>At the coffee bar the solid doors sit on the counter, so nothing is wasted behind a backsplash, and they lift on Blum Aventos hardware and close softly. Pots live in a deep <span class="nb">double-drawer</span> base beside the range, spices in a pull-out, sheets and trays in shallow drawers. All of it is soft-close, because a school morning should not sound like slamming doors.</p>
+<h3>Doors that lift, drawers that&nbsp;glide</h3>
+<p>At the coffee bar the solid doors sit on the counter, so nothing is wasted behind a backsplash, and they lift on Blum Aventos hardware and close softly. Pots live in a deep <span class="nb" style="white-space:nowrap">double-drawer</span> base beside the range, spices in a pull-out, sheets and trays in shallow drawers. All of it is soft-close, because a school morning should not sound like slamming doors.</p>
 </div>
 </div>
 </div>
@@ -367,7 +342,7 @@
 <div class="client">
 <div>
 <span class="eyebrow">In a Client&rsquo;s Words</span>
-<h2>From another kitchen <em>remodel.</em></h2>
+<h2>From another kitchen&nbsp;<em>remodel.</em></h2>
 <div class="score">
 <div class="n">5.0</div>
 <div class="s"><span class="stars" aria-hidden="true">★★★★★</span>60+ <span class="nb" style="white-space:nowrap">five-star</span> reviews<br>on Google</div>
@@ -390,7 +365,7 @@
 
 <section class="sec sand on-sand" id="next-project">
 <div class="wrap">
-<a class="next-proj text" href="/posada-site-preview/projects/sorrento-master-bathroom/"><div class="tx"><span class="eyebrow">Next Project</span><h2>A master bathroom in Sorrento, remodeled around <em>daily life.</em></h2><span class="textlink">Read the story</span></div></a>
+<a class="next-proj text" href="/posada-site-preview/projects/sorrento-master-bathroom/"><div class="tx"><span class="eyebrow">Next Project</span><h2>A master bathroom in Sorrento, remodeled around <em>daily&nbsp;life.</em></h2><span class="textlink">Read the story</span></div></a>
 </div>
 </section>
 
@@ -399,7 +374,7 @@
 <div class="inner">
 <div>
 <span class="eyebrow">Begin Here</span>
-<h2>Plan a kitchen like <em>this one.</em></h2>
+<h2>Plan a kitchen like <em>this&nbsp;one.</em></h2>
 <p>A complimentary in-home design consultation. We listen to how you cook and live, tell you honestly which range your kitchen falls into, and show the layout in renderings before anything is built.</p>
 <div class="ctas"><a class="btn" href="/posada-site-preview/contact-us/?project=kitchen">Book a Complimentary Consultation</a><a class="textlink" href="/posada-site-preview/kitchen-remodeling/#cost">See what a kitchen costs</a></div>
 </div>
