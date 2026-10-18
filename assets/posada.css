@@ -781,3 +781,7 @@ html,body{overflow-x:hidden}
 .c1 .rev blockquote{text-wrap:wrap}
 /* round 7: from 1101px the quiet-hero buttons start at the left of their column, so they read with the lede beside them (64px gap) instead of floating at the right edge. 881-1100px pages already stack them under the lede */
 @media (min-width:1101px){.c1 .hero.quiet .ctas{justify-content:flex-start}}
+
+/* lead form: honeypot (never shown to people) and the sending state */
+.c1 .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.c1 .lead-form .btn[disabled]{opacity:.65;cursor:progress}

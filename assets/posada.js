@@ -36,15 +36,77 @@
     var hrefN = (navLinks[n].getAttribute('href') || '').split('#')[0].toLowerCase();
     if (hrefN && hrefN === here) navLinks[n].setAttribute('aria-current', 'page');
   }
-  // styled photo upload
+  // styled photo upload. Each picture is shrunk in the browser to ~1600px (JPEG) before it is sent,
+  // so a full set of six fits the 4.5 MB a lead-form request may carry; this mirrors the live site's form.
+  var PH_MAX = 6, PH_EDGE = 1600, PH_BUDGET = 3800000, PH_KEEP = 3000000;
+  var canShrink = !!(window.DataTransfer && window.Promise && window.File && HTMLCanvasElement.prototype.toBlob);
+  var shrinkPhoto = function(file){ return new Promise(function(res){
+    if (!/^image\//.test(file.type)) { res(null); return; }
+    var url = URL.createObjectURL(file), img = new Image();
+    var keep = function(){ URL.revokeObjectURL(url); res(file.size <= PH_KEEP ? file : null); };
+    img.onload = function(){
+      try {
+        var w = img.naturalWidth, h = img.naturalHeight, sc = Math.min(1, PH_EDGE / Math.max(w, h, 1));
+        var c = document.createElement('canvas'); c.width = Math.max(1, Math.round(w * sc)); c.height = Math.max(1, Math.round(h * sc));
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(function(b){ res(b ? new File([b], file.name.replace(/\.[^.]+$/, '') + '.jpg', {type: 'image/jpeg'}) : (file.size <= PH_KEEP ? file : null)); }, 'image/jpeg', 0.82);
+      } catch (e) { keep(); }
+    };
+    img.onerror = keep;
+    img.src = url;
+  }); };
   var fileInputs = document.querySelectorAll('.file input[type=file]');
   for (var f = 0; f < fileInputs.length; f++) (function(inp){
     var row = document.createElement('div'); row.className = 'file-row';
     var btn = document.createElement('label'); btn.className = 'file-btn'; btn.setAttribute('for', inp.id); btn.textContent = 'Add photos';
-    var nm = document.createElement('span'); nm.className = 'file-name'; nm.textContent = 'No photos added yet';
+    var nm = document.createElement('span'); nm.className = 'file-name'; nm.setAttribute('aria-live', 'polite'); nm.textContent = 'No photos added yet';
     row.appendChild(btn); row.appendChild(nm); inp.parentNode.insertBefore(row, inp.nextSibling);
-    inp.addEventListener('change', function(){ var c = inp.files ? inp.files.length : 0; nm.textContent = c === 0 ? 'No photos added yet' : (c === 1 ? inp.files[0].name : c + ' photos added'); });
+    var form = inp.form, submit = form ? form.querySelector('button[type=submit]') : null;
+    var say = function(kept, dropped){
+      nm.textContent = kept === 0 ? (dropped ? 'Those photos could not be added. Try a JPG or PNG, or text them to us after we reach out.' : 'No photos added yet')
+        : (kept === 1 ? '1 photo ready' : kept + ' photos ready') + (dropped ? ' · ' + dropped + ' left out (too large or not a photo)' : '');
+    };
+    inp.addEventListener('change', function(){
+      var files = Array.prototype.slice.call(inp.files || [], 0, PH_MAX);
+      var dropped = inp.files && inp.files.length > PH_MAX ? inp.files.length - PH_MAX : 0;
+      if (!files.length) { say(0, 0); return; }
+      if (!canShrink) { say(files.length, dropped); return; }
+      nm.textContent = 'Getting your photos ready…'; if (submit) submit.disabled = true;
+      Promise.all(files.map(shrinkPhoto)).then(function(out){
+        var dt = new DataTransfer(), total = 0, kept = 0;
+        out.forEach(function(p){ if (!p || total + p.size > PH_BUDGET) { dropped++; return; } total += p.size; kept++; dt.items.add(p); });
+        try { inp.files = dt.files; } catch (e) { var orig = 0; for (var i = 0; i < inp.files.length; i++) orig += inp.files[i].size; if (orig > PH_BUDGET || kept !== out.length) { inp.value = ''; kept = 0; } }
+        say(kept, dropped);
+      }).catch(function(){ say(files.length, dropped); }).then(function(){ if (submit) submit.disabled = false; });
+    });
   })(fileInputs[f]);
+  // lead form: posts straight to Posada's own lead system (same endpoint as the current site). The handler
+  // only reads name, phone, email, address, project_type, message and photos, so the "best time" and
+  // text-consent answers are folded into the message. Off the live domain (this preview, localhost) the
+  // endpoint refuses the post, so the form just walks through to the thank-you page instead.
+  var leadForms = document.querySelectorAll('form.lead-form');
+  var onLiveDomain = /(^|\.)posadaremodeling\.com$/i.test(location.hostname);
+  for (var lf = 0; lf < leadForms.length; lf++) (function(form){
+    form.addEventListener('submit', function(e){
+      var msg = form.querySelector('[name=message]'), time = form.querySelector('[name=best_time]'), sms = form.querySelector('[name=sms_consent]');
+      var extra = [];
+      if (time && time.value) extra.push('Best time to reach: ' + time.value);
+      if (sms) extra.push('OK to text: ' + (sms.checked ? 'yes' : 'no'));
+      if (msg && extra.length && msg.value.indexOf('Best time to reach:') === -1 && msg.value.indexOf('OK to text:') === -1) {
+        msg.value = (msg.value.trim() ? msg.value.trim() + '\n\n' : '') + extra.join('\n');
+      }
+      var submit = form.querySelector('button[type=submit]');
+      if (!onLiveDomain) { e.preventDefault(); location.href = 'thank-you.html?preview=1'; return; }
+      if (submit) { submit.disabled = true; submit.textContent = 'Sending…'; }
+    });
+  })(leadForms[0 + lf]);
+  // thank-you page: the lead system bounces back here with ?error=name when the name was missing
+  var tyTitle = document.getElementById('ty-title'), tyLede = document.getElementById('ty-lede');
+  if (tyTitle && tyLede && /[?&]error=name/.test(location.search)) {
+    tyTitle.innerHTML = 'We didn’t catch <em>your name.</em>';
+    tyLede.innerHTML = 'Your request did not go through because the name field was empty. <a href="contact.html" style="text-decoration:underline">Go back to the form</a>, add your name, and we will reply within 24 hours.';
+  }
   // reveal on scroll
   var canObserve = 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (canObserve) {

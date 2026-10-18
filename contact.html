@@ -41,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/posada.css?v=1792289244">
+<link rel="stylesheet" href="assets/posada.css?v=1792296489">
 <style>
 .c1 .next p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .next p a:hover{color:var(--bronze2)}
@@ -128,23 +128,25 @@
 <div class="proof">
 <span class="pl"><span class="pl-in"><span class="pl-it">Veteran-owned</span> <span class="pl-it">Family-operated</span> <span class="pl-it">Fully insured</span></span></span>
 </div>
-<form action="thank-you.html" method="get">
+<form class="lead-form" action="https://posada-hq.vercel.app/api/lead-form" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+<input type="hidden" name="return_to" value="https://posadaremodeling.com/thank-you/">
+<div class="hp" aria-hidden="true"><label for="f-company">Company</label><input id="f-company" type="text" name="company" tabindex="-1" autocomplete="off"></div>
 <div class="field full"><label for="f-name">Name</label><input id="f-name" type="text" name="name" autocomplete="name" required></div>
 <div class="field"><label for="f-phone">Mobile</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" required></div>
 <div class="field"><label for="f-time">Best time to reach you <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><select id="f-time" name="best_time"><option value="">Any time works</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select></div>
 <div class="field"><label for="f-email">Email <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-email" type="email" name="email" autocomplete="email"></div>
-<div class="field"><label for="f-city">City or ZIP <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-city" type="text" name="city" autocomplete="postal-code"></div>
+<div class="field"><label for="f-address">City or address <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-address" type="text" name="address" autocomplete="street-address"></div>
 <div class="field full">
 <label>Project type</label>
 <div class="chips">
-<span class="chip"><input type="radio" id="p-k" name="project" value="Kitchen"><label for="p-k">Kitchen</label></span>
-<span class="chip"><input type="radio" id="p-b" name="project" value="Bathroom"><label for="p-b">Bathroom</label></span>
-<span class="chip"><input type="radio" id="p-f" name="project" value="Flooring"><label for="p-f">Flooring</label></span>
-<span class="chip"><input type="radio" id="p-w" name="project" value="Whole home"><label for="p-w">Whole home</label></span>
+<span class="chip"><input type="radio" id="p-k" name="project_type" value="Kitchen remodel"><label for="p-k">Kitchen</label></span>
+<span class="chip"><input type="radio" id="p-b" name="project_type" value="Bathroom remodel"><label for="p-b">Bathroom</label></span>
+<span class="chip"><input type="radio" id="p-f" name="project_type" value="Flooring"><label for="p-f">Flooring</label></span>
+<span class="chip"><input type="radio" id="p-w" name="project_type" value="Whole home remodel"><label for="p-w">Whole home</label></span>
 </div>
 </div>
 <div class="field full"><label for="f-msg">Tell us a little about it <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
-<div class="field full file"><label for="f-photos">Photos of the space <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-photos" type="file" name="photos" accept="image/*" multiple></div>
+<div class="field full file"><label for="f-photos">Photos of the space <span style="letter-spacing:0;text-transform:none;color:rgba(246,242,236,.55)">(optional)</span></label><input id="f-photos" type="file" name="photos" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,image/*" multiple></div>
 <div class="field full consent"><input type="checkbox" id="f-sms" name="sms_consent" value="yes"><label for="f-sms"><strong>Yes, text me about my project.</strong><small>By checking this box I agree to receive text messages from Posada Remodeling &amp; Design at the number provided, including automated messages. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out or HELP for help. See our <a href="https://posadaremodeling.com/privacy-policy/" style="text-decoration:underline">Privacy Policy</a>.</small></label></div>
 <div class="submit-row">
 <button class="btn" type="submit">Book My Complimentary Consultation</button>
@@ -290,7 +292,7 @@
 </nav>
 
 </div>
-<script src="assets/posada.js?v=1792289244" defer></script>
+<script src="assets/posada.js?v=1792296489" defer></script>
 <script>document.querySelectorAll('form[action="thank-you.html"]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();location.href='thank-you.html';});});</script>
 <script>(function(){var m={kitchen:'p-k',bathroom:'p-b',flooring:'p-f','whole-home':'p-w'},k=new URLSearchParams(location.search).get('project');if(!m[k]&&document.referrer){try{var r=new URL(document.referrer);if(r.host===location.host){var pa=r.pathname.toLowerCase();k=/kitchen/.test(pa)?'kitchen':/bath/.test(pa)?'bathroom':/floor/.test(pa)?'flooring':null;}}catch(e){}}var el=document.getElementById(m[k]);if(el&&!document.querySelector('input[name="project"]:checked'))el.checked=true;})();</script>
 </body>
