@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp" imagesrcset="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-island-lantern-pendants-800.webp 800w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-island-lantern-pendants.webp 2000w" imagesizes="100vw">
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792296489">
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792304438">
 <style>
 .c1 p,.c1 li,.c1 blockquote,.c1 figcaption,.c1 summary,.c1 .owner-cue span,.c1 .micro{text-wrap:pretty}
 .c1 .on-navy h3 em{color:var(--brassl)}
@@ -70,8 +70,6 @@
 /* the optional "Best time to reach you" select reads like the text fields beside it: no native box or indent, the same underline height, and a thin brass chevron (same rule as contact.html) */
 .c1 #contact select{-webkit-appearance:none;appearance:none;height:45px;line-height:24px;padding:10px 30px 10px 0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23D9C58A' stroke-width='1.3'/%3E%3C/svg%3E") no-repeat right 4px center/12px 8px}
 /* hero crop: the img's inline object-position is center 4%, not the round-5 text's 8%. Measured under the new band: at 1920x970 (photo 1920x692), 8% lets the top ~10px of the outlet on the island's end panel into the bottom of the photo and cuts the cap off the front lantern; 4% keeps the lantern cap and chain ring and keeps the outlet out at 1920x970, 1440x790 and 1280x640 (only a pixel or two to spare at 1920x970, so do not raise it) */
-/* topline on phones: the short line and the rating each take a line, and the separator between them is dropped, so no dot hangs at a line end (it wrapped at 550px and below; 601-880 keeps one line with the dot) */
-@media (max-width:600px){.c1 .topline .show-m{display:block}.c1 .topline .tl-sep{display:none}}
 /* round 6: the kicker names Winter Park; on phones it tightens to .14em at 10px so it holds 3 lines (4 without this) and sits quieter under the headline */
 @media (max-width:600px){.c1 .panel .kicker{letter-spacing:.14em;font-size:10px}}
 /* footer about line: the trust phrases need about 296px on one line. At 881-1000px the first footer column is 268-314px, and they wrapped onto a hanging dot plus "Fully insured." alone (881-953px); phones narrower than 360px do the same. In those bands each phrase takes its own line; everywhere else it stays one line. The phone and email line under the address hung its dot in the same bands (881-955px, under 340px), so it stacks there too */
@@ -636,8 +634,7 @@
 </nav>
 
 </div>
-<script src="/posada-site-preview/assets/posada.js?v=1792296489" defer></script>
-<script>document.querySelectorAll('form[action="/posada-site-preview/thank-you/"]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();location.href='/posada-site-preview/thank-you/';});});</script>
+<script src="/posada-site-preview/assets/posada.js?v=1792304438" defer></script>
 <script>(function(){var m={kitchen:'p-k',bathroom:'p-b',flooring:'p-f','whole-home':'p-w'},k=new URLSearchParams(location.search).get('project');if(!m[k]&&document.referrer){try{var r=new URL(document.referrer);if(r.host===location.host){var pa=r.pathname.toLowerCase();k=/kitchen/.test(pa)?'kitchen':/bath/.test(pa)?'bathroom':/floor/.test(pa)?'flooring':null;}}catch(e){}}var el=document.getElementById(m[k]);if(el&&!document.querySelector('input[name="project"]:checked'))el.checked=true;})();</script>
 </body>
 </html>

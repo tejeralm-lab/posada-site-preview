@@ -41,22 +41,31 @@
 .c1 .post-body td{padding:14px 18px 14px 0;border-bottom:1px solid rgba(111,88,31,.22);vertical-align:top;color:var(--body)}
 .c1 .post-body td:first-child{color:var(--navy)}
 .c1 .post-body th:last-child,.c1 .post-body td:last-child{padding-right:0}
+.c1 .post-body p.faq-q{margin:34px 0 10px;font-size:19px;line-height:1.4;color:var(--navy)}
+.c1 .post-body p.faq-q strong{font-weight:500}
+.c1 .post-body h2 + p.faq-q{margin-top:0}
 .c1 .post-cta{margin-top:64px;padding-top:44px;border-top:1px solid var(--line);display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+.c1 .post-cta .btn{white-space:normal;text-align:center;line-height:1.5;padding:14px 30px;max-width:100%}
 
-.c1 .rail-sticky{position:sticky;top:124px}
-.c1 .toc{margin-bottom:36px;padding-bottom:30px;border-bottom:1px solid var(--line)}
-.c1 .toc ol{list-style:none;margin:18px 0 0;padding:0;counter-reset:toc}
+/* rail: the quote card first (its button stays in view on a 900px-tall screen), the guide below it; a long guide scrolls on its own.
+   The aside must stretch to the row (the grid aligns items to start), or the sticky child has no room to travel and never sticks. */
+.c1 .post-rail{align-self:stretch}
+.c1 .rail-sticky{position:sticky;top:124px;max-height:calc(100vh - 140px);display:flex;flex-direction:column}
+.c1 .toc{margin-top:30px;padding-top:26px;border-top:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.c1 .toc .eyebrow{flex:none;align-self:flex-start}
+.c1 .toc ol{list-style:none;margin:18px 0 0;padding:0 14px 40px 0;counter-reset:toc;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(111,88,31,.35) transparent;-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(to bottom,#000 calc(100% - 40px),transparent)}
 .c1 .toc li{counter-increment:toc;font-size:14.5px;line-height:1.45;margin:0 0 11px;display:flex;gap:14px;color:var(--navy)}
-.c1 .toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--serif);font-size:15px;color:var(--brass);flex:none;padding-top:2px;letter-spacing:.04em}
+.c1 .toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--serif);font-size:15px;color:var(--brass);flex:none;min-width:1.25em;padding-top:2px;letter-spacing:.04em}
+.c1 .toc.own li::before{content:attr(data-n)}
 .c1 .toc a:hover{color:var(--bronze)}
-.c1 .quote-card{background:var(--navy);color:var(--ivory);padding:44px 40px 40px;position:relative}
-.c1 .quote-card::before{content:"";position:absolute;left:40px;top:26px;width:56px;height:1px;background:var(--brass)}
+.c1 .quote-card{flex:none;background:var(--navy);color:var(--ivory);padding:40px 36px 36px;position:relative}
+.c1 .quote-card::before{content:"";position:absolute;left:36px;top:24px;width:56px;height:1px;background:var(--brass)}
 .c1 .quote-card .eyebrow{margin-top:10px}
-.c1 .quote-card h3{font-size:31px;margin:14px 0 14px;color:var(--ivory)}
+.c1 .quote-card h3{font-size:31px;margin:12px 0;color:var(--ivory)}
 .c1 .quote-card h3 em{color:var(--brassl)}
-.c1 .quote-card p{font-size:15.5px;line-height:1.65;color:rgba(246,242,236,.84);margin:0 0 26px}
+.c1 .quote-card p{font-size:15.5px;line-height:1.65;color:rgba(246,242,236,.84);margin:0 0 22px}
 .c1 .quote-card .btn{width:100%}
-.c1 .rail-tel{display:block;margin-top:28px;font-family:var(--serif);font-size:32px;line-height:1.1;color:var(--ivory)}
+.c1 .rail-tel{display:block;margin-top:24px;font-family:var(--serif);font-size:32px;line-height:1.1;color:var(--ivory)}
 .c1 .rail-tel:hover{color:var(--brassl)}
 .c1 .quote-card p.small{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brassl);margin:10px 0 0}
 
@@ -86,9 +95,18 @@
 .c1 .post-lead p{font-size:17px;line-height:1.65;color:var(--body);margin:0 0 26px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .c1 .post-lead .textlink{display:inline-block}
 
+@media (min-width:1101px) and (max-height:860px){
+.c1 .rail-sticky{max-height:calc(100vh - 140px)}
+.c1 .quote-card{padding:34px 32px 30px}
+.c1 .quote-card::before{left:32px;top:20px}
+.c1 .quote-card h3{font-size:27px;margin:10px 0}
+.c1 .quote-card p{font-size:14.5px;margin-bottom:20px}
+.c1 .rail-tel{font-size:28px;margin-top:20px}
+.c1 .toc{margin-top:28px;padding-top:24px}
+}
 @media (max-width:1100px){
 .c1 .post-grid{grid-template-columns:minmax(0,1fr);gap:56px}
-.c1 .rail-sticky{position:static}
+.c1 .rail-sticky{position:static;max-height:none;display:block}
 .c1 .toc{display:none}
 .c1 .quote-card{max-width:520px}
 .c1 .post-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 32px}
@@ -109,6 +127,8 @@
 .c1 .post-body table{font-size:14.5px}
 .c1 .post-body th,.c1 .post-body td{padding-right:14px}
 .c1 .post-cta{gap:22px;margin-top:48px;padding-top:36px}
+.c1 .post-cta .btn{width:100%}
+.c1 .post-body p.faq-q{font-size:18px;margin-top:28px}
 .c1 .post-cards{grid-template-columns:1fr;gap:44px}
 .c1 .post-card h3{font-size:25px}
 .c1 .post-lead h3{font-size:34px}

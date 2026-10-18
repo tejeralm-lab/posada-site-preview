@@ -679,6 +679,8 @@ html,body{overflow-x:hidden}
 @media (max-width:880px){.c1 .quote-plate{aspect-ratio:auto;padding:48px 32px}.c1 .quote-plate blockquote{font-size:26px}}
 /* top bar: the 5.0 rating links to Google on every page. Desktop: consultations · evenings & weekends (from 1181px) · rating, 60+ reviews · phone; phones: the short consultation line and the rating */
 .c1 .topline .show-m{display:none}@media (max-width:880px){.c1 .topline .show-m{display:inline}}@media (max-width:1180px){.c1 .topline .tl-ev{display:none}}.c1 .topline .tl-rate{color:var(--navy);white-space:nowrap}.c1 .topline .tl-stars{color:var(--brass);letter-spacing:.08em;margin-right:4px}
+/* round 8: phone top bar, one rule for every page: the consultation line takes line 1, the dot is hidden, the stars and 5.0 take line 2; from 601px the bar is one line with the dot (it needs about 550px) */
+@media (max-width:600px){.c1 .topline .show-m{display:block}.c1 .topline .tl-sep{display:none}}
 /* client reviews as editorial quotes under a brass hairline (no white card, no per-card stars, no hover lift); the 5.0 score stays once in each .rev-head */
 .c1 .rev-grid{column-gap:72px;row-gap:64px}.c1 .rev{background:transparent;border-top:1px solid var(--brass);padding:34px 0 0}.c1 .rev .stars{display:none}.c1 .rev blockquote{margin:0 0 22px;font-size:25px;line-height:1.42}@media (max-width:880px){.c1 .rev{padding:28px 0 0}.c1 .rev-grid{row-gap:44px}.c1 .rev blockquote{font-size:22px}}
 /* guard: .split.rev (photo on the right) shares its class name with the review card, so it never takes the review hairline or padding (the kitchen, financing and service-areas pages carry the same rule) */
@@ -785,3 +787,5 @@ html,body{overflow-x:hidden}
 /* lead form: honeypot (never shown to people) and the sending state */
 .c1 .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .c1 .lead-form .btn[disabled]{opacity:.65;cursor:progress}
+/* round 8: quiet-hero lede and CTA block share a top edge whatever the lede length */
+@media (min-width:1101px){.c1 .hero.quiet .q-row{align-items:start}}

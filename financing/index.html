@@ -72,7 +72,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792296489">
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792304438">
 <style>
 /* .split.rev shares its class name with the review card; keep the split flat on ivory (same fix as the kitchen page) */
 .c1 .split.rev{background:transparent;border-top:0;padding:0}
@@ -110,8 +110,7 @@
 .c1 #top .stat-row .l{text-wrap:balance}
 @media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}
 @media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}
-/* top bar, phones: the nowrap rating link always wraps below the consultation line up to 552px wide, so at 600px and under the separator (.tl-sep) is hidden and the rating takes its own line; no "·" hangs at a line edge (two lines, 60.7px, from 360px; three at 320, where the consultation line itself wraps). From 601px the bar stays one line with the dot. Shared round-5 markup; belongs in posada.css once every page carries .tl-sep */
-@media (max-width:600px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block}}
+@media (min-width:881px){.c1 #top .stat-row{grid-template-columns:repeat(3,minmax(0,1fr))}.c1 #top .stat-row .cell:nth-child(3){border-left:1px solid var(--line);border-top:0}}
 </style>
 </head>
 <body>
@@ -159,11 +158,10 @@
 <div class="crumb"><a href="/posada-site-preview/">Home</a><span>›</span><span>Financing</span></div>
 <h1>Spread the investment <em>over&nbsp;time.</em></h1>
 <div class="q-row">
-<p class="lede">Financing is available through Hearth, with 0%&nbsp;APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your&nbsp;score.</p>
+<p class="lede">Through Hearth you can spread a kitchen, bathroom or new floors over time, with 0%&nbsp;APR promotional options for qualified homeowners. Your itemized proposal gives you the exact number first.</p>
 <div class="ctas"><a class="btn" href="/posada-site-preview/contact-us/">Book a Complimentary Consultation</a><a class="textlink" href="https://app.gethearth.com/financing/54980/97055/prequalify?utm_campaign=54980" target="_blank" rel="noopener">Check your options</a></div>
 </div>
 <div class="stat-row">
-<div class="cell"><div class="n">0% APR</div><div class="l">Promotional options<br>for qualified homeowners</div></div>
 <div class="cell"><div class="n">1 min</div><div class="l">About a minute to check your options</div></div>
 <div class="cell"><div class="n">3</div><div class="l">Steps, from options to start date</div></div>
 <a class="cell" href="https://maps.google.com/maps?cid=3116045480222163497"><div class="n">5.0</div><div class="l">Google rating<br>60+ reviews</div></a>
@@ -180,7 +178,6 @@
 <h2>Check your options in <em>about a minute.</em></h2>
 <p>Financing is available through Hearth (NMLS ID 1628533), which works with a network of lending partners, including 0% APR promotional options for qualified homeowners. Checking your options takes about a minute and uses a soft credit check that does not affect your score. Posada is not a lender; rates and terms are set by the lending&nbsp;partner.</p>
 <ul class="checks">
-<li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Soft credit check that does not affect your score</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>0% APR promotional options for qualified&nbsp;homeowners</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Use it toward a kitchen, bathroom, flooring or whole-home remodel</span></li>
 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-8"></path></svg><span>Your itemized proposal tells you the exact number first</span></li>
@@ -204,7 +201,7 @@
 <div class="tile">
 <div class="big">01</div>
 <div class="k">Check your options</div>
-<p>Answer a few questions on Hearth&rsquo;s site. It takes about a minute and uses a soft credit check that does not affect your score.</p>
+<p>Answer a few questions on Hearth&rsquo;s site. It takes about a minute.</p>
 </div>
 <div class="tile">
 <div class="big">02</div>
@@ -422,6 +419,6 @@
 </nav>
 
 </div>
-<script src="/posada-site-preview/assets/posada.js?v=1792296489" defer></script>
+<script src="/posada-site-preview/assets/posada.js?v=1792304438" defer></script>
 </body>
 </html>

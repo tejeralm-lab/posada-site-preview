@@ -41,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792296489">
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792304438">
 <style>
 .c1 .next p a{color:var(--bronze);border-bottom:1px solid var(--brass)}
 .c1 .next p a:hover{color:var(--bronze2)}
@@ -69,8 +69,6 @@
 @media (max-width:480px),(min-width:1101px) and (max-width:1120px){.c1 .side .side-by .sep{display:block;height:0;overflow:hidden}}
 /* round 5: the optional "Best time to reach you" select reads like the text fields beside it: no native box or indent, the same underline height, and a thin brass chevron */
 .c1 #contact select{-webkit-appearance:none;appearance:none;height:45px;line-height:24px;padding:10px 30px 10px 0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23D9C58A' stroke-width='1.3'/%3E%3C/svg%3E") no-repeat right 4px center/12px 8px}
-/* round 5: below 600px the top bar wraps, so the rating takes its own line (sized to its text, so the tap area is only the link) and the separator dot is dropped, so no line ends or starts with a dot; same rule for every page */
-@media (max-width:599px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block;width:fit-content;margin:0 auto}}
 /* round 5: the footer gets an edge after the quiet closing line */
 .c1 .foot{border-top:1px solid var(--line)}
 /* round 7, fix 6. desktop: the contact column stays beside the form while it scrolls. It is about 802px tall, so it sticks only where the window is at least 900px tall (96px under the scrolled 92px header + 802 = 898); on shorter windows it would be cut off at the bottom while stuck, so there it stays as it is today. If the side column grows, raise the min-height to its height plus 96px */
@@ -292,8 +290,7 @@
 </nav>
 
 </div>
-<script src="/posada-site-preview/assets/posada.js?v=1792296489" defer></script>
-<script>document.querySelectorAll('form[action="/posada-site-preview/thank-you/"]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();location.href='/posada-site-preview/thank-you/';});});</script>
+<script src="/posada-site-preview/assets/posada.js?v=1792304438" defer></script>
 <script>(function(){var m={kitchen:'p-k',bathroom:'p-b',flooring:'p-f','whole-home':'p-w'},k=new URLSearchParams(location.search).get('project');if(!m[k]&&document.referrer){try{var r=new URL(document.referrer);if(r.host===location.host){var pa=r.pathname.toLowerCase();k=/kitchen/.test(pa)?'kitchen':/bath/.test(pa)?'bathroom':/floor/.test(pa)?'flooring':null;}}catch(e){}}var el=document.getElementById(m[k]);if(el&&!document.querySelector('input[name="project"]:checked'))el.checked=true;})();</script>
 </body>
 </html>

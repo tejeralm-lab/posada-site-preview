@@ -68,7 +68,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792296489">
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792304438">
 <style>
 /* Questions wrap as balanced lines and answers never end on a lone word ("project?", "permit."). */
 .c1 summary{text-wrap:balance}
@@ -85,13 +85,7 @@
 @media (max-width:600px){.c1 #top .stat-row .cell{padding-left:6px;padding-right:6px}}
 @media (max-width:359px){.c1 #top .stat-row .l{letter-spacing:.1em}}
 @media (min-width:881px) and (max-width:1100px){.c1 #top .q-row{grid-template-columns:minmax(0,1fr);gap:36px}.c1 #top .ctas{justify-content:flex-start}}
-/* Phone top bar (round 6). The shared phone span ended in " &nbsp;·&nbsp; " with normal spaces on both sides, so the dot
-   hung at the end of line 1 (361-430px) or opened line 2 (344-360px), and at 320 the bar ran to three lines. The dot now
-   sits in its own .tl-sep span: from 601 to 880px the bar is one line (it needs about 550px) and keeps the dot; at 600px and
-   below the dot is hidden and the rating link takes its own line, so the bar is two lines with nothing hanging. Below 360
-   the tracking eases from .26em to .17em so "Complimentary in-home consultations" (302px at .26em, 269px at .17em) still fits
-   one line at 320 with room to spare. */
-@media (max-width:600px){.c1 .topline .tl-sep{display:none}.c1 .topline .tl-rate{display:block}}
+/* below 360px the tracking eases from .26em to .17em so "Complimentary in-home consultations" still fits one line at 320 */
 @media (max-width:359px){.c1 .topline{letter-spacing:.17em}}
 /* FAQ group cells (round 6). The 01-04 cells are links to #cost, #timeline, #design and #warranty, but they looked exactly like the
    static stat rows on About and Our Process; a sand hover, a bronze numeral and a small down arrow under each label mark them as jumps. */
@@ -374,6 +368,6 @@
 </nav>
 
 </div>
-<script src="/posada-site-preview/assets/posada.js?v=1792296489" defer></script>
+<script src="/posada-site-preview/assets/posada.js?v=1792304438" defer></script>
 </body>
 </html>

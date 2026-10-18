@@ -94,8 +94,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" imagesrcset="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-2000.webp 2000w" imagesizes="100vw">
-<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792296489">
+<link rel="preload" as="image" href="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" imagesrcset="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-2000.webp 2000w" imagesizes="(max-width: 880px) 90vw, 352px">
+<link rel="stylesheet" href="/posada-site-preview/assets/posada.css?v=1792304438">
 <style>
 .c1 p,.c1 li,.c1 blockquote,.c1 figcaption{text-wrap:pretty}
 .c1 h2,.c1 h3{text-wrap:balance}
@@ -117,12 +117,16 @@
 .c1 .trust.three .l{letter-spacing:.14em}
 .c1 .trust-line{line-height:1.9}
 }
+/* round 8: the coffee bar is a print hero (film print classes, as Sorrento). The 1228x1800 photo is taller (1.466:1) than the 656x820 Sorrento still the shared 420/408/336px caps were tuned for, and this panel is shorter than Sorrento's, so the print takes its own caps, one per shared height guard (measured in dist, print bottom vs panel bottom): tall windows 352px (352x516 vs the 525px panel, 8px short); 761-940px tall windows 296px (296x434 vs the 436px panel at 1440x900, 1366x768 and 1280x800); 760px and under 266px (266x390 vs the 391px panel). Selectors match the shared guards' specificity */
+@media (min-width:1100px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),352px)}.c1 section.hero.compact.print .print-cap{max-width:352px}}
+@media (min-width:1100px) and (min-height:761px) and (max-height:940px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),296px)}}
+@media (min-width:1100px) and (max-height:760px){.c1 section.hero.compact.print:not(.wide) .hero-media img.still{width:min(clamp(260px,calc(min(100vw,1280px) - 839px),420px),266px)}}
 </style>
 </head>
 <body>
 <div class="c1">
 
-<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations &nbsp;·&nbsp; </span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
+<div class="topline"><span class="hide-m">Complimentary in-home design consultations &nbsp;·&nbsp; <span class="tl-ev">Evenings &amp; weekends &nbsp;·&nbsp; </span></span><span class="show-m">Complimentary in-home consultations<span class="tl-sep"> &nbsp;·&nbsp; </span></span><a class="tl-rate" href="https://maps.google.com/maps?cid=3116045480222163497"><span class="tl-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 on Google<span class="hide-m">, 60+ reviews</span></a><span class="hide-m"> &nbsp;·&nbsp; (407) 319-3503</span></div>
 
 <div class="site-head">
 <div class="wrap">
@@ -159,9 +163,10 @@
 </div>
 
 <main id="main">
-<section class="hero compact" id="top">
+<section class="hero compact film print" id="top">
 <div class="hero-media">
-<img src="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" srcset="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-2000.webp 2000w" sizes="100vw" width="1228" height="1800" alt="Coffee bar in a Winter Garden, FL kitchen remodel with a brick herringbone backsplash, floating wood shelves, glass-front white cabinets and a wine fridge" style="object-position:center 35%" fetchpriority="high" decoding="async">
+<img class="still" src="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp" srcset="/posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-800.webp 545w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood.webp 1228w, /posada-site-preview/images/kitchen-remodel-winter-garden-fl-coffee-bar-wood-range-hood-2000.webp 2000w" sizes="(max-width: 880px) 90vw, 352px" width="1228" height="1800" alt="Coffee bar in a Winter Garden, FL kitchen remodel with a brick herringbone backsplash, floating wood shelves, glass-front white cabinets and a wine fridge" style="object-position:center 40%" fetchpriority="high" decoding="async">
+<p class="print-cap">Coffee bar&nbsp;·&nbsp;Winter&nbsp;Garden</p>
 </div>
 <div class="hero-panel">
 <div class="panel on-navy">
@@ -404,6 +409,6 @@
 </nav>
 
 </div>
-<script src="/posada-site-preview/assets/posada.js?v=1792296489" defer></script>
+<script src="/posada-site-preview/assets/posada.js?v=1792304438" defer></script>
 </body>
 </html>
