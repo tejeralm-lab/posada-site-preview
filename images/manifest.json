@@ -248,21 +248,6 @@
   }
  },
  {
-  "name": "wide-plank-flooring-installation-living-room-central-florida",
-  "alt": "Wide plank flooring installation in a Central Florida living room",
-  "source": "living-room-flooring-installation.webp",
-  "sizes": {
-   "wide-plank-flooring-installation-living-room-central-florida.webp": [
-    900,
-    504
-   ],
-   "wide-plank-flooring-installation-living-room-central-florida-800.webp": [
-    800,
-    448
-   ]
-  }
- },
- {
   "name": "mike-posada-owner-posada-remodeling-design-casselberry-fl",
   "alt": "Mike Posada, owner and founder of Posada Remodeling and Design, beside the company van in Casselberry, FL",
   "source": "mike-posada-van-1400.jpg",
@@ -754,6 +739,21 @@
    "mike-posada-full-bathroom-remodel-orlando-fl-800.webp": [
     720,
     540
+   ]
+  }
+ },
+ {
+  "name": "dining-room-wood-look-tile-floor-winter-garden-fl",
+  "alt": "Dining room in a Winter Garden, FL home with wood-look tile floors, dark board-and-batten wainscoting and a farmhouse table",
+  "source": "GBP Photos/Posada/15a-dining-room-4011.jpg (Posada job photo, Winter Garden; 16:9 centre crop)",
+  "sizes": {
+   "dining-room-wood-look-tile-floor-winter-garden-fl.webp": [
+    1600,
+    900
+   ],
+   "dining-room-wood-look-tile-floor-winter-garden-fl-800.webp": [
+    800,
+    450
    ]
   }
  }
