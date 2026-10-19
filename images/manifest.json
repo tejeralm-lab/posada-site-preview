@@ -188,15 +188,15 @@
   }
  },
  {
-  "name": "stone-fireplace-feature-wall-living-room-remodel-central-florida",
-  "alt": "Living room remodel with a floor-to-ceiling stone fireplace feature wall in Central Florida",
-  "source": "Stone fireplace wall (Aug 23).jpg",
+  "name": "white-shaker-kitchen-waterfall-quartz-island-central-florida",
+  "alt": "White shaker kitchen remodel with a waterfall quartz island, counter stools, floating shelves and a hexagon mosaic tile backsplash in Central Florida",
+  "source": "kitchen-waterfall-island-color-fixed.jpg (Mike's Oct 17, 2026 'Perova' emails, color-fixed; Posada's own white shaker kitchen, also in the brochure). Replaces the stone fireplace photo removed 2026-10-19 (another company's work, per Mike)",
   "sizes": {
-   "stone-fireplace-feature-wall-living-room-remodel-central-florida.webp": [
+   "white-shaker-kitchen-waterfall-quartz-island-central-florida.webp": [
     1350,
     1800
    ],
-   "stone-fireplace-feature-wall-living-room-remodel-central-florida-800.webp": [
+   "white-shaker-kitchen-waterfall-quartz-island-central-florida-800.webp": [
     600,
     800
    ]
@@ -347,6 +347,36 @@
     558
    ],
    "manny-tejera-vice-president-posada-remodeling-800.webp": [
+    400,
+    558
+   ]
+  }
+ },
+ {
+  "name": "cameron-lane-lead-tile-artisan-posada-remodeling",
+  "alt": "Cameron Lane, lead tile artisan at Posada Remodeling and Design",
+  "source": "cameron-lane-team-photo-no-badge.jpg (from Mike 2026-10-17, show badge removed at Mike's request; same photo as brochure v26 Meet the Team)",
+  "sizes": {
+   "cameron-lane-lead-tile-artisan-posada-remodeling.webp": [
+    800,
+    1116
+   ],
+   "cameron-lane-lead-tile-artisan-posada-remodeling-800.webp": [
+    400,
+    558
+   ]
+  }
+ },
+ {
+  "name": "tonya-posada-administration-logistics-posada-remodeling",
+  "alt": "Tonya Posada, administration and logistics at Posada Remodeling and Design",
+  "source": "tonya-posada-from-mike-2026-10-18.png (from Mike; same photo as brochure v26 Meet the Team)",
+  "sizes": {
+   "tonya-posada-administration-logistics-posada-remodeling.webp": [
+    800,
+    1116
+   ],
+   "tonya-posada-administration-logistics-posada-remodeling-800.webp": [
     400,
     558
    ]
